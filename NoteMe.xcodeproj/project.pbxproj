@@ -16,6 +16,7 @@
 		DDB894022AE83827002CF4EE /* UIImage+Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB894012AE83827002CF4EE /* UIImage+Consts.swift */; };
 		DDB894052AE83AF2002CF4EE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DDB894042AE83AF2002CF4EE /* SnapKit */; };
 		DDB8940A2AE83DE1002CF4EE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB894092AE83DE1002CF4EE /* LoginVC.swift */; };
+		DDBE49E62AED413600994F69 /* UIButton+Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBE49E52AED413600994F69 /* UIButton+Consts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		DDB893FF2AE834F1002CF4EE /* UIFont+Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Consts.swift"; sourceTree = "<group>"; };
 		DDB894012AE83827002CF4EE /* UIImage+Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Consts.swift"; sourceTree = "<group>"; };
 		DDB894092AE83DE1002CF4EE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		DDBE49E52AED413600994F69 /* UIButton+Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Consts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				DDB893FC2AE82E78002CF4EE /* UIColor+Consts.swift */,
 				DDB893FF2AE834F1002CF4EE /* UIFont+Consts.swift */,
 				DDB894012AE83827002CF4EE /* UIImage+Consts.swift */,
+				DDBE49E52AED413600994F69 /* UIButton+Consts.swift */,
 			);
 			path = Consts;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				DDB894022AE83827002CF4EE /* UIImage+Consts.swift in Sources */,
 				DDB894002AE834F1002CF4EE /* UIFont+Consts.swift in Sources */,
 				DDB8940A2AE83DE1002CF4EE /* LoginVC.swift in Sources */,
+				DDBE49E62AED413600994F69 /* UIButton+Consts.swift in Sources */,
 				DDB893E62AE824D0002CF4EE /* AppDelegate.swift in Sources */,
 				DDB893FD2AE82E78002CF4EE /* UIColor+Consts.swift in Sources */,
 				DDB893E82AE824D0002CF4EE /* SceneDelegate.swift in Sources */,
