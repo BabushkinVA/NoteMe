@@ -10,6 +10,9 @@
 		DD5E1B662AF15F48004512AF /* View+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B652AF15F48004512AF /* View+Layer.swift */; };
 		DD5E1B692AF1602A004512AF /* UIButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B682AF1602A004512AF /* UIButton+Styles.swift */; };
 		DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */; };
+		DD6EA1262AF7813E004E0CF2 /* RegisterVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1252AF7813E004E0CF2 /* RegisterVC1.swift */; };
+		DD6EA1292AF78435004E0CF2 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1282AF78435004E0CF2 /* ResetPasswordVC.swift */; };
+		DD6EA12B2AF7DBB1004E0CF2 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC.swift */; };
 		DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */; };
 		DD734FF42AF6BEE800A2C4F4 /* UIView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */; };
 		DDB893E62AE824D0002CF4EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB893E52AE824D0002CF4EE /* AppDelegate.swift */; };
@@ -27,6 +30,9 @@
 		DD5E1B652AF15F48004512AF /* View+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Layer.swift"; sourceTree = "<group>"; };
 		DD5E1B682AF1602A004512AF /* UIButton+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Styles.swift"; sourceTree = "<group>"; };
 		DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
+		DD6EA1252AF7813E004E0CF2 /* RegisterVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC1.swift; sourceTree = "<group>"; };
+		DD6EA1282AF78435004E0CF2 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Styles.swift"; sourceTree = "<group>"; };
 		DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Styles.swift"; sourceTree = "<group>"; };
 		DDB893E22AE824D0002CF4EE /* NoteMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +83,23 @@
 				DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		DD6EA1242AF78122004E0CF2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC.swift */,
+				DD6EA1252AF7813E004E0CF2 /* RegisterVC1.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		DD6EA1272AF78404004E0CF2 /* Reset */ = {
+			isa = PBXGroup;
+			children = (
+				DD6EA1282AF78435004E0CF2 /* ResetPasswordVC.swift */,
+			);
+			path = Reset;
 			sourceTree = "<group>";
 		};
 		DDB893D92AE824D0002CF4EE = {
@@ -150,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				DDB894082AE83DBE002CF4EE /* Login */,
+				DD6EA1242AF78122004E0CF2 /* Register */,
+				DD6EA1272AF78404004E0CF2 /* Reset */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -239,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB894022AE83827002CF4EE /* UIImage+Consts.swift in Sources */,
+				DD6EA1292AF78435004E0CF2 /* ResetPasswordVC.swift in Sources */,
 				DDB894002AE834F1002CF4EE /* UIFont+Consts.swift in Sources */,
 				DD734FF42AF6BEE800A2C4F4 /* UIView+Styles.swift in Sources */,
 				DDB8940A2AE83DE1002CF4EE /* LoginVC.swift in Sources */,
@@ -247,6 +273,8 @@
 				DDB893FD2AE82E78002CF4EE /* UIColor+Consts.swift in Sources */,
 				DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */,
 				DD5E1B662AF15F48004512AF /* View+Layer.swift in Sources */,
+				DD6EA1262AF7813E004E0CF2 /* RegisterVC1.swift in Sources */,
+				DD6EA12B2AF7DBB1004E0CF2 /* RegisterVC.swift in Sources */,
 				DDB893E82AE824D0002CF4EE /* SceneDelegate.swift in Sources */,
 				DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */,
 			);
