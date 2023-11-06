@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class ResetPasswordVC: UIViewController {
-    
+
     private lazy var contentView: UIView = {
         let view = UIView()
         view.backgroundColor = .appGray
@@ -20,27 +20,19 @@ final class ResetPasswordVC: UIViewController {
     UIImageView(image: .General.logo)
     
     private lazy var titleLabel: UILabel =
-        .mainLabelStyle("Reset Password")
+        .mainLabelStyle("reset_password_label".localized)
     private lazy var resetButton: UIButton =
-        .yellowRoundedButton("Reset")
+        .yellowRoundedButton("reset_button".localized)
     private lazy var cancelButton: UIButton =
         .cancelButton()
     
     private lazy var infoView: UIView = .shadowStyle()
-    private lazy var descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .left
-        label.text = "Enter your email address and we will share a link to create a new password."
-        label.numberOfLines = 0
-        label.font = .appFont.withSize(13.0)
-        label.textColor = .appText
-        
-        return label
-    }()
+    private lazy var infoLabel: UILabel =
+        .infoLabelStyle("reset_infolabel".localized)
     
     private lazy var resetPasswordByEmailTextField: LineTextField = {
         let textField = LineTextField()
-        textField.placeholder = "Enter E-mail"
+        textField.placeholder = "e-mail_textField_placeholder".localized
         return textField
     }()
     
@@ -61,7 +53,7 @@ final class ResetPasswordVC: UIViewController {
         contentView.addSubview(infoView)
         contentView.addSubview(titleLabel)
         
-        infoView.addSubview(descriptionLabel)
+        infoView.addSubview(infoLabel)
         infoView.addSubview(resetPasswordByEmailTextField)
     }
     
@@ -100,13 +92,14 @@ final class ResetPasswordVC: UIViewController {
             make.bottom.equalTo(infoView.snp.top).inset(-8.0)
         }
         
-        descriptionLabel.snp.makeConstraints { make in
+        infoLabel.snp.makeConstraints { make in
             make.top.left.right.equalToSuperview().inset(16.0)
         }
         
         resetPasswordByEmailTextField.snp.makeConstraints { make in
-            make.top.equalTo(descriptionLabel.snp.bottom).inset(-8.0)
+            make.top.equalTo(infoLabel.snp.bottom).inset(-8.0)
             make.horizontalEdges.equalToSuperview().inset(16.0)
+            make.bottom.equalToSuperview().inset(20.0)
         }
     }
 }

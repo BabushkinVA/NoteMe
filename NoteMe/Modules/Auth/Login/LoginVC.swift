@@ -20,27 +20,27 @@ final class LoginVC: UIViewController {
     UIImageView(image: .General.logo)
     
     private lazy var titleLabel: UILabel = 
-        .mainLabelStyle("Welcome back!")
-    private lazy var loginButton: UIButton = 
-        .yellowRoundedButton("Login")
+        .mainLabelStyle("welcome_label".localized)
+    private lazy var loginButton: UIButton =
+        .yellowRoundedButton("login_button".localized)
     private lazy var newAccountButton: UIButton =
-        .underlineYellowButton("New Account")
+        .underlineYellowButton("new_account_button".localized)
     private lazy var forgotPasswordButton: UIButton =
-        .underlineGrayButton("Forgot Password")
+        .underlineGrayButton("forgot_password_button".localized)
     
     private lazy var infoView: UIView = .shadowStyle()
     
     private lazy var emailTextField: LineTextField = {
         let textField = LineTextField()
-        textField.title = "E-mail"
-        textField.placeholder = "Enter E-mail"
+        textField.title = "e-mail_label".localized
+        textField.placeholder = "e-mail_textField_placeholder".localized
         return textField
     }()
     
     private lazy var passwordTextField: LineTextField = {
         let textField = LineTextField()
-        textField.title = "Password"
-        textField.placeholder = "Enter Password"
+        textField.title = "password_label".localized
+        textField.placeholder = "password_textField_placeholder".localized
         return textField
     }()
     

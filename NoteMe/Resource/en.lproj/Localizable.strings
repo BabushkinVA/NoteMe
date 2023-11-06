@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  NoteMe
+
+  Created by Vadim on 5.11.23.
+  
+*/
+"welcome_label" = "Welcome back!";
+"nice_to_meet_you_label" = "Nice to meet you!";
+"reset_password_label" = "Reset Password";
+"e-mail_label" = "E-mail";
+"e-mail_textField_placeholder" = "Enter E-mail";
+"password_label" = "Password";
+"password_textField_placeholder" = "Enter Password";
+"repeat_password_label" = "Repeat Password";
+"repeat_password_textField_placeholder" = "Enter Password";
+"forgot_password_button" = "Forgot Password";
+"login_button" = "Login";
+"register_button" = "Register";
+"new_account_button" = "New Account";
+"have_account_button" = "I have an Account";
+"reset_button" = "Reset";
+"cancel_button" = "Cancel";
+"reset_infolabel" = "Enter your email address and we will share a link to
+create a new password.";
+

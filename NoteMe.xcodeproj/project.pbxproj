@@ -10,9 +10,11 @@
 		DD5E1B662AF15F48004512AF /* View+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B652AF15F48004512AF /* View+Layer.swift */; };
 		DD5E1B692AF1602A004512AF /* UIButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B682AF1602A004512AF /* UIButton+Styles.swift */; };
 		DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */; };
-		DD6EA1262AF7813E004E0CF2 /* RegisterVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1252AF7813E004E0CF2 /* RegisterVC1.swift */; };
+		DD63C5842AF8F029007E6E35 /* String+Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63C5832AF8F029007E6E35 /* String+Locale.swift */; };
+		DD6EA1262AF7813E004E0CF2 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1252AF7813E004E0CF2 /* RegisterVC.swift */; };
 		DD6EA1292AF78435004E0CF2 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1282AF78435004E0CF2 /* ResetPasswordVC.swift */; };
-		DD6EA12B2AF7DBB1004E0CF2 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC.swift */; };
+		DD6EA12B2AF7DBB1004E0CF2 /* RegisterVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC1.swift */; };
+		DD6EA12E2AF7E41E004E0CF2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD6EA1302AF7E41E004E0CF2 /* Localizable.strings */; };
 		DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */; };
 		DD734FF42AF6BEE800A2C4F4 /* UIView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */; };
 		DDB893E62AE824D0002CF4EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB893E52AE824D0002CF4EE /* AppDelegate.swift */; };
@@ -30,9 +32,13 @@
 		DD5E1B652AF15F48004512AF /* View+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Layer.swift"; sourceTree = "<group>"; };
 		DD5E1B682AF1602A004512AF /* UIButton+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Styles.swift"; sourceTree = "<group>"; };
 		DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
-		DD6EA1252AF7813E004E0CF2 /* RegisterVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC1.swift; sourceTree = "<group>"; };
+		DD63C5832AF8F029007E6E35 /* String+Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Locale.swift"; sourceTree = "<group>"; };
+		DD6EA1252AF7813E004E0CF2 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		DD6EA1282AF78435004E0CF2 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
-		DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC1.swift; sourceTree = "<group>"; };
+		DD6EA12F2AF7E41E004E0CF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD6EA1312AF7E4C9004E0CF2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DD6EA1322AF7E4C9004E0CF2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Styles.swift"; sourceTree = "<group>"; };
 		DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Styles.swift"; sourceTree = "<group>"; };
 		DDB893E22AE824D0002CF4EE /* NoteMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				DD5E1B652AF15F48004512AF /* View+Layer.swift */,
+				DD63C5832AF8F029007E6E35 /* String+Locale.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -88,8 +95,8 @@
 		DD6EA1242AF78122004E0CF2 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC.swift */,
-				DD6EA1252AF7813E004E0CF2 /* RegisterVC1.swift */,
+				DD6EA1252AF7813E004E0CF2 /* RegisterVC.swift */,
+				DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC1.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -147,6 +154,7 @@
 			children = (
 				DDB893FB2AE82E3D002CF4EE /* Consts */,
 				DDB893EE2AE824D1002CF4EE /* Assets.xcassets */,
+				DD6EA1302AF7E41E004E0CF2 /* Localizable.strings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -232,6 +240,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = DDB893D92AE824D0002CF4EE;
 			packageReferences = (
@@ -252,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB893F22AE824D1002CF4EE /* LaunchScreen.storyboard in Resources */,
+				DD6EA12E2AF7E41E004E0CF2 /* Localizable.strings in Resources */,
 				DDB893EF2AE824D1002CF4EE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,13 +278,14 @@
 				DDB894002AE834F1002CF4EE /* UIFont+Consts.swift in Sources */,
 				DD734FF42AF6BEE800A2C4F4 /* UIView+Styles.swift in Sources */,
 				DDB8940A2AE83DE1002CF4EE /* LoginVC.swift in Sources */,
+				DD63C5842AF8F029007E6E35 /* String+Locale.swift in Sources */,
 				DD5E1B692AF1602A004512AF /* UIButton+Styles.swift in Sources */,
 				DDB893E62AE824D0002CF4EE /* AppDelegate.swift in Sources */,
 				DDB893FD2AE82E78002CF4EE /* UIColor+Consts.swift in Sources */,
 				DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */,
 				DD5E1B662AF15F48004512AF /* View+Layer.swift in Sources */,
-				DD6EA1262AF7813E004E0CF2 /* RegisterVC1.swift in Sources */,
-				DD6EA12B2AF7DBB1004E0CF2 /* RegisterVC.swift in Sources */,
+				DD6EA1262AF7813E004E0CF2 /* RegisterVC.swift in Sources */,
+				DD6EA12B2AF7DBB1004E0CF2 /* RegisterVC1.swift in Sources */,
 				DDB893E82AE824D0002CF4EE /* SceneDelegate.swift in Sources */,
 				DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */,
 			);
@@ -283,10 +294,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		DD6EA1302AF7E41E004E0CF2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD6EA12F2AF7E41E004E0CF2 /* en */,
+				DD6EA1322AF7E4C9004E0CF2 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DDB893F02AE824D1002CF4EE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DDB893F12AE824D1002CF4EE /* Base */,
+				DD6EA1312AF7E4C9004E0CF2 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -299,6 +320,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -362,6 +384,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
