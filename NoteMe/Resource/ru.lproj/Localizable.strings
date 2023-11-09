@@ -5,15 +5,22 @@
   Created by Vadim on 5.11.23.
   
 */
+    //MARK: - Auth screens
+//Labels
 "welcome_label" = "Добро пожаловать!";
 "nice_to_meet_you_label"= "Введите данные регистрации";
 "reset_password_label" = "Восстановление Пароля";
 "e-mail_label" = "Электронная почта";
-"e-mail_textField_placeholder" = "Введите электронную почту";
 "password_label" = "Пароль";
-"password_textField_placeholder" = "Введите пароль";
 "repeat_password_label" = "Повторите пароль";
+"reset_infolabel" = "Введите адрес электронной почты чтобы получить ссылку для создания нового пароля.";
+
+//Placeholders
+"e-mail_textField_placeholder" = "Введите электронную почту";
+"password_textField_placeholder" = "Введите пароль";
 "repeat_password_textField_placeholder" = "Повторите пароль";
+
+//Buttons
 "forgot_password_button" = "Восстановить Доступ";
 "login_button" = "Войти";
 "register_button" = "Регистрация";
@@ -21,4 +28,3 @@
 "have_account_button" = "У меня уже есть Аккаунт";
 "reset_button" = "Сброс";
 "cancel_button" = "Назад";
-"reset_infolabel" = "Введите адрес электронной почты чтобы получить ссылку для создания нового пароля.";

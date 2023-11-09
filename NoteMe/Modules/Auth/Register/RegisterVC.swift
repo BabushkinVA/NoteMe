@@ -10,11 +10,8 @@ import SnapKit
 
 final class RegisterVC: UIViewController {
     
-    private lazy var contentView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .appGray
-        return view
-    }()
+    private lazy var contentView: UIView =
+        .contentViewStyle()
     
     private lazy var logoImageView: UIImageView =
     UIImageView(image: .General.logo)

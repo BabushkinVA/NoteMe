@@ -22,18 +22,10 @@ extension UIView {
         return view
     }
     
-//    static func shadowStyle() -> UIView {
-//        let view = UIView()
-//        view.cornerRadius = 5
-//        view.backgroundColor = .white
-//        
-//        view.layer.shadowOpacity = 0.3
-//        view.layer.shadowOffset = CGSize(width: 2.5, height: 2.5)
-//        view.layer.shadowRadius = 1.0
-//        view.layer.shadowColor = UIColor.appGrayText.cgColor
-////        view.layer.masksToBounds = false - нужна ли эта строка?
-//        
-//        return view
-//    }
+    static func contentViewStyle() -> UIView {
+        let view = UIView()
+        view.backgroundColor = .appGray
+        return view
+    }
     
 }

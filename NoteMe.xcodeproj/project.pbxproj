@@ -13,7 +13,6 @@
 		DD63C5842AF8F029007E6E35 /* String+Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD63C5832AF8F029007E6E35 /* String+Locale.swift */; };
 		DD6EA1262AF7813E004E0CF2 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1252AF7813E004E0CF2 /* RegisterVC.swift */; };
 		DD6EA1292AF78435004E0CF2 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1282AF78435004E0CF2 /* ResetPasswordVC.swift */; };
-		DD6EA12B2AF7DBB1004E0CF2 /* RegisterVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC1.swift */; };
 		DD6EA12E2AF7E41E004E0CF2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD6EA1302AF7E41E004E0CF2 /* Localizable.strings */; };
 		DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */; };
 		DD734FF42AF6BEE800A2C4F4 /* UIView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */; };
@@ -35,7 +34,6 @@
 		DD63C5832AF8F029007E6E35 /* String+Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Locale.swift"; sourceTree = "<group>"; };
 		DD6EA1252AF7813E004E0CF2 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		DD6EA1282AF78435004E0CF2 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
-		DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC1.swift; sourceTree = "<group>"; };
 		DD6EA12F2AF7E41E004E0CF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DD6EA1312AF7E4C9004E0CF2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DD6EA1322AF7E4C9004E0CF2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				DD6EA1252AF7813E004E0CF2 /* RegisterVC.swift */,
-				DD6EA12A2AF7DBB1004E0CF2 /* RegisterVC1.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -285,7 +282,6 @@
 				DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */,
 				DD5E1B662AF15F48004512AF /* View+Layer.swift in Sources */,
 				DD6EA1262AF7813E004E0CF2 /* RegisterVC.swift in Sources */,
-				DD6EA12B2AF7DBB1004E0CF2 /* RegisterVC1.swift in Sources */,
 				DDB893E82AE824D0002CF4EE /* SceneDelegate.swift in Sources */,
 				DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */,
 			);
