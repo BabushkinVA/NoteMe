@@ -5,26 +5,34 @@
   Created by Vadim on 5.11.23.
   
 */
-    //MARK: - Auth screens
-//Labels
-"welcome_label" = "Welcome back!";
-"nice_to_meet_you_label" = "Nice to meet you!";
-"reset_password_label" = "Reset Password";
-"e-mail_label" = "E-mail";
-"password_label" = "Password";
-"repeat_password_label" = "Repeat Password";
-"reset_infolabel" = "Enter your email address and we will share a link to create a new password.";
-
-//Placeholders
-"e-mail_textField_placeholder" = "Enter E-mail";
-"password_textField_placeholder" = "Enter Password";
-"repeat_password_textField_placeholder" = "Enter Password";
-
-//Buttons
-"forgot_password_button" = "Forgot Password";
-"login_button" = "Login";
-"register_button" = "Register";
-"new_account_button" = "New Account";
-"have_account_button" = "I have an Account";
-"reset_button" = "Reset";
 "cancel_button" = "Cancel";
+
+    //MARK: - Auth group
+//LoginVC
+"auth_title_label" = "Welcome back!";
+"auth_e-mail_label" = "E-mail";
+"auth_e-mail_textField_placeholder" = "Enter E-mail";
+"auth_password_label" = "Password";
+"auth_password_textField_placeholder" = "Enter Password";
+"auth_forgot_password_button" = "Forgot Password";
+"auth_login_button" = "Login";
+"auth_new_account_button" = "New Account";
+"auth_wrong_e-mail" = "Wrong e-mail";
+"auth_wrong_password" = "Non-valid password";
+
+//RegisterVC
+"reg_title_label" = "Nice to meet you!";
+"reg_e-mail_label" = "E-mail";
+"reg_e-mail_textField_placeholder" = "Enter E-mail";
+"reg_password_label" = "Password";
+"reg_password_textField_placeholder" = "Enter Password";
+"reg_repeat_password_label" = "Repeat Password";
+"reg_repeat_password_textField_placeholder" = "Enter Password";
+"reg_register_button" = "Register";
+"reg_have_account_button" = "I have an Account";
+
+//ResetPasswordVC
+"res_title_label" = "Reset Password";
+"res_infolabel" = "Enter your email address and we will share a link to create a new password.";
+"res_e-mail_textField_placeholder" = "Enter E-mail";
+"res_reset_button" = "Reset";

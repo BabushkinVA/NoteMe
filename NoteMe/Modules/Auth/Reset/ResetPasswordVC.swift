@@ -8,28 +8,33 @@
 import UIKit
 import SnapKit
 
+protocol ResetPasswordViewModelProtocol {
+    func resetDidTap(email: String?)
+}
+
 final class ResetPasswordVC: UIViewController {
 
     private lazy var contentView: UIView =
         .contentViewStyle()
     
+    private lazy var logoContainer: UIView = UIView()
     private lazy var logoImageView: UIImageView =
     UIImageView(image: .General.logo)
     
     private lazy var titleLabel: UILabel =
-        .mainLabelStyle("reset_password_label".localized)
+        .titleLabelStyle("res_title_label".localized)
     private lazy var resetButton: UIButton =
-        .yellowRoundedButton("reset_button".localized)
+        .yellowRoundedButton("res_reset_button".localized)
     private lazy var cancelButton: UIButton =
         .cancelButton()
     
     private lazy var infoView: UIView = .shadowStyle()
     private lazy var infoLabel: UILabel =
-        .infoLabelStyle("reset_infolabel".localized)
+        .infoLabelStyle("res_infolabel".localized)
     
     private lazy var resetPasswordByEmailTextField: LineTextField = {
         let textField = LineTextField()
-        textField.placeholder = "e-mail_textField_placeholder".localized
+        textField.placeholder = "res_e-mail_textField_placeholder".localized
         return textField
     }()
     
@@ -43,12 +48,14 @@ final class ResetPasswordVC: UIViewController {
     private func setupUI() {
         view.backgroundColor = .appBlack
         view.addSubview(contentView)
+        view.addSubview(resetButton)
+        view.addSubview(cancelButton)
         
-        contentView.addSubview(logoImageView)
-        contentView.addSubview(resetButton)
-        contentView.addSubview(cancelButton)
+        contentView.addSubview(logoContainer)
         contentView.addSubview(infoView)
         contentView.addSubview(titleLabel)
+        
+        logoContainer.addSubview(logoImageView)
         
         infoView.addSubview(infoLabel)
         infoView.addSubview(resetPasswordByEmailTextField)
@@ -98,5 +105,9 @@ final class ResetPasswordVC: UIViewController {
             make.horizontalEdges.equalToSuperview().inset(16.0)
             make.bottom.equalToSuperview().inset(20.0)
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

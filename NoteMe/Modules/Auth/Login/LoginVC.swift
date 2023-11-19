@@ -8,38 +8,68 @@
 import UIKit
 import SnapKit
 
+@objc protocol LoginViewModelProtocol: AnyObject {
+    var catchEmailError: ((String?) -> Void)? { get set }
+    var catchPasswordError: ((String?) -> Void)? { get set }
+    
+    func loginDidTap(email: String?, password: String?)
+    @objc func newAccountDidTap()
+    func forgotPasswordDidTap(email: String?)
+}
+
 final class LoginVC: UIViewController {
     
-    private lazy var contentView: UIView = 
-        .contentViewStyle()
+    private lazy var contentView: UIView = .contentViewStyle()
     
+    private lazy var logoContainer: UIView = UIView()
     private lazy var logoImageView: UIImageView =
-    UIImageView(image: .General.logo)
-    
+        UIImageView(image: .General.logo)
+
     private lazy var titleLabel: UILabel = 
-        .mainLabelStyle("welcome_label".localized)
+        .titleLabelStyle("auth_title_label".localized)
+    
     private lazy var loginButton: UIButton =
-        .yellowRoundedButton("login_button".localized)
+        .yellowRoundedButton("auth_login_button".localized)
+        .withAction(self, #selector(loginDidTap))
+    
     private lazy var newAccountButton: UIButton =
-        .underlineYellowButton("new_account_button".localized)
+        .underlineYellowButton("auth_new_account_button".localized)
+        .withAction(viewModel,
+                    #selector(LoginViewModelProtocol.newAccountDidTap))
+    
     private lazy var forgotPasswordButton: UIButton =
-        .underlineGrayButton("forgot_password_button".localized)
+        .underlineGrayButton("auth_forgot_password_button".localized)
+        .withAction(self, #selector(forgotPasswordDidTap))
     
     private lazy var infoView: UIView = .shadowStyle()
     
     private lazy var emailTextField: LineTextField = {
         let textField = LineTextField()
-        textField.title = "e-mail_label".localized
-        textField.placeholder = "e-mail_textField_placeholder".localized
+        textField.title = "auth_e-mail_label".localized
+        textField.placeholder = "auth_e-mail_textField_placeholder".localized
         return textField
     }()
     
     private lazy var passwordTextField: LineTextField = {
         let textField = LineTextField()
-        textField.title = "password_label".localized
-        textField.placeholder = "password_textField_placeholder".localized
+        textField.title = "auth_password_label".localized
+        textField.placeholder = "auth_password_textField_placeholder".localized
         return textField
     }()
+    
+    private var viewModel: LoginViewModelProtocol
+    
+    init(viewModel: LoginViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        
+        bind()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,15 +82,29 @@ final class LoginVC: UIViewController {
         }
     }
     
+    private func bind() {
+        viewModel.catchEmailError = { errorText in
+            self.emailTextField.errorText = errorText
+        }
+        
+        viewModel.catchPasswordError = {
+            self.passwordTextField.errorText = $0
+        }
+    }
+    
     private func setupUI() {
         view.backgroundColor = .appBlack
-        view.addSubview(contentView)
         
+        view.addSubview(contentView)
+        view.addSubview(loginButton)
+        view.addSubview(newAccountButton)
+        
+        contentView.addSubview(logoContainer)
         contentView.addSubview(logoImageView)
-        contentView.addSubview(loginButton)
-        contentView.addSubview(newAccountButton)
         contentView.addSubview(infoView)
         contentView.addSubview(titleLabel)
+        
+        logoContainer.addSubview(logoImageView)
         
         infoView.addSubview(forgotPasswordButton)
         infoView.addSubview(emailTextField)
@@ -74,9 +118,13 @@ final class LoginVC: UIViewController {
             make.bottom.equalTo(loginButton.snp.centerY)
         }
         
+        logoContainer.snp.makeConstraints { make in
+            make.top.horizontalEdges.equalToSuperview()
+            make.bottom.equalTo(titleLabel.snp.top)
+        }
+        
         logoImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(72.0)
-            make.centerX.equalToSuperview()
+            make.center.equalToSuperview()
             make.size.equalTo(96.0)
         }
         
@@ -116,6 +164,19 @@ final class LoginVC: UIViewController {
             make.left.bottom.equalToSuperview().inset(16.0)
             make.height.equalTo(17.0)
         }
+    }
+    
+    @objc private func loginDidTap() {
+        viewModel.loginDidTap(email: emailTextField.text,
+                              password: passwordTextField.text)
+    }
+    
+    @objc private func forgotPasswordDidTap() {
+        viewModel.forgotPasswordDidTap(email: emailTextField.text)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 

@@ -8,43 +8,67 @@
 import UIKit
 import SnapKit
 
+@objc protocol RegisterPresenterProtocol: AnyObject {
+    func registerDidTap(email: String?,
+                        password: String?,
+                        repeatPassword: String?)
+    @objc func haveAccountDidTap()
+}
+
 final class RegisterVC: UIViewController {
     
     private lazy var contentView: UIView =
         .contentViewStyle()
     
+    private lazy var logoContainer: UIView = UIView()
     private lazy var logoImageView: UIImageView =
     UIImageView(image: .General.logo)
     
     private lazy var titleLabel: UILabel =
-        .mainLabelStyle("nice_to_meet_you_label".localized)
+        .titleLabelStyle("reg_title_label".localized)
+    
     private lazy var registerButton: UIButton =
-        .yellowRoundedButton("register_button".localized)
+        .yellowRoundedButton("reg_register_button".localized)
+        .withAction(self, #selector(registerDidTap))
+    
     private lazy var haveAccountButton: UIButton =
-        .underlineYellowButton("have_account_button".localized)
+        .underlineYellowButton("reg_have_account_button".localized)
+        .withAction(presenter,
+                    #selector(RegisterPresenterProtocol.haveAccountDidTap))
     
     private lazy var infoView: UIView = .shadowStyle()
     
     private lazy var emailTextField: LineTextField = {
         let textField = LineTextField()
-        textField.title = "e-mail_label".localized
-        textField.placeholder = "e-mail_textField_placeholder".localized
+        textField.title = "reg_e-mail_label".localized
+        textField.placeholder = "reg_e-mail_textField_placeholder".localized
         return textField
     }()
     
     private lazy var passwordTextField: LineTextField = {
         let textField = LineTextField()
-        textField.title = "password_label".localized
-        textField.placeholder = "password_textField_placeholder".localized
+        textField.title = "reg_password_label".localized
+        textField.placeholder = "reg_password_textField_placeholder".localized
         return textField
     }()
     
     private lazy var repeatPasswordTextField: LineTextField = {
         let textField = LineTextField()
-        textField.title = "repeat_password_label".localized
-        textField.placeholder = "repeat_password_textField_placeholder".localized
+        textField.title = "reg_repeat_password_label".localized
+        textField.placeholder = "reg_repeat_password_textField_placeholder".localized
         return textField
     }()
+    
+    private var presenter: RegisterPresenterProtocol
+    
+    init(presenter: RegisterPresenterProtocol) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,12 +80,14 @@ final class RegisterVC: UIViewController {
     private func setupUI() {
         view.backgroundColor = .appBlack
         view.addSubview(contentView)
+        view.addSubview(registerButton)
+        view.addSubview(haveAccountButton)
         
-        contentView.addSubview(logoImageView)
-        contentView.addSubview(registerButton)
-        contentView.addSubview(haveAccountButton)
+        contentView.addSubview(logoContainer)
         contentView.addSubview(infoView)
         contentView.addSubview(titleLabel)
+        
+        logoContainer.addSubview(logoImageView)
         
         infoView.addSubview(emailTextField)
         infoView.addSubview(passwordTextField)
@@ -75,9 +101,13 @@ final class RegisterVC: UIViewController {
             make.bottom.equalTo(registerButton.snp.centerY)
         }
         
+        logoContainer.snp.makeConstraints { make in
+            make.top.horizontalEdges.equalToSuperview()
+            make.bottom.equalTo(titleLabel.snp.top)
+        }
+        
         logoImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(72.0)
-            make.centerX.equalToSuperview()
+            make.center.equalToSuperview()
             make.size.equalTo(96.0)
         }
         
@@ -118,4 +148,51 @@ final class RegisterVC: UIViewController {
             make.bottom.equalToSuperview().inset(20.0)
         }
     }
+    
+    @objc private func registerDidTap() {
+        presenter.registerDidTap(email: emailTextField.text,
+                                 password: passwordTextField.text,
+                                 repeatPassword: repeatPasswordTextField.text)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+}
+
+extension RegisterVC: RegisterPresenterDelegate {
+    func setEmailError(error: String?) {
+        emailTextField.errorText = error
+    }
+    
+    func setPasswordError(error: String?) {
+        passwordTextField.errorText = error
+    }
+    
+    func setRepeatPasswordError(error: String?) {
+        repeatPasswordTextField.errorText = error
+    }
+    
+    func keyboardFrameChanged(_ frame: CGRect) {
+        let maxY = infoView.frame.maxY + contentView.frame.minY + 16.0
+        let keyboardY = frame.minY
+        
+        if maxY > keyboardY {
+            let diff = maxY - keyboardY
+            UIView.animate(withDuration: 0.25) {
+                self.infoView.snp.updateConstraints { make in
+                    make.centerY.equalToSuperview().offset(-diff)
+                }
+                self.view.layoutIfNeeded()
+            }
+        } else {
+            UIView.animate(withDuration: 0.25) {
+                self.infoView.snp.updateConstraints { make in
+                    make.centerY.equalToSuperview()
+                }
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
+    
 }
