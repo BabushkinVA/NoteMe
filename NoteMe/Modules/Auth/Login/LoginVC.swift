@@ -166,6 +166,10 @@ final class LoginVC: UIViewController {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @objc private func loginDidTap() {
         viewModel.loginDidTap(email: emailTextField.text,
                               password: passwordTextField.text)
@@ -175,8 +179,5 @@ final class LoginVC: UIViewController {
         viewModel.forgotPasswordDidTap(email: emailTextField.text)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
 }
 

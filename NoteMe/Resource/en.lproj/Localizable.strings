@@ -36,3 +36,4 @@
 "res_infolabel" = "Enter your email address and we will share a link to create a new password.";
 "res_e-mail_textField_placeholder" = "Enter E-mail";
 "res_reset_button" = "Reset";
+"res_wrong_e-mail" = "Wrong e-mail";

@@ -17,8 +17,7 @@ import SnapKit
 
 final class RegisterVC: UIViewController {
     
-    private lazy var contentView: UIView =
-        .contentViewStyle()
+    private lazy var contentView: UIView = .contentViewStyle()
     
     private lazy var logoContainer: UIView = UIView()
     private lazy var logoImageView: UIImageView =
@@ -149,15 +148,16 @@ final class RegisterVC: UIViewController {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @objc private func registerDidTap() {
         presenter.registerDidTap(email: emailTextField.text,
                                  password: passwordTextField.text,
                                  repeatPassword: repeatPasswordTextField.text)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
 }
 
 extension RegisterVC: RegisterPresenterDelegate {
