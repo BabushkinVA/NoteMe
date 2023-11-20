@@ -9,6 +9,10 @@ import UIKit
 import SnapKit
 
 @objc protocol RegisterPresenterProtocol: AnyObject {
+    var catchEmailError: ((String?) -> Void)? { get set }
+    var catchPasswordError: ((String?) -> Void)? { get set }
+    var catchRepeatPasswordError: ((String?) -> Void)? { get set }
+    
     func registerDidTap(email: String?,
                         password: String?,
                         repeatPassword: String?)
@@ -63,6 +67,8 @@ final class RegisterVC: UIViewController {
     init(presenter: RegisterPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
+        
+        bind()
     }
     
     required init?(coder: NSCoder) {
@@ -74,6 +80,20 @@ final class RegisterVC: UIViewController {
         
         setupUI()
         setupConstraints()
+    }
+    
+    private func bind() {
+        presenter.catchEmailError = { errorText in
+            self.emailTextField.errorText = errorText
+        }
+        
+        presenter.catchPasswordError = {
+            self.passwordTextField.errorText = $0
+        }
+        
+        presenter.catchRepeatPasswordError = {
+            self.repeatPasswordTextField.errorText = $0
+        }
     }
     
     private func setupUI() {

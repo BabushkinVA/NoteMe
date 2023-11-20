@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(windowScene: windowScene)
 //        window?.rootViewController = LoginAssembler.make()
-//        window?.rootViewController = RegisterAssembler.make()
-        window?.rootViewController = ResetAssembler.make()
+        window?.rootViewController = RegisterAssembler.make()
+//        window?.rootViewController = ResetAssembler.make()
         
         window?.makeKeyAndVisible()
     }

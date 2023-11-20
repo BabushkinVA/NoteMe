@@ -30,6 +30,9 @@
 "reg_repeat_password_textField_placeholder" = "Повторите пароль";
 "reg_register_button" = "Регистрация";
 "reg_have_account_button" = "У меня уже есть Аккаунт";
+"reg_wrong_e-mail" = "Неверная электронная почта";
+"reg_wrong_password" = "Недействительный пароль";
+"reg_password_not_matches" = "Пароль не совпадает";
 
 //ResetPasswordVC
 "res_title_label" = "Восстановление Пароля";

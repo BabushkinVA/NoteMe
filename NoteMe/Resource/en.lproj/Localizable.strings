@@ -30,6 +30,9 @@
 "reg_repeat_password_textField_placeholder" = "Enter Password";
 "reg_register_button" = "Register";
 "reg_have_account_button" = "I have an Account";
+"reg_wrong_e-mail" = "Wrong e-mail";
+"reg_wrong_password" = "Non-valid password";
+"reg_password_not_matches" = "Passwords doesn't match";
 
 //ResetPasswordVC
 "res_title_label" = "Reset Password";
