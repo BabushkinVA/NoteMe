@@ -11,10 +11,11 @@ import UIKit
 final class RegisterAssembler {
     private init() {}
     
-    static func make() -> UIViewController {
-        let presenter = RegisterPresenter(keyboardHelper: .init(),
-                                            registerService: TESTRegisterAuthService(),
-                                            inputValidator: InputValidator())
+    static func make(coordinator: RegisterCoordinatorProtocol) -> UIViewController {
+        let presenter = RegisterPresenter(coordinator: coordinator,
+                                          keyboardHelper: .init(),
+                                          registerService: TESTRegisterAuthService(),
+                                          inputValidator: InputValidator())
         let vc = RegisterVC(presenter: presenter)
         
         presenter.delegate = vc

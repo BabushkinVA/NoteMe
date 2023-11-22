@@ -20,6 +20,10 @@
 		DD6EA1262AF7813E004E0CF2 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1252AF7813E004E0CF2 /* RegisterVC.swift */; };
 		DD6EA1292AF78435004E0CF2 /* ResetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6EA1282AF78435004E0CF2 /* ResetVC.swift */; };
 		DD6EA12E2AF7E41E004E0CF2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD6EA1302AF7E41E004E0CF2 /* Localizable.strings */; };
+		DD6F0E2E2B0D124D006EB549 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F0E2D2B0D124D006EB549 /* AppCoordinator.swift */; };
+		DD6F0E312B0D129F006EB549 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F0E302B0D129F006EB549 /* Coordinator.swift */; };
+		DD6F0E342B0D1B71006EB549 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F0E332B0D1B71006EB549 /* LoginCoordinator.swift */; };
+		DD6F0E372B0D24C4006EB549 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F0E362B0D24C4006EB549 /* RegisterCoordinator.swift */; };
 		DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */; };
 		DD734FF42AF6BEE800A2C4F4 /* UIView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */; };
 		DD9E12EC2B0BAB8500EF5671 /* InputValidator+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E12EB2B0BAB8500EF5671 /* InputValidator+Register.swift */; };
@@ -55,6 +59,10 @@
 		DD6EA12F2AF7E41E004E0CF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DD6EA1312AF7E4C9004E0CF2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		DD6EA1322AF7E4C9004E0CF2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD6F0E2D2B0D124D006EB549 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DD6F0E302B0D129F006EB549 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DD6F0E332B0D1B71006EB549 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		DD6F0E362B0D24C4006EB549 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Styles.swift"; sourceTree = "<group>"; };
 		DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Styles.swift"; sourceTree = "<group>"; };
 		DD9E12EB2B0BAB8500EF5671 /* InputValidator+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputValidator+Register.swift"; sourceTree = "<group>"; };
@@ -134,10 +142,10 @@
 		DD6EA1242AF78122004E0CF2 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				DD6F0E352B0D24B6006EB549 /* Coordinator */,
 				DD9E12EA2B0BAB6E00EF5671 /* UseCases */,
 				DD6EA1252AF7813E004E0CF2 /* RegisterVC.swift */,
 				DD4EBADD2B03DB8500CBABB8 /* RegisterPresenter.swift */,
-				DD4EBADF2B03E13200CBABB8 /* RegisterAssembler.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -153,6 +161,32 @@
 			path = Reset;
 			sourceTree = "<group>";
 		};
+		DD6F0E2F2B0D1290006EB549 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DD6F0E302B0D129F006EB549 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DD6F0E322B0D1B58006EB549 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DD6F0E332B0D1B71006EB549 /* LoginCoordinator.swift */,
+				DDA7B63C2AFE97EE005FEFDB /* LoginAssembler.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DD6F0E352B0D24B6006EB549 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DD6F0E362B0D24C4006EB549 /* RegisterCoordinator.swift */,
+				DD4EBADF2B03E13200CBABB8 /* RegisterAssembler.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		DD9E12EA2B0BAB6E00EF5671 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,8 +198,9 @@
 		DDA7B63E2AFEA14C005FEFDB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DD4EBAE12B03E50C00CBABB8 /* KeyboardHelper */,
+				DD6F0E2F2B0D1290006EB549 /* Coordinator */,
 				DDA7B63F2AFEA165005FEFDB /* InputValidator */,
+				DD4EBAE12B03E50C00CBABB8 /* KeyboardHelper */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -221,6 +256,7 @@
 		DDB893F92AE82D08002CF4EE /* App */ = {
 			isa = PBXGroup;
 			children = (
+				DD6F0E2D2B0D124D006EB549 /* AppCoordinator.swift */,
 				DDB893E52AE824D0002CF4EE /* AppDelegate.swift */,
 				DDB893E72AE824D0002CF4EE /* SceneDelegate.swift */,
 			);
@@ -268,10 +304,10 @@
 		DDB894082AE83DBE002CF4EE /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				DD6F0E322B0D1B58006EB549 /* Coordinator */,
 				DDA7B6422AFEA7B7005FEFDB /* UseCases */,
 				DDB894092AE83DE1002CF4EE /* LoginVC.swift */,
 				DDA7B63A2AFE9780005FEFDB /* LoginVM.swift */,
-				DDA7B63C2AFE97EE005FEFDB /* LoginAssembler.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -360,6 +396,7 @@
 				DDB894002AE834F1002CF4EE /* UIFont+Consts.swift in Sources */,
 				DD734FF42AF6BEE800A2C4F4 /* UIView+Styles.swift in Sources */,
 				DDA7B63B2AFE9780005FEFDB /* LoginVM.swift in Sources */,
+				DD6F0E2E2B0D124D006EB549 /* AppCoordinator.swift in Sources */,
 				DD4EBAE02B03E13200CBABB8 /* RegisterAssembler.swift in Sources */,
 				DDB8940A2AE83DE1002CF4EE /* LoginVC.swift in Sources */,
 				DDA7B63D2AFE97EE005FEFDB /* LoginAssembler.swift in Sources */,
@@ -373,6 +410,8 @@
 				DD5C55BB2B0A6AD60080065D /* ResetVM.swift in Sources */,
 				DD5C55BD2B0A6AEA0080065D /* ResetAssembler.swift in Sources */,
 				DDA7B6412AFEA1B4005FEFDB /* InputValidator.swift in Sources */,
+				DD6F0E342B0D1B71006EB549 /* LoginCoordinator.swift in Sources */,
+				DD6F0E312B0D129F006EB549 /* Coordinator.swift in Sources */,
 				DD4EBAE32B03E53000CBABB8 /* KeyboardHelper.swift in Sources */,
 				DD4EBADE2B03DB8500CBABB8 /* RegisterPresenter.swift in Sources */,
 				DD5E1B662AF15F48004512AF /* View+Layer.swift in Sources */,
@@ -380,6 +419,7 @@
 				DD5C55C02B0A8D360080065D /* InputValidator+Reset.swift in Sources */,
 				DDB893E82AE824D0002CF4EE /* SceneDelegate.swift in Sources */,
 				DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */,
+				DD6F0E372B0D24C4006EB549 /* RegisterCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
