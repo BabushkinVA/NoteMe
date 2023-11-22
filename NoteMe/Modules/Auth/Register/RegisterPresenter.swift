@@ -24,6 +24,14 @@ protocol RegisterPresenterDelegate: AnyObject {
     func keyboardFrameChanged(_ frame: CGRect)
 }
 
+protocol RegisterKeyboardHelperUseCase {
+    @discardableResult
+    func onWillShow(_ handler: @escaping (CGRect) -> Void) -> Self
+    
+    @discardableResult
+    func onWillHide(_ handler: @escaping (CGRect) -> Void) -> Self
+}
+
 protocol RegisterAuthServiceUseCase {
     func register(email: String,
                password: String,
@@ -63,7 +71,7 @@ final class RegisterPresenter: RegisterPresenterProtocol {
             self?.delegate?.keyboardFrameChanged(frame)
         }
     }
-    
+
     func registerDidTap(email: String?,
                         password: String?,
                         repeatPassword: String?) {

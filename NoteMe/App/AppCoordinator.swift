@@ -20,6 +20,7 @@ final class AppCoordinator: Coordinator {
     }
     
     private func openAuthModule() {
+//        let coordinator = RegisterCoordinator()
         let coordinator = LoginCoordinator()
         children.append(coordinator)
         

@@ -41,6 +41,7 @@
 		DDB894022AE83827002CF4EE /* UIImage+Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB894012AE83827002CF4EE /* UIImage+Consts.swift */; };
 		DDB894052AE83AF2002CF4EE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DDB894042AE83AF2002CF4EE /* SnapKit */; };
 		DDB8940A2AE83DE1002CF4EE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB894092AE83DE1002CF4EE /* LoginVC.swift */; };
+		DDF3E94D2B0E090400CE23EA /* KeyboardHelper+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF3E94C2B0E090400CE23EA /* KeyboardHelper+Register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		DDB893FF2AE834F1002CF4EE /* UIFont+Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Consts.swift"; sourceTree = "<group>"; };
 		DDB894012AE83827002CF4EE /* UIImage+Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Consts.swift"; sourceTree = "<group>"; };
 		DDB894092AE83DE1002CF4EE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		DDF3E94C2B0E090400CE23EA /* KeyboardHelper+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardHelper+Register.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				DD9E12EB2B0BAB8500EF5671 /* InputValidator+Register.swift */,
+				DDF3E94C2B0E090400CE23EA /* KeyboardHelper+Register.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				DDB893E62AE824D0002CF4EE /* AppDelegate.swift in Sources */,
 				DDB893FD2AE82E78002CF4EE /* UIColor+Consts.swift in Sources */,
 				DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */,
+				DDF3E94D2B0E090400CE23EA /* KeyboardHelper+Register.swift in Sources */,
 				DD5C55BB2B0A6AD60080065D /* ResetVM.swift in Sources */,
 				DD5C55BD2B0A6AEA0080065D /* ResetAssembler.swift in Sources */,
 				DDA7B6412AFEA1B4005FEFDB /* InputValidator.swift in Sources */,
