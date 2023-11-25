@@ -9,7 +9,7 @@
 
     //MARK: - Auth group
 //LoginVC
-"auth_title_label" =  "Добро пожаловать!";
+"auth_title_label" =  "С возвращением!";
 "auth_e-mail_label" = "Электронная почта";
 "auth_e-mail_textField_placeholder" = "Введите электронную почту";
 "auth_password_label" = "Пароль";
@@ -21,7 +21,7 @@
 "auth_wrong_password" = "Недействительный пароль";
 
 //RegisterVC
-"reg_title_label" = "Введите данные регистрации";
+"reg_title_label" = "Добро пожаловать!";
 "reg_e-mail_label" = "Электронная почта";
 "reg_e-mail_textField_placeholder" = "Введите электронную почту";
 "reg_password_label" = "Пароль";

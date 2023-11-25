@@ -17,7 +17,7 @@ final class InputValidator {
     func validate(password: String?) -> Bool {
         return validate(string: password,
 //                        pattern: "ˆ(?=.*[A-Z])(?=.*[!@#$*])(?=.*[0-9])(?=.*[a-z]).{6,}$")
-                        pattern: "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&*!]).{6,}")
+                        pattern: "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&*!]).{4,}")
         
     }
     

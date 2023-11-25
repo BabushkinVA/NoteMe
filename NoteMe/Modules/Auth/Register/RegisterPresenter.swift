@@ -40,9 +40,6 @@ protocol RegisterAuthServiceUseCase {
 }
 
 final class RegisterPresenter: RegisterPresenterProtocol {
-    var catchEmailError: ((String?) -> Void)?
-    var catchPasswordError: ((String?) -> Void)?
-    var catchRepeatPasswordError: ((String?) -> Void)?
     
     weak var delegate: RegisterPresenterDelegate?
     
@@ -99,13 +96,13 @@ final class RegisterPresenter: RegisterPresenterProtocol {
                                  repeatPassword: String?) -> Bool {
         let isEmailValid = inputValidator.validate(email: email)
         let isPasswordValid = inputValidator.validate(password: password)
-        let isRepeatPasswordValid = inputValidator.validate(password: repeatPassword)
         
-        catchEmailError?(isEmailValid ? nil : "reg_wrong_e-mail".localized)
-        catchPasswordError?(isPasswordValid ? nil : "reg_wrong_password".localized)
-        catchRepeatPasswordError?(isRepeatPasswordValid ? nil : "reg_password_not_matches".localized)
-        
-        return isEmailValid && isPasswordValid && isRepeatPasswordValid
+        delegate?.setEmailError(error: isEmailValid ? nil : "reg_wrong_e-mail".localized)
+        delegate?.setPasswordError(error: isPasswordValid ? nil : "reg_wrong_password".localized)
+        delegate?.setRepeatPasswordError(error: repeatPassword == password ?
+                                  nil : "reg_password_not_matches".localized)
+
+        return isEmailValid && isPasswordValid && repeatPassword == password
     }
     
 }
