@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD4CF49B2B15F01C00BCDF65 /* ResetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4CF49A2B15F01C00BCDF65 /* ResetCoordinator.swift */; };
 		DD4EBADE2B03DB8500CBABB8 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBADD2B03DB8500CBABB8 /* RegisterPresenter.swift */; };
 		DD4EBAE02B03E13200CBABB8 /* RegisterAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBADF2B03E13200CBABB8 /* RegisterAssembler.swift */; };
 		DD4EBAE32B03E53000CBABB8 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBAE22B03E53000CBABB8 /* KeyboardHelper.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD4CF49A2B15F01C00BCDF65 /* ResetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetCoordinator.swift; sourceTree = "<group>"; };
 		DD4EBADD2B03DB8500CBABB8 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		DD4EBADF2B03E13200CBABB8 /* RegisterAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembler.swift; sourceTree = "<group>"; };
 		DD4EBAE22B03E53000CBABB8 /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
@@ -97,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD4CF4992B15F00100BCDF65 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DD4CF49A2B15F01C00BCDF65 /* ResetCoordinator.swift */,
+				DD5C55BC2B0A6AEA0080065D /* ResetAssembler.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		DD4EBAE12B03E50C00CBABB8 /* KeyboardHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,10 +166,10 @@
 		DD6EA1272AF78404004E0CF2 /* Reset */ = {
 			isa = PBXGroup;
 			children = (
+				DD4CF4992B15F00100BCDF65 /* Coordinator */,
 				DD5C55BE2B0A8D1A0080065D /* UseCases */,
 				DD6EA1282AF78435004E0CF2 /* ResetVC.swift */,
 				DD5C55BA2B0A6AD60080065D /* ResetVM.swift */,
-				DD5C55BC2B0A6AEA0080065D /* ResetAssembler.swift */,
 			);
 			path = Reset;
 			sourceTree = "<group>";
@@ -417,6 +428,7 @@
 				DD6F0E342B0D1B71006EB549 /* LoginCoordinator.swift in Sources */,
 				DD6F0E312B0D129F006EB549 /* Coordinator.swift in Sources */,
 				DD4EBAE32B03E53000CBABB8 /* KeyboardHelper.swift in Sources */,
+				DD4CF49B2B15F01C00BCDF65 /* ResetCoordinator.swift in Sources */,
 				DD4EBADE2B03DB8500CBABB8 /* RegisterPresenter.swift in Sources */,
 				DD5E1B662AF15F48004512AF /* View+Layer.swift in Sources */,
 				DD6EA1262AF7813E004E0CF2 /* RegisterVC.swift in Sources */,

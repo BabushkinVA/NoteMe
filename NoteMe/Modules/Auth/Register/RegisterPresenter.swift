@@ -62,10 +62,11 @@ final class RegisterPresenter: RegisterPresenterProtocol {
     }
     
     private func bind() {
-        keyboardHelper.onWillShow { [weak self] frame in
-            self?.delegate?.keyboardFrameChanged(frame)
-        }.onWillHide { [weak self] frame in
-            self?.delegate?.keyboardFrameChanged(frame)
+        keyboardHelper
+            .onWillShow { [weak delegate] in
+            delegate?.keyboardFrameChanged($0)
+        }.onWillHide { [weak delegate] in
+            delegate?.keyboardFrameChanged($0)
         }
     }
 
@@ -84,11 +85,11 @@ final class RegisterPresenter: RegisterPresenterProtocol {
             print(isSuccess)
             coordinator?.finish()
         }
-        coordinator?.finish()
     }
     
     func haveAccountDidTap() {
-        
+//        coordinator?.openLoginModule()
+        coordinator?.finish()
     }
     
     private func checkValidation(email: String?, 

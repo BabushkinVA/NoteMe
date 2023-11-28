@@ -8,10 +8,11 @@
 import UIKit
 import SnapKit
 
-protocol ResetViewModelProtocol {
+@objc protocol ResetViewModelProtocol {
     var catchEmailError: ((String?) -> Void)? { get set }
     
     func resetDidTap(email: String?)
+    @objc func cancelDidTap()
 }
 
 final class ResetVC: UIViewController {
@@ -29,7 +30,9 @@ final class ResetVC: UIViewController {
         .yellowRoundedButton("res_reset_button".localized)
         .withAction(self, #selector(resetDidTap))
     
-    private lazy var cancelButton: UIButton = .cancelButton()
+    private lazy var cancelButton: UIButton = 
+        .cancelButton()
+        .withAction(viewModel, #selector(ResetViewModelProtocol.cancelDidTap))
     
     private lazy var infoView: UIView = .shadowStyle()
     private lazy var infoLabel: UILabel =
