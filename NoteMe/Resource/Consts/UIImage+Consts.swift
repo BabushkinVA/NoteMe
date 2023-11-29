@@ -16,4 +16,17 @@ extension UIImage {
         
     }
     
+    //MARK: - Onboarding
+    enum Onboarding {
+        
+        static let onboard: UIImage = .init(named: "onboard")!
+        
+    }
+    
+    //MARK: - TabBarController
+    enum TabBarController {
+        static let home: UIImage = .init(named: "home")!
+        static let profile: UIImage = .init(named: "profile")!
+    }
+    
 }

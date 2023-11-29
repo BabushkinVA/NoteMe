@@ -16,18 +16,49 @@ final class AppCoordinator: Coordinator {
     }
     
     func startApp() {
-        openAuthModule()
+        
+        openTabBar()
+        
+//        //FIXME: - TEST CODE
+//        ParametersHelper.set(.authenticated, value: false)
+//        
+//        if ParametersHelper.get(.authenticated) {
+//            //open onboarding or mainApp
+//            //            window.rootViewController = nil
+//            openOnboardingModule()
+//        } else {
+//            openAuthModule()
+//        }
+    }
+    
+    private func openTabBar() {
+        let vc = TabBarController()
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
     }
     
     private func openAuthModule() {
-//        let coordinator = RegisterCoordinator()
         let coordinator = LoginCoordinator()
-//        let coordinator = ResetCoordinator()
         children.append(coordinator)
         
         coordinator.onDidFinish = { [weak self] coordinator in
-            self?.children.removeAll { $0 == coordinator }
-            self?.window.rootViewController = nil
+            self?.children.removeAll { coordinator == $0 }
+            self?.startApp()
+        }
+        
+        let vc = coordinator.start()
+        
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
+    }
+    
+    private func openOnboardingModule() {
+        let coordinator = OnboardFirstStepCoordinator()
+        children.append(coordinator)
+        
+        coordinator.onDidFinish = { [weak self] coordinator in
+            self?.children.removeAll { coordinator == $0 }
+            self?.startApp()
         }
         
         let vc = coordinator.start()

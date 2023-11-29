@@ -31,4 +31,14 @@ extension UILabel {
         
     }
     
+    static func onboardSelectionImageLabelStyle(_ text: String) -> UILabel {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.text = "\(text)"
+        label.font = .appFont.withSize(16.0)
+        label.textColor = .appText
+        
+        return label
+    }
+    
 }

@@ -41,5 +41,20 @@
 "res_reset_button" = "Сброс";
 "res_wrong_e-mail" = "Неверная электронная почта";
 
+    //MARK: - Onboard group
+//OnboardFirstStepVC
+"onboard_next_button" = "Далее";
+"onboard_first_title_label" = "Добро пожаловать!";
+"onboard_first_infolabel" = "NoteMe - это приложение, которое напоминает вам обо всём!";
 
+//OnboardSecondStepVC
+"onboard_done_button" = "Готово";
+"onboard_second_title_label" = "Разные варианты!";
+"onboard_second_calendar_label" = "Календарь";
+"onboard_second_location_label" = "Положение";
+"onboard_second_timer_label" = "Таймер";
 
+"onboard_second_infolabel" = "Вы можете использовать 3 типа напоминаний
+- Календарь - выберите дату, когда вы хотите получить напоминание.
+- Положение - выберите область на карте и вы получите напоминание как только окажетесь в ней.
+- Таймер - установите таймер и через указанный промежуток времени вы получите напоминание.";

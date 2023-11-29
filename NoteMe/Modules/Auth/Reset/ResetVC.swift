@@ -21,7 +21,7 @@ final class ResetVC: UIViewController {
     
     private lazy var logoContainer: UIView = UIView()
     private lazy var logoImageView: UIImageView =
-    UIImageView(image: .General.logo)
+        UIImageView(image: .General.logo)
     
     private lazy var titleLabel: UILabel =
         .titleLabelStyle("res_title_label".localized)
