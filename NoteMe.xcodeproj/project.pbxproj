@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD00B1F22B1CB1FB00749721 /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD00B1F12B1CB1FB00749721 /* TabBarAssembler.swift */; };
 		DD4632EB2B164B5A009275D3 /* ParametersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4632EA2B164B5A009275D3 /* ParametersHelper.swift */; };
 		DD4632F02B165474009275D3 /* OnboardFirstStepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4632EF2B165474009275D3 /* OnboardFirstStepVC.swift */; };
 		DD4632F22B165681009275D3 /* OnboardFirstStepVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4632F12B165681009275D3 /* OnboardFirstStepVM.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD00B1F12B1CB1FB00749721 /* TabBarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
 		DD4632EA2B164B5A009275D3 /* ParametersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersHelper.swift; sourceTree = "<group>"; };
 		DD4632EF2B165474009275D3 /* OnboardFirstStepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardFirstStepVC.swift; sourceTree = "<group>"; };
 		DD4632F12B165681009275D3 /* OnboardFirstStepVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardFirstStepVM.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				DD4632ED2B165432009275D3 /* OnboardFirstStep */,
+				DD4632F72B165AB9009275D3 /* OnboardSecondStep */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				DD46330A2B17C9CE009275D3 /* TabBarController.swift */,
+				DD00B1F12B1CB1FB00749721 /* TabBarAssembler.swift */,
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
@@ -357,7 +361,6 @@
 				DDB893F92AE82D08002CF4EE /* App */,
 				DD5E1B6A2AF16E9A004512AF /* Custom */,
 				DDB894062AE83D7B002CF4EE /* Modules */,
-				DD4633042B17C081009275D3 /* Main */,
 				DDB893FA2AE82DAD002CF4EE /* Resource */,
 				DDA7B63E2AFEA14C005FEFDB /* Services */,
 				DD5E1B672AF15FFE004512AF /* Styles */,
@@ -403,7 +406,7 @@
 			children = (
 				DDB894072AE83DAC002CF4EE /* Auth */,
 				DD4632EC2B16540A009275D3 /* Onboarding */,
-				DD4632F72B165AB9009275D3 /* OnboardSecondStep */,
+				DD4633042B17C081009275D3 /* Main */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				DDA7B63D2AFE97EE005FEFDB /* LoginAssembler.swift in Sources */,
 				DD4633002B165CD8009275D3 /* OnboardSecondStepCoordinator.swift in Sources */,
 				DD63C5842AF8F029007E6E35 /* String+Locale.swift in Sources */,
+				DD00B1F22B1CB1FB00749721 /* TabBarAssembler.swift in Sources */,
 				DD5E1B692AF1602A004512AF /* UIButton+Styles.swift in Sources */,
 				DDA7B6392AFE942D005FEFDB /* UIButton+Actions.swift in Sources */,
 				DD9E12EC2B0BAB8500EF5671 /* InputValidator+Register.swift in Sources */,

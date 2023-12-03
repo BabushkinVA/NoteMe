@@ -10,7 +10,8 @@ import UIKit
 final class OnboardFirstStepAssembler {
     private init() {}
     
-    static func  make(_ coordinator: OnboardFirstStepCoordinatorProtocol) -> UIViewController {
+    static func  make(_ coordinator: OnboardFirstStepCoordinatorProtocol) -> 
+        UIViewController {
         let vm = OnboardFirstStepVM(coordinator: coordinator)
         return OnboardFirstStepVC(viewModel: vm)
     }

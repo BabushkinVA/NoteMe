@@ -41,9 +41,7 @@ protocol RegisterAuthServiceUseCase {
 
 final class RegisterPresenter: RegisterPresenterProtocol {
     
-    weak var delegate: RegisterPresenterDelegate? {
-        didSet { bind() }
-    }
+    weak var delegate: RegisterPresenterDelegate?
     
     private weak var coordinator: RegisterCoordinatorProtocol?
     
@@ -59,14 +57,15 @@ final class RegisterPresenter: RegisterPresenterProtocol {
         self.keyboardHelper = keyboardHelper
         self.registerService = registerService
         self.inputValidator = inputValidator
+        
+        bind()
     }
     
     private func bind() {
-        keyboardHelper
-            .onWillShow { [weak delegate] in
-            delegate?.keyboardFrameChanged($0)
-        }.onWillHide { [weak delegate] in
-            delegate?.keyboardFrameChanged($0)
+        keyboardHelper.onWillShow { [weak self] frame in
+            self?.delegate?.keyboardFrameChanged(frame)
+        }.onWillHide { [weak self] frame in
+            self?.delegate?.keyboardFrameChanged(frame)
         }
     }
 

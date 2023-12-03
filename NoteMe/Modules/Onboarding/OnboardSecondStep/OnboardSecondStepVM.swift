@@ -8,7 +8,9 @@
 import UIKit
 
 protocol OnboardSecondStepCoordinatorProtocol: AnyObject {
-    func openNextStep()
+//    func finish()
+    func onboardingFinished()
+    func dismissedByUser()
 }
 
 final class OnboardSecondStepVM: OnboardSecondStepViewModelProtocol {
@@ -20,11 +22,11 @@ final class OnboardSecondStepVM: OnboardSecondStepViewModelProtocol {
     }
     
     func doneDidTap() {
-        coordinator?.openNextStep()
+        coordinator?.onboardingFinished()
     }
     
     func dismissedByUser() {
-//        coordinator?.dismissedByUser()
+        coordinator?.dismissedByUser()
     }
     
 }

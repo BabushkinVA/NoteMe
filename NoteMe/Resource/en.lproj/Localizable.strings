@@ -55,7 +55,6 @@
 "onboard_second_timer_label" = "Timer";
 
 "onboard_second_infolabel" = "You can use 3 types of notifications
-- Calendar - choose the date, when you want to receive notification.
-- Location - choose the region and notification will come after you enter it.
-- Timer - set timer and after selected period you will receive the notification.";
-
+• Calendar - choose the date, when you want to receive notification.
+• Location - choose the region and notification will come after you enter it.
+• Timer - set timer and after selected period you will receive the notification.";

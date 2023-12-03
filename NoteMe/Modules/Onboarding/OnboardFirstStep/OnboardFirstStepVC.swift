@@ -52,6 +52,7 @@ final class OnboardFirstStepVC: UIViewController {
     
     private func setupUI() {
         self.hideNavigationBar()
+        
         view.backgroundColor = .appBlack
         
         view.addSubview(contentView)

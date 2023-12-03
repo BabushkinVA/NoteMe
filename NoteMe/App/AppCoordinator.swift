@@ -17,23 +17,23 @@ final class AppCoordinator: Coordinator {
     
     func startApp() {
         
-        openTabBar()
+//        openTabBar()
         
-//        //FIXME: - TEST CODE
+        //FIXME: - TEST CODE
 //        ParametersHelper.set(.authenticated, value: false)
-//        
-//        if ParametersHelper.get(.authenticated) {
-//            //open onboarding or mainApp
-//            //            window.rootViewController = nil
-//            openOnboardingModule()
-//        } else {
-//            openAuthModule()
-//        }
+        
+        if ParametersHelper.get(.authenticated) {
+            //open onboarding or mainApp
+            //            window.rootViewController = nil
+            openOnboardingModule()
+        } else {
+            openAuthModule()
+        }
     }
     
     private func openTabBar() {
-        let vc = TabBarController()
-        window.rootViewController = vc
+        let tbc = TabBarController()
+        window.rootViewController = tbc
         window.makeKeyAndVisible()
     }
     
@@ -42,7 +42,7 @@ final class AppCoordinator: Coordinator {
         children.append(coordinator)
         
         coordinator.onDidFinish = { [weak self] coordinator in
-            self?.children.removeAll { coordinator == $0 }
+            self?.children.removeAll { $0 == coordinator }
             self?.startApp()
         }
         
@@ -57,7 +57,7 @@ final class AppCoordinator: Coordinator {
         children.append(coordinator)
         
         coordinator.onDidFinish = { [weak self] coordinator in
-            self?.children.removeAll { coordinator == $0 }
+            self?.children.removeAll { $0 == coordinator }
             self?.startApp()
         }
         

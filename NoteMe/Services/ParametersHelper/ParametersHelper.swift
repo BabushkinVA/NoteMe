@@ -24,4 +24,5 @@ final class ParametersHelper {
     static func get(_ key: ParameterKey) -> Bool {
         return ud.bool(forKey: key.rawValue)
     }
+    
 }

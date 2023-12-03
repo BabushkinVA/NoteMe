@@ -23,8 +23,22 @@ final class OnboardSecondStepVC: UIViewController {
                     #selector(OnboardSecondStepViewModelProtocol.doneDidTap))
     
     private lazy var infoView: UIView = .shadowStyle()
+    
     private lazy var infoLabel: UILabel =
         .infoLabelStyle("onboard_second_infolabel".localized)
+    
+    private func infoLabelBoldText() {
+        guard let text = infoLabel.text,
+                let font = infoLabel.font
+        else { return }
+
+        let boldSearchFont = UIFont.systemFont(ofSize: font.pointSize, weight: .bold)
+        infoLabel.attributedText = addBoldText(fullString: text as NSString,
+                                               boldPartsOfString:
+        ["• Calendar", "• Location", "• Timer",
+        "• Календарь", "• Положение", "• Таймер"],
+                                               boldFont: boldSearchFont)
+    }
     
     private lazy var titleLabel: UILabel =
         .titleLabelStyle("onboard_second_title_label".localized)
@@ -36,6 +50,7 @@ final class OnboardSecondStepVC: UIViewController {
     private lazy var onboardContainer: UIView = UIView()
     private lazy var onboardImageView: UIImageView =
         UIImageView(image: .Onboarding.onboard)
+    
     
     private lazy var calendarLabel: UILabel =
         .onboardSelectionImageLabelStyle("onboard_second_calendar_label".localized)
@@ -71,6 +86,8 @@ final class OnboardSecondStepVC: UIViewController {
     }
     
     private func setupUI() {
+        infoLabelBoldText()
+        
         view.backgroundColor = .appBlack
         
         view.addSubview(contentView)
@@ -137,8 +154,8 @@ final class OnboardSecondStepVC: UIViewController {
         
         onboardImageView.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.height.equalTo(157.0)
             make.width.equalTo(180.0)
+            make.height.equalTo(157.0)
         }
         
         calendarLabel.snp.makeConstraints { make in
@@ -159,4 +176,23 @@ final class OnboardSecondStepVC: UIViewController {
             make.left.equalToSuperview().inset(24.0)
         }
     }
+    
+}
+
+extension OnboardSecondStepVC {
+    
+    private func addBoldText(fullString: NSString,
+                     boldPartsOfString: Array<NSString>,
+                     boldFont: UIFont) -> NSAttributedString {
+        
+        let boldFontAttribute = [NSAttributedString.Key.font: boldFont]
+        let boldString = NSMutableAttributedString(string: fullString as String)
+        for i in 0 ..< boldPartsOfString.count {
+            boldString.addAttributes(
+                boldFontAttribute,
+                range: fullString.range(of: boldPartsOfString[i] as String))
+        }
+        return boldString
+    }
+    
 }
