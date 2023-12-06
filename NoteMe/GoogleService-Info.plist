@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyACtyHdOqb6nEkD_xxh0_GIzbQI7TS02Ns</string>
+	<key>GCM_SENDER_ID</key>
+	<string>368206630796</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.VadimBabushkin.NoteMe</string>
+	<key>PROJECT_ID</key>
+	<string>noteme-58c4c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>noteme-58c4c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:368206630796:ios:b13183fc6234adaca110a9</string>
+</dict>
+</plist>

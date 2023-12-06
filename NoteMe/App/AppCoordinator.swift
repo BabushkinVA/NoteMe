@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 final class AppCoordinator: Coordinator {
     
@@ -20,7 +21,7 @@ final class AppCoordinator: Coordinator {
 //        openTabBar()
         
         //FIXME: - TEST CODE
-//        ParametersHelper.set(.authenticated, value: false)
+        ParametersHelper.set(.authenticated, value: false)
         
         if ParametersHelper.get(.authenticated) {
             //open onboarding or mainApp

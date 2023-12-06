@@ -31,12 +31,14 @@ final class OnboardSecondStepVC: UIViewController {
         guard let text = infoLabel.text,
                 let font = infoLabel.font
         else { return }
+        
+        let boldWords: Array<NSString> = 
+            ["• Calendar", "• Location", "• Timer",
+            "• Календарь", "• Положение", "• Таймер"]
 
         let boldSearchFont = UIFont.systemFont(ofSize: font.pointSize, weight: .bold)
         infoLabel.attributedText = addBoldText(fullString: text as NSString,
-                                               boldPartsOfString:
-        ["• Calendar", "• Location", "• Timer",
-        "• Календарь", "• Положение", "• Таймер"],
+                                               boldPartsOfString: boldWords,
                                                boldFont: boldSearchFont)
     }
     

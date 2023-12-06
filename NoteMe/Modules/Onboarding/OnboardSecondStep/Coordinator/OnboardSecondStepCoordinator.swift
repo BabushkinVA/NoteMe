@@ -19,7 +19,8 @@ final class OnboardSecondStepCoordinator: Coordinator {
 extension OnboardSecondStepCoordinator: OnboardSecondStepCoordinatorProtocol {
     
     func onboardingFinished() {
-         TabBarAssembler.make()
+        
+
     }
     
     func dismissedByUser() {

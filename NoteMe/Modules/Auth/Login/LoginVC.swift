@@ -77,9 +77,9 @@ final class LoginVC: UIViewController {
         setupUI()
         setupConstraints()
         
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.emailTextField.errorText = "1.5sec"
-        }
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+//            self.emailTextField.errorText = "1.5sec"
+//        }
     }
     
     private func bind() {

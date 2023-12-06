@@ -22,6 +22,7 @@ final class OnboardSecondStepVM: OnboardSecondStepViewModelProtocol {
     }
     
     func doneDidTap() {
+        print("Done tapped")
         coordinator?.onboardingFinished()
     }
     

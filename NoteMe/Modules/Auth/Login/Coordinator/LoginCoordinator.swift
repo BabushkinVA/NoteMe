@@ -50,4 +50,8 @@ extension LoginCoordinator: LoginCoordinatorProtocol {
         rootVC?.present(vc, animated: true)
     }
     
+    func showAlert(_ alert: UIAlertController) {
+        rootVC?.present(alert, animated: true)
+    }
+    
 }
