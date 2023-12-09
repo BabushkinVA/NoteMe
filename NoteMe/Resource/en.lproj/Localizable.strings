@@ -17,8 +17,9 @@
 "auth_forgot_password_button" = "Forgot Password";
 "auth_login_button" = "Login";
 "auth_new_account_button" = "New Account";
-"auth_wrong_e-mail" = "Wrong e-mail";
-"auth_wrong_password" = "Non-valid password";
+"auth_alert_title" = "Error!";
+"auth_alert_message" = "Email or password invalid or doesn't exist";
+"auth_alert_okTitle" = "Ok";
 
 //RegisterVC
 "reg_title_label" = "Nice to meet you!";
@@ -30,8 +31,8 @@
 "reg_repeat_password_textField_placeholder" = "Enter Password";
 "reg_register_button" = "Register";
 "reg_have_account_button" = "I have an Account";
-"reg_wrong_e-mail" = "Wrong e-mail";
-"reg_wrong_password" = "Non-valid password";
+"reg_wrong_e-mail" = "Wrong e-mail format";
+"reg_wrong_password" = "Password must contain at least six characters, including at least one number and includes both lower and uppercase letters and special characters";
 "reg_password_not_matches" = "Passwords doesn't match";
 
 //ResetPasswordVC

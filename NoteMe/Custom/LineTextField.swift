@@ -38,6 +38,7 @@ final class LineTextField: UIView {
         label.font = .appBoldFont.withSize(12.0)
         label.textColor = .appRed
         label.textAlignment = .left
+        label.numberOfLines = 0
         return label
     }()
     

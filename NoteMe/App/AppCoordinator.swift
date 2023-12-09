@@ -18,15 +18,16 @@ final class AppCoordinator: Coordinator {
     
     func startApp() {
         
-//        openTabBar()
-        
-        //FIXME: - TEST CODE
-        ParametersHelper.set(.authenticated, value: false)
+//        //FIXME: - TEST CODE
+//        ParametersHelper.set(.authenticated, value: false)
+//        ParametersHelper.set(.onboarded, value: false)
         
         if ParametersHelper.get(.authenticated) {
-            //open onboarding or mainApp
-            //            window.rootViewController = nil
-            openOnboardingModule()
+            if ParametersHelper.get(.onboarded) {
+                openTabBar()
+            } else {
+                openOnboardingModule()
+            }
         } else {
             openAuthModule()
         }

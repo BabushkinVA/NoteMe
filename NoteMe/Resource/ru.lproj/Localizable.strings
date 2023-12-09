@@ -17,8 +17,9 @@
 "auth_forgot_password_button" = "Восстановить Доступ";
 "auth_login_button" = "Войти";
 "auth_new_account_button" = "Новый Аккаунт";
-"auth_wrong_e-mail" = "Неверная электронная почта";
-"auth_wrong_password" = "Недействительный пароль";
+"auth_alert_title" = "Ошибка!";
+"auth_alert_message" = "Электронная почта или пароль неправильные либо не существуют";
+"auth_alert_okTitle" = "Хорошо";
 
 //RegisterVC
 "reg_title_label" = "Добро пожаловать!";
@@ -30,8 +31,8 @@
 "reg_repeat_password_textField_placeholder" = "Повторите пароль";
 "reg_register_button" = "Регистрация";
 "reg_have_account_button" = "У меня уже есть Аккаунт";
-"reg_wrong_e-mail" = "Неверная электронная почта";
-"reg_wrong_password" = "Недействительный пароль";
+"reg_wrong_e-mail" = "Неверный формат электронной почты";
+"reg_wrong_password" = "Пароль должен содержать минимум 1 заглавную букву, 1 прописную, одну цифру, один символ, и должен состоять минимум из 6 символов";
 "reg_password_not_matches" = "Пароль не совпадает";
 
 //ResetPasswordVC

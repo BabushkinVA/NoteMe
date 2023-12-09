@@ -23,6 +23,7 @@ final class OnboardSecondStepVM: OnboardSecondStepViewModelProtocol {
     
     func doneDidTap() {
         print("Done tapped")
+//        ParametersHelper.set(.onboarded, value: true)
         coordinator?.onboardingFinished()
     }
     

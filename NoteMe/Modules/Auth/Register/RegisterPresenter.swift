@@ -87,7 +87,6 @@ final class RegisterPresenter: RegisterPresenterProtocol {
     }
     
     func haveAccountDidTap() {
-//        coordinator?.openLoginModule()
         coordinator?.finish()
     }
     

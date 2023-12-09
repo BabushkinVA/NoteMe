@@ -12,8 +12,7 @@ extension AuthService: RegisterAuthServiceUseCase {
                   password: String,
                   repeatPassword: String,
                   completion: @escaping (Bool) -> Void) {
-        self.signIn(email: email, password: password, completion: completion)
+        self.createUser(email: email, password: password, completion: completion)
     }
-    
     
 }

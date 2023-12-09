@@ -12,8 +12,6 @@ final class ResetCoordinator: Coordinator {
     override func start() -> UIViewController {
         return ResetAssembler.make(coordinator: self)
     }
-
-    
     
 }
 

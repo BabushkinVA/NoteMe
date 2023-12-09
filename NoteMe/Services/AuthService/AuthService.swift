@@ -23,7 +23,15 @@ final class AuthService {
         }
     }
     
-    func resetIn(email: String,
+    func createUser(email: String,
+                  password: String,
+                  completion: @escaping (Bool) -> Void) {
+        firebase.createUser(withEmail: email, password: password) { result, error in
+            completion(error == nil)
+        }
+    }
+    
+    func resetPassw(email: String,
                  completion: @escaping (Bool) -> Void) {
         firebase.sendPasswordReset(withEmail: email) { error in
             completion(error == nil)

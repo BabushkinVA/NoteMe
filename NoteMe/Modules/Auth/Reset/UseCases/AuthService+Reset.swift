@@ -9,6 +9,6 @@ import Foundation
 
 extension AuthService: ResetAuthServiceUseCase {
     func resetPassword(email: String, completion: @escaping (Bool) -> Void) {
-        self.resetIn(email: email, completion: completion)
+        self.resetPassw(email: email, completion: completion)
     }
 }

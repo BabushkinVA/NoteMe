@@ -49,7 +49,6 @@
 		DDA7B63B2AFE9780005FEFDB /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA7B63A2AFE9780005FEFDB /* LoginVM.swift */; };
 		DDA7B63D2AFE97EE005FEFDB /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA7B63C2AFE97EE005FEFDB /* LoginAssembler.swift */; };
 		DDA7B6412AFEA1B4005FEFDB /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA7B6402AFEA1B4005FEFDB /* InputValidator.swift */; };
-		DDA7B6442AFEA815005FEFDB /* InputValidator+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA7B6432AFEA815005FEFDB /* InputValidator+Login.swift */; };
 		DDB893E62AE824D0002CF4EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB893E52AE824D0002CF4EE /* AppDelegate.swift */; };
 		DDB893E82AE824D0002CF4EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB893E72AE824D0002CF4EE /* SceneDelegate.swift */; };
 		DDB893F22AE824D1002CF4EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB893F02AE824D1002CF4EE /* LaunchScreen.storyboard */; };
@@ -117,7 +116,6 @@
 		DDA7B63A2AFE9780005FEFDB /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		DDA7B63C2AFE97EE005FEFDB /* LoginAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
 		DDA7B6402AFEA1B4005FEFDB /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
-		DDA7B6432AFEA815005FEFDB /* InputValidator+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputValidator+Login.swift"; sourceTree = "<group>"; };
 		DDB893E22AE824D0002CF4EE /* NoteMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB893E52AE824D0002CF4EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB893E72AE824D0002CF4EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -364,7 +362,6 @@
 		DDA7B6422AFEA7B7005FEFDB /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				DDA7B6432AFEA815005FEFDB /* InputValidator+Login.swift */,
 				DDDF42052B209A1D00D183F4 /* AuthService+Login.swift */,
 			);
 			path = UseCases;
@@ -571,7 +568,6 @@
 				DD4632F42B165725009275D3 /* OnboardFirstStepAssembler.swift in Sources */,
 				DD6EA1292AF78435004E0CF2 /* ResetVC.swift in Sources */,
 				DD46330B2B17C9CE009275D3 /* TabBarController.swift in Sources */,
-				DDA7B6442AFEA815005FEFDB /* InputValidator+Login.swift in Sources */,
 				DDDF42092B209CD700D183F4 /* AlertBuilder.swift in Sources */,
 				DD4632FE2B165C57009275D3 /* OnboardSecondStepAssembler.swift in Sources */,
 				DDB894002AE834F1002CF4EE /* UIFont+Consts.swift in Sources */,

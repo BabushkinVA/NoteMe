@@ -9,12 +9,13 @@ import UIKit
 import SnapKit
 
 @objc protocol LoginViewModelProtocol: AnyObject {
-    var catchEmailError: ((String?) -> Void)? { get set }
-    var catchPasswordError: ((String?) -> Void)? { get set }
-    
     func loginDidTap(email: String?, password: String?)
     @objc func newAccountDidTap()
     func forgotPasswordDidTap(email: String?)
+}
+
+protocol LoginKeyboardHelper {
+    func keyboardFrameChanged(_ frame: CGRect)
 }
 
 final class LoginVC: UIViewController {
@@ -23,9 +24,9 @@ final class LoginVC: UIViewController {
     
     private lazy var logoContainer: UIView = UIView()
     private lazy var logoImageView: UIImageView =
-        UIImageView(image: .General.logo)
-
-    private lazy var titleLabel: UILabel = 
+    UIImageView(image: .General.logo)
+    
+    private lazy var titleLabel: UILabel =
         .titleLabelStyle("auth_title_label".localized)
     
     private lazy var loginButton: UIButton =
@@ -58,12 +59,15 @@ final class LoginVC: UIViewController {
     }()
     
     private var viewModel: LoginViewModelProtocol
+    private let keyboardHelper: KeyboardHelper
     
-    init(viewModel: LoginViewModelProtocol) {
+    init(viewModel: LoginViewModelProtocol,
+         keyboardHelper: KeyboardHelper) {
         self.viewModel = viewModel
+        self.keyboardHelper = keyboardHelper
         super.init(nibName: nil, bundle: nil)
         
-        bind()
+
     }
     
     required init?(coder: NSCoder) {
@@ -71,26 +75,27 @@ final class LoginVC: UIViewController {
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bind()
         setupUI()
         setupConstraints()
         
-//    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-//            self.emailTextField.errorText = "1.5sec"
-//        }
+        //    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+        //            self.emailTextField.errorText = "1.5sec"
+        //        }
     }
     
     private func bind() {
-        viewModel.catchEmailError = { errorText in
-            self.emailTextField.errorText = errorText
-        }
-        
-        viewModel.catchPasswordError = {
-            self.passwordTextField.errorText = $0
+        keyboardHelper.onWillShow { [weak self] frame in
+            self?.keyboardFrameChanged(frame)
+        }.onWillHide { [weak self] frame in
+            self?.keyboardFrameChanged(frame)
         }
     }
+
     
     private func setupUI() {
         view.backgroundColor = .appBlack
@@ -110,7 +115,7 @@ final class LoginVC: UIViewController {
         infoView.addSubview(emailTextField)
         infoView.addSubview(passwordTextField)
     }
-    
+        
     private func setupConstraints() {
         contentView.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview()
@@ -179,4 +184,28 @@ final class LoginVC: UIViewController {
         viewModel.forgotPasswordDidTap(email: emailTextField.text)
     }
     
+}
+
+extension LoginVC: LoginKeyboardHelper {
+    func keyboardFrameChanged(_ frame: CGRect) {
+        let maxY = infoView.frame.maxY + contentView.frame.minY + 16.0
+        let keyboardY = frame.minY
+        
+        if maxY > keyboardY {
+            let diff = maxY - keyboardY
+            UIView.animate(withDuration: 0.25) {
+                self.infoView.snp.updateConstraints { make in
+                    make.centerY.equalToSuperview().offset(-diff)
+                }
+                self.view.layoutIfNeeded()
+            }
+        } else {
+            UIView.animate(withDuration: 0.25) {
+                self.infoView.snp.updateConstraints { make in
+                    make.centerY.equalToSuperview()
+                }
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
 }
