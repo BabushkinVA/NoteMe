@@ -26,6 +26,8 @@
 		DD4EBADE2B03DB8500CBABB8 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBADD2B03DB8500CBABB8 /* RegisterPresenter.swift */; };
 		DD4EBAE02B03E13200CBABB8 /* RegisterAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBADF2B03E13200CBABB8 /* RegisterAssembler.swift */; };
 		DD4EBAE32B03E53000CBABB8 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBAE22B03E53000CBABB8 /* KeyboardHelper.swift */; };
+		DD53AE812B24A86600D78D24 /* AuthService+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53AE802B24A86600D78D24 /* AuthService+Register.swift */; };
+		DD53AE832B24A94C00D78D24 /* AuthService+Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD53AE822B24A94C00D78D24 /* AuthService+Reset.swift */; };
 		DD5C55BB2B0A6AD60080065D /* ResetVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C55BA2B0A6AD60080065D /* ResetVM.swift */; };
 		DD5C55BD2B0A6AEA0080065D /* ResetAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C55BC2B0A6AEA0080065D /* ResetAssembler.swift */; };
 		DD5C55C02B0A8D360080065D /* InputValidator+Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C55BF2B0A8D360080065D /* InputValidator+Reset.swift */; };
@@ -90,6 +92,8 @@
 		DD4EBADD2B03DB8500CBABB8 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		DD4EBADF2B03E13200CBABB8 /* RegisterAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembler.swift; sourceTree = "<group>"; };
 		DD4EBAE22B03E53000CBABB8 /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
+		DD53AE802B24A86600D78D24 /* AuthService+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthService+Register.swift"; sourceTree = "<group>"; };
+		DD53AE822B24A94C00D78D24 /* AuthService+Reset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthService+Reset.swift"; sourceTree = "<group>"; };
 		DD5C55BA2B0A6AD60080065D /* ResetVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetVM.swift; sourceTree = "<group>"; };
 		DD5C55BC2B0A6AEA0080065D /* ResetAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetAssembler.swift; sourceTree = "<group>"; };
 		DD5C55BF2B0A8D360080065D /* InputValidator+Reset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputValidator+Reset.swift"; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				DD5C55BF2B0A8D360080065D /* InputValidator+Reset.swift */,
+				DD53AE822B24A94C00D78D24 /* AuthService+Reset.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 		DD9E12EA2B0BAB6E00EF5671 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				DD53AE802B24A86600D78D24 /* AuthService+Register.swift */,
 				DD9E12EB2B0BAB8500EF5671 /* InputValidator+Register.swift */,
 				DDF3E94C2B0E090400CE23EA /* KeyboardHelper+Register.swift */,
 			);
@@ -599,8 +605,10 @@
 				DD4632F22B165681009275D3 /* OnboardFirstStepVM.swift in Sources */,
 				DD4EBAE32B03E53000CBABB8 /* KeyboardHelper.swift in Sources */,
 				DD4CF49B2B15F01C00BCDF65 /* ResetCoordinator.swift in Sources */,
+				DD53AE812B24A86600D78D24 /* AuthService+Register.swift in Sources */,
 				DD4632F62B1657D2009275D3 /* OnboardFirstStepCoordinator.swift in Sources */,
 				DD4EBADE2B03DB8500CBABB8 /* RegisterPresenter.swift in Sources */,
+				DD53AE832B24A94C00D78D24 /* AuthService+Reset.swift in Sources */,
 				DD5E1B662AF15F48004512AF /* View+Layer.swift in Sources */,
 				DD4632FC2B165AFA009275D3 /* OnboardSecondStepVM.swift in Sources */,
 				DDDF42062B209A1D00D183F4 /* AuthService+Login.swift in Sources */,
