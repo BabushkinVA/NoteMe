@@ -12,7 +12,6 @@ protocol LoginCoordinatorProtocol: AnyObject {
     func finish()
     func openRegisterModule()
     func openResetModule()
-    func showAlert(_ alert: UIAlertController)
 }
 
 protocol LoginAuthServiceUseCase {
@@ -21,36 +20,41 @@ protocol LoginAuthServiceUseCase {
                completion: @escaping (Bool) -> Void)
 }
 
+protocol LoginAlertServiceUseCase {
+    func showAlert(title: String, message: String, okTitle: String)
+}
+
 final class LoginVM: LoginViewModelProtocol {
     private weak var coordinator: LoginCoordinatorProtocol?
     
     private let authService: LoginAuthServiceUseCase
+    private let alertService: LoginAlertServiceUseCase
     
     init(coordinator: LoginCoordinatorProtocol,
-         authService: LoginAuthServiceUseCase) {
+         authService: LoginAuthServiceUseCase,
+         alertService: LoginAlertServiceUseCase) {
         
         self.coordinator = coordinator
         self.authService = authService
-}
-
+        self.alertService = alertService
+    }
+    
     func loginDidTap(email: String?, password: String?) {
         guard let email, let password
         else { return }
         
         authService.login(email: email,
-                          password: password) { [weak coordinator] isSuccess in
+                          password: password) { [weak self] isSuccess in
             print(isSuccess)
             if isSuccess {
                 //FIXME: uncomment
 //                ParametersHelper.set(.authenticated, value: true)
-                coordinator?.finish()
+                self?.coordinator?.finish()
             } else {
-                let alertVC = AlertBuilder.build(
+                self?.alertService.showAlert(
                     title: "auth_alert_title".localized,
                     message: "auth_alert_message".localized,
                     okTitle: "auth_alert_okTitle".localized)
-                
-                coordinator?.showAlert(alertVC)
             }
         }
     }

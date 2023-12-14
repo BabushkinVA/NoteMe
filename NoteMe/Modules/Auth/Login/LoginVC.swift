@@ -96,7 +96,6 @@ final class LoginVC: UIViewController {
         }
     }
 
-    
     private func setupUI() {
         view.backgroundColor = .appBlack
         

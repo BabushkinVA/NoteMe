@@ -24,7 +24,7 @@ extension UIImage {
     }
     
     //MARK: - TabBarController
-    enum TabBarController {
+    enum TabBar {
         static let home: UIImage = .init(named: "home")!
         static let profile: UIImage = .init(named: "profile")!
     }

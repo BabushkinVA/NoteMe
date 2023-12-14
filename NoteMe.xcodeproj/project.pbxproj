@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD00B1F22B1CB1FB00749721 /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD00B1F12B1CB1FB00749721 /* TabBarAssembler.swift */; };
+		DD00B1F22B1CB1FB00749721 /* MainTabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD00B1F12B1CB1FB00749721 /* MainTabBarAssembler.swift */; };
+		DD24613F2B2B0CA800DB5118 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD24613E2B2B0CA800DB5118 /* AlertVC.swift */; };
+		DD2461412B2B162500DB5118 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2461402B2B162500DB5118 /* AlertService.swift */; };
+		DD2461432B2B26CF00DB5118 /* AlertService+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2461422B2B26CF00DB5118 /* AlertService+Login.swift */; };
+		DD2461462B2B33EF00DB5118 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2461452B2B33EF00DB5118 /* MainTabBarVC.swift */; };
+		DD2461482B2B34D900DB5118 /* MainTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2461472B2B34D900DB5118 /* MainTabBarCoordinator.swift */; };
+		DD24614C2B2B364900DB5118 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD24614B2B2B364800DB5118 /* HomeVC.swift */; };
+		DD24614E2B2B366C00DB5118 /* HomeAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD24614D2B2B366C00DB5118 /* HomeAssembler.swift */; };
+		DD2461502B2B36AA00DB5118 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD24614F2B2B36AA00DB5118 /* HomeCoordinator.swift */; };
 		DD4632EB2B164B5A009275D3 /* ParametersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4632EA2B164B5A009275D3 /* ParametersHelper.swift */; };
 		DD4632F02B165474009275D3 /* OnboardFirstStepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4632EF2B165474009275D3 /* OnboardFirstStepVC.swift */; };
 		DD4632F22B165681009275D3 /* OnboardFirstStepVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4632F12B165681009275D3 /* OnboardFirstStepVM.swift */; };
@@ -18,9 +26,6 @@
 		DD4632FE2B165C57009275D3 /* OnboardSecondStepAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4632FD2B165C57009275D3 /* OnboardSecondStepAssembler.swift */; };
 		DD4633002B165CD8009275D3 /* OnboardSecondStepCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4632FF2B165CD8009275D3 /* OnboardSecondStepCoordinator.swift */; };
 		DD4633022B1765B1009275D3 /* UIVC+hideNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4633012B1765B1009275D3 /* UIVC+hideNC.swift */; };
-		DD4633062B17C092009275D3 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4633052B17C092009275D3 /* HomeVC.swift */; };
-		DD4633082B17C4F0009275D3 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4633072B17C4F0009275D3 /* ProfileVC.swift */; };
-		DD46330B2B17C9CE009275D3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD46330A2B17C9CE009275D3 /* TabBarController.swift */; };
 		DD46330D2B17D1A7009275D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD46330C2B17D1A7009275D3 /* Assets.xcassets */; };
 		DD4CF49B2B15F01C00BCDF65 /* ResetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4CF49A2B15F01C00BCDF65 /* ResetCoordinator.swift */; };
 		DD4EBADE2B03DB8500CBABB8 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EBADD2B03DB8500CBABB8 /* RegisterPresenter.swift */; };
@@ -72,7 +77,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DD00B1F12B1CB1FB00749721 /* TabBarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
+		DD00B1F12B1CB1FB00749721 /* MainTabBarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarAssembler.swift; sourceTree = "<group>"; };
+		DD24613E2B2B0CA800DB5118 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
+		DD2461402B2B162500DB5118 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		DD2461422B2B26CF00DB5118 /* AlertService+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertService+Login.swift"; sourceTree = "<group>"; };
+		DD2461452B2B33EF00DB5118 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
+		DD2461472B2B34D900DB5118 /* MainTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarCoordinator.swift; sourceTree = "<group>"; };
+		DD24614B2B2B364800DB5118 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		DD24614D2B2B366C00DB5118 /* HomeAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembler.swift; sourceTree = "<group>"; };
+		DD24614F2B2B36AA00DB5118 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		DD4632EA2B164B5A009275D3 /* ParametersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersHelper.swift; sourceTree = "<group>"; };
 		DD4632EF2B165474009275D3 /* OnboardFirstStepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardFirstStepVC.swift; sourceTree = "<group>"; };
 		DD4632F12B165681009275D3 /* OnboardFirstStepVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardFirstStepVM.swift; sourceTree = "<group>"; };
@@ -83,9 +96,6 @@
 		DD4632FD2B165C57009275D3 /* OnboardSecondStepAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSecondStepAssembler.swift; sourceTree = "<group>"; };
 		DD4632FF2B165CD8009275D3 /* OnboardSecondStepCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSecondStepCoordinator.swift; sourceTree = "<group>"; };
 		DD4633012B1765B1009275D3 /* UIVC+hideNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVC+hideNC.swift"; sourceTree = "<group>"; };
-		DD4633052B17C092009275D3 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		DD4633072B17C4F0009275D3 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		DD46330A2B17C9CE009275D3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DD46330C2B17D1A7009275D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../NoteMe COPY 25.11 before Home coordinator/NoteMe copy/NoteMe/Resource/Assets.xcassets"; sourceTree = "<group>"; };
 		DD4CF49A2B15F01C00BCDF65 /* ResetCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetCoordinator.swift; sourceTree = "<group>"; };
 		DD4EBADD2B03DB8500CBABB8 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
@@ -151,6 +161,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD24613D2B2B0C9900DB5118 /* AlertVC */ = {
+			isa = PBXGroup;
+			children = (
+				DD24613E2B2B0CA800DB5118 /* AlertVC.swift */,
+			);
+			path = AlertVC;
+			sourceTree = "<group>";
+		};
+		DD2461442B2B339C00DB5118 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DD00B1F12B1CB1FB00749721 /* MainTabBarAssembler.swift */,
+				DD2461472B2B34D900DB5118 /* MainTabBarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DD2461492B2B360C00DB5118 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DD24614A2B2B361300DB5118 /* Coordinator */,
+				DD24614B2B2B364800DB5118 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DD24614A2B2B361300DB5118 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DD24614D2B2B366C00DB5118 /* HomeAssembler.swift */,
+				DD24614F2B2B36AA00DB5118 /* HomeCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		DD4632E92B164B48009275D3 /* ParametersHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,23 +251,13 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		DD4633042B17C081009275D3 /* Main */ = {
+		DD4633042B17C081009275D3 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				DD4633092B17C9AE009275D3 /* TabBarController */,
-				DD4633052B17C092009275D3 /* HomeVC.swift */,
-				DD4633072B17C4F0009275D3 /* ProfileVC.swift */,
+				DD2461442B2B339C00DB5118 /* Coordinator */,
+				DD2461452B2B33EF00DB5118 /* MainTabBarVC.swift */,
 			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		DD4633092B17C9AE009275D3 /* TabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				DD46330A2B17C9CE009275D3 /* TabBarController.swift */,
-				DD00B1F12B1CB1FB00749721 /* TabBarAssembler.swift */,
-			);
-			path = TabBarController;
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		DD4CF4992B15F00100BCDF65 /* Coordinator */ = {
@@ -341,7 +376,7 @@
 		DDA7B63E2AFEA14C005FEFDB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DDDF42072B209CBD00D183F4 /* AlertBuilder */,
+				DDDF42072B209CBD00D183F4 /* AlertService */,
 				DDDF42022B20982700D183F4 /* AuthService */,
 				DD4632E92B164B48009275D3 /* ParametersHelper */,
 				DD6F0E2F2B0D1290006EB549 /* Coordinator */,
@@ -363,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				DDDF42052B209A1D00D183F4 /* AuthService+Login.swift */,
+				DD2461422B2B26CF00DB5118 /* AlertService+Login.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -433,9 +469,10 @@
 		DDB894062AE83D7B002CF4EE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DD2461492B2B360C00DB5118 /* Home */,
 				DDB894072AE83DAC002CF4EE /* Auth */,
 				DD4632EC2B16540A009275D3 /* Onboarding */,
-				DD4633042B17C081009275D3 /* Main */,
+				DD4633042B17C081009275D3 /* Tabbar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -469,12 +506,14 @@
 			path = AuthService;
 			sourceTree = "<group>";
 		};
-		DDDF42072B209CBD00D183F4 /* AlertBuilder */ = {
+		DDDF42072B209CBD00D183F4 /* AlertService */ = {
 			isa = PBXGroup;
 			children = (
+				DD24613D2B2B0C9900DB5118 /* AlertVC */,
 				DDDF42082B209CD700D183F4 /* AlertBuilder.swift */,
+				DD2461402B2B162500DB5118 /* AlertService.swift */,
 			);
-			path = AlertBuilder;
+			path = AlertService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -567,34 +606,36 @@
 				DDB894022AE83827002CF4EE /* UIImage+Consts.swift in Sources */,
 				DD4632F42B165725009275D3 /* OnboardFirstStepAssembler.swift in Sources */,
 				DD6EA1292AF78435004E0CF2 /* ResetVC.swift in Sources */,
-				DD46330B2B17C9CE009275D3 /* TabBarController.swift in Sources */,
 				DDDF42092B209CD700D183F4 /* AlertBuilder.swift in Sources */,
 				DD4632FE2B165C57009275D3 /* OnboardSecondStepAssembler.swift in Sources */,
+				DD2461432B2B26CF00DB5118 /* AlertService+Login.swift in Sources */,
 				DDB894002AE834F1002CF4EE /* UIFont+Consts.swift in Sources */,
-				DD4633062B17C092009275D3 /* HomeVC.swift in Sources */,
 				DD734FF42AF6BEE800A2C4F4 /* UIView+Styles.swift in Sources */,
 				DD4632EB2B164B5A009275D3 /* ParametersHelper.swift in Sources */,
 				DDA7B63B2AFE9780005FEFDB /* LoginVM.swift in Sources */,
 				DD6F0E2E2B0D124D006EB549 /* AppCoordinator.swift in Sources */,
 				DD4EBAE02B03E13200CBABB8 /* RegisterAssembler.swift in Sources */,
 				DDB8940A2AE83DE1002CF4EE /* LoginVC.swift in Sources */,
+				DD2461412B2B162500DB5118 /* AlertService.swift in Sources */,
 				DDA7B63D2AFE97EE005FEFDB /* LoginAssembler.swift in Sources */,
 				DD4633002B165CD8009275D3 /* OnboardSecondStepCoordinator.swift in Sources */,
 				DD63C5842AF8F029007E6E35 /* String+Locale.swift in Sources */,
-				DD00B1F22B1CB1FB00749721 /* TabBarAssembler.swift in Sources */,
+				DD00B1F22B1CB1FB00749721 /* MainTabBarAssembler.swift in Sources */,
 				DDDF42042B20983800D183F4 /* AuthService.swift in Sources */,
+				DD24614E2B2B366C00DB5118 /* HomeAssembler.swift in Sources */,
 				DD5E1B692AF1602A004512AF /* UIButton+Styles.swift in Sources */,
 				DDA7B6392AFE942D005FEFDB /* UIButton+Actions.swift in Sources */,
 				DD9E12EC2B0BAB8500EF5671 /* InputValidator+Register.swift in Sources */,
 				DD4632F02B165474009275D3 /* OnboardFirstStepVC.swift in Sources */,
-				DD4633082B17C4F0009275D3 /* ProfileVC.swift in Sources */,
 				DDB893E62AE824D0002CF4EE /* AppDelegate.swift in Sources */,
 				DDB893FD2AE82E78002CF4EE /* UIColor+Consts.swift in Sources */,
 				DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */,
 				DDF3E94D2B0E090400CE23EA /* KeyboardHelper+Register.swift in Sources */,
 				DD4633022B1765B1009275D3 /* UIVC+hideNC.swift in Sources */,
+				DD2461462B2B33EF00DB5118 /* MainTabBarVC.swift in Sources */,
 				DD5C55BB2B0A6AD60080065D /* ResetVM.swift in Sources */,
 				DD5C55BD2B0A6AEA0080065D /* ResetAssembler.swift in Sources */,
+				DD2461502B2B36AA00DB5118 /* HomeCoordinator.swift in Sources */,
 				DDA7B6412AFEA1B4005FEFDB /* InputValidator.swift in Sources */,
 				DD6F0E342B0D1B71006EB549 /* LoginCoordinator.swift in Sources */,
 				DD6F0E312B0D129F006EB549 /* Coordinator.swift in Sources */,
@@ -609,9 +650,12 @@
 				DD4632FC2B165AFA009275D3 /* OnboardSecondStepVM.swift in Sources */,
 				DDDF42062B209A1D00D183F4 /* AuthService+Login.swift in Sources */,
 				DD4632FA2B165AEF009275D3 /* OnboardSecondStepVC.swift in Sources */,
+				DD24613F2B2B0CA800DB5118 /* AlertVC.swift in Sources */,
 				DD6EA1262AF7813E004E0CF2 /* RegisterVC.swift in Sources */,
+				DD2461482B2B34D900DB5118 /* MainTabBarCoordinator.swift in Sources */,
 				DD5C55C02B0A8D360080065D /* InputValidator+Reset.swift in Sources */,
 				DDB893E82AE824D0002CF4EE /* SceneDelegate.swift in Sources */,
+				DD24614C2B2B364900DB5118 /* HomeVC.swift in Sources */,
 				DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */,
 				DD6F0E372B0D24C4006EB549 /* RegisterCoordinator.swift in Sources */,
 			);

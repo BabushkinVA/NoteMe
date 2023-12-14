@@ -10,33 +10,30 @@ import Firebase
 
 final class AppCoordinator: Coordinator {
     
+    static var windowScene: UIWindowScene?
+    
     private var window: UIWindow
     
     init(scene: UIWindowScene) {
         self.window = UIWindow(windowScene: scene)
+        Self.windowScene = scene
     }
     
     func startApp() {
-        
+        openMainApp()
 //        //FIXME: - TEST CODE
 //        ParametersHelper.set(.authenticated, value: false)
 //        ParametersHelper.set(.onboarded, value: false)
         
-        if ParametersHelper.get(.authenticated) {
-            if ParametersHelper.get(.onboarded) {
-                openTabBar()
-            } else {
-                openOnboardingModule()
-            }
-        } else {
-            openAuthModule()
-        }
-    }
-    
-    private func openTabBar() {
-        let tbc = TabBarController()
-        window.rootViewController = tbc
-        window.makeKeyAndVisible()
+//        if ParametersHelper.get(.authenticated) {
+//            if ParametersHelper.get(.onboarded) {
+//                
+//            } else {
+//                openOnboardingModule()
+//            }
+//        } else {
+//            openAuthModule()
+//        }
     }
     
     private func openAuthModule() {
@@ -56,6 +53,21 @@ final class AppCoordinator: Coordinator {
     
     private func openOnboardingModule() {
         let coordinator = OnboardFirstStepCoordinator()
+        children.append(coordinator)
+        
+        coordinator.onDidFinish = { [weak self] coordinator in
+            self?.children.removeAll { $0 == coordinator }
+            self?.startApp()
+        }
+        
+        let vc = coordinator.start()
+        
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
+    }
+    
+    private func openMainApp() {
+        let coordinator = MainTabBarCoordinator()
         children.append(coordinator)
         
         coordinator.onDidFinish = { [weak self] coordinator in
