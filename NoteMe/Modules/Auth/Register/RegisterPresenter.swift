@@ -41,6 +41,12 @@ protocol RegisterAuthServiceUseCase {
 
 final class RegisterPresenter: RegisterPresenterProtocol {
     
+    private enum L10n {
+        static let emailError: String = "reg_wrong_e-mail".localized
+        static let passwError: String = "reg_wrong_password".localized
+        static let matchPasswError: String = "reg_password_not_matches".localized
+    }
+    
     weak var delegate: RegisterPresenterDelegate?
     
     private weak var coordinator: RegisterCoordinatorProtocol?
@@ -96,10 +102,10 @@ final class RegisterPresenter: RegisterPresenterProtocol {
         let isEmailValid = inputValidator.validate(email: email)
         let isPasswordValid = inputValidator.validate(password: password)
         
-        delegate?.setEmailError(error: isEmailValid ? nil : "reg_wrong_e-mail".localized)
-        delegate?.setPasswordError(error: isPasswordValid ? nil : "reg_wrong_password".localized)
+        delegate?.setEmailError(error: isEmailValid ? nil : L10n.emailError)
+        delegate?.setPasswordError(error: isPasswordValid ? nil : L10n.passwError)
         delegate?.setRepeatPasswordError(error: repeatPassword == password ?
-                                  nil : "reg_password_not_matches".localized)
+                                         nil : L10n.matchPasswError)
 
         return isEmailValid && isPasswordValid && repeatPassword == password
     }

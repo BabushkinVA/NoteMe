@@ -20,7 +20,7 @@ final class AppCoordinator: Coordinator {
     }
     
     func startApp() {
-        openMainApp()
+        openOnboardingModule()
 //        //FIXME: - TEST CODE
 //        ParametersHelper.set(.authenticated, value: false)
 //        ParametersHelper.set(.onboarded, value: false)

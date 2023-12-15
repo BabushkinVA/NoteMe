@@ -41,6 +41,9 @@
 "res_e-mail_textField_placeholder" = "Enter E-mail";
 "res_reset_button" = "Reset";
 "res_wrong_e-mail" = "Wrong e-mail";
+"res_alert_title" = "Done!";
+"res_alert_message" = "We sent you a letter with further instructions.";
+"res_alert_okTitle" = "Ok";
 
     //MARK: - Onboard group
 //OnboardFirstStepVC
@@ -59,3 +62,8 @@
 • Calendar - choose the date, when you want to receive notification.
 • Location - choose the region and notification will come after you enter it.
 • Timer - set timer and after selected period you will receive the notification.";
+
+//MARK: - Main group
+//TabBar
+"home_item" = "Home";
+"profile_item" = "Profile";

@@ -13,7 +13,8 @@ final class ResetAssembler {
     static func make(coordinator: ResetCoordinatorProtocol) -> UIViewController {
         let vm = ResetVM(coordinator: coordinator,
                          resetService: AuthService(),
-                         inputValidator: InputValidator())
+                         inputValidator: InputValidator(),
+                         alertService: AlertService.current)
         return ResetVC(viewModel: vm)
     }
 }

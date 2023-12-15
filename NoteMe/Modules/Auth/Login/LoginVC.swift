@@ -20,6 +20,17 @@ protocol LoginKeyboardHelper {
 
 final class LoginVC: UIViewController {
     
+    private enum L10n {
+        static let titleLabel: String = "auth_title_label".localized
+        static let loginButton: String = "auth_login_button".localized
+        static let newAccountButton: String = "auth_new_account_button".localized
+        static let forgotPasswordButton: String = "auth_forgot_password_button".localized
+        static let emailLabel: String = "auth_e-mail_label".localized
+        static let emailPlaceholder: String = "auth_e-mail_textField_placeholder".localized
+        static let passwLabel: String = "auth_password_label".localized
+        static let passwPlaceholder: String = "auth_password_textField_placeholder".localized
+    }
+    
     private lazy var contentView: UIView = .contentViewStyle()
     
     private lazy var logoContainer: UIView = UIView()
@@ -27,34 +38,34 @@ final class LoginVC: UIViewController {
     UIImageView(image: .General.logo)
     
     private lazy var titleLabel: UILabel =
-        .titleLabelStyle("auth_title_label".localized)
+        .titleLabelStyle(L10n.titleLabel)
     
     private lazy var loginButton: UIButton =
-        .yellowRoundedButton("auth_login_button".localized)
+        .yellowRoundedButton(L10n.loginButton)
         .withAction(self, #selector(loginDidTap))
     
     private lazy var newAccountButton: UIButton =
-        .underlineYellowButton("auth_new_account_button".localized)
+        .underlineYellowButton(L10n.newAccountButton)
         .withAction(viewModel,
                     #selector(LoginViewModelProtocol.newAccountDidTap))
     
     private lazy var forgotPasswordButton: UIButton =
-        .underlineGrayButton("auth_forgot_password_button".localized)
+        .underlineGrayButton(L10n.forgotPasswordButton)
         .withAction(self, #selector(forgotPasswordDidTap))
     
     private lazy var infoView: UIView = .shadowStyle()
     
     private lazy var emailTextField: LineTextField = {
         let textField = LineTextField()
-        textField.title = "auth_e-mail_label".localized
-        textField.placeholder = "auth_e-mail_textField_placeholder".localized
+        textField.title = L10n.emailLabel
+        textField.placeholder = L10n.emailPlaceholder
         return textField
     }()
     
     private lazy var passwordTextField: LineTextField = {
         let textField = LineTextField()
-        textField.title = "auth_password_label".localized
-        textField.placeholder = "auth_password_textField_placeholder".localized
+        textField.title = L10n.passwLabel
+        textField.placeholder = L10n.passwPlaceholder
         return textField
     }()
     
@@ -66,15 +77,11 @@ final class LoginVC: UIViewController {
         self.viewModel = viewModel
         self.keyboardHelper = keyboardHelper
         super.init(nibName: nil, bundle: nil)
-        
-
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,10 +89,6 @@ final class LoginVC: UIViewController {
         bind()
         setupUI()
         setupConstraints()
-        
-        //    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-        //            self.emailTextField.errorText = "1.5sec"
-        //        }
     }
     
     private func bind() {
@@ -207,4 +210,5 @@ extension LoginVC: LoginKeyboardHelper {
             }
         }
     }
+    
 }

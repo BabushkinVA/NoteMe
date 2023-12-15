@@ -14,19 +14,25 @@ import SnapKit
 
 final class OnboardFirstStepVC: UIViewController {
     
+    private enum L10n {
+        static let nextButton: String = "onboard_next_button".localized
+        static let infoLabel: String = "onboard_first_infolabel".localized
+        static let titleLabel: String = "onboard_first_title_label".localized
+    }
+    
     private lazy var contentView: UIView = .contentViewStyle()
     
     private lazy var nextButton: UIButton =
-        .yellowRoundedButton("onboard_next_button".localized)
-        .withAction(viewModel, 
+        .yellowRoundedButton(L10n.nextButton)
+        .withAction(viewModel,
                     #selector(OnboardFirstStepViewModelProtocol.nextDidTap))
     
     private lazy var infoView: UIView = .shadowStyle()
     private lazy var infoLabel: UILabel =
-        .infoLabelStyle("onboard_first_infolabel".localized)
+        .infoLabelStyle(L10n.infoLabel)
     
     private lazy var titleLabel: UILabel =
-        .titleLabelStyle("onboard_first_title_label".localized)
+        .titleLabelStyle(L10n.titleLabel)
     
     private lazy var logoContainer: UIView = UIView()
     private lazy var logoImageView: 

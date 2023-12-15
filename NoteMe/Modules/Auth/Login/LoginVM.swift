@@ -25,6 +25,13 @@ protocol LoginAlertServiceUseCase {
 }
 
 final class LoginVM: LoginViewModelProtocol {
+    
+    private enum L10n {
+    static let alertTitle: String = "auth_alert_title".localized
+    static let alertMessage: String = "auth_alert_message".localized
+    static let alertOkTitle: String = "auth_alert_okTitle".localized
+    }
+    
     private weak var coordinator: LoginCoordinatorProtocol?
     
     private let authService: LoginAuthServiceUseCase
@@ -52,9 +59,9 @@ final class LoginVM: LoginViewModelProtocol {
                 self?.coordinator?.finish()
             } else {
                 self?.alertService.showAlert(
-                    title: "auth_alert_title".localized,
-                    message: "auth_alert_message".localized,
-                    okTitle: "auth_alert_okTitle".localized)
+                    title: L10n.alertTitle,
+                    message: L10n.alertMessage,
+                    okTitle: L10n.alertOkTitle)
             }
         }
     }

@@ -16,6 +16,13 @@ import SnapKit
 }
 
 final class ResetVC: UIViewController {
+    
+    private enum L10n {
+        static let titleLabel: String = "res_title_label".localized
+        static let resetButton: String = "res_reset_button".localized
+        static let infoLabel: String = "res_infolabel".localized
+        static let resEmailTextField: String = "res_e-mail_textField_placeholder".localized
+    }
 
     private lazy var contentView: UIView = .contentViewStyle()
     
@@ -24,10 +31,10 @@ final class ResetVC: UIViewController {
         UIImageView(image: .General.logo)
     
     private lazy var titleLabel: UILabel =
-        .titleLabelStyle("res_title_label".localized)
+        .titleLabelStyle(L10n.titleLabel)
     
     private lazy var resetButton: UIButton =
-        .yellowRoundedButton("res_reset_button".localized)
+        .yellowRoundedButton(L10n.resetButton)
         .withAction(self, #selector(resetDidTap))
     
     private lazy var cancelButton: UIButton = 
@@ -36,11 +43,11 @@ final class ResetVC: UIViewController {
     
     private lazy var infoView: UIView = .shadowStyle()
     private lazy var infoLabel: UILabel =
-        .infoLabelStyle("res_infolabel".localized)
+        .infoLabelStyle(L10n.infoLabel)
     
     private lazy var resetEmailTextField: LineTextField = {
         let textField = LineTextField()
-        textField.placeholder = "res_e-mail_textField_placeholder".localized
+        textField.placeholder = L10n.resEmailTextField
         return textField
     }()
     

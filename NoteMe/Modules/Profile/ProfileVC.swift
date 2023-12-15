@@ -1,5 +1,5 @@
 //
-//  HomeVC.swift
+//  ProfileVC.swift
 //  NoteMe
 //
 //  Created by Vadim on 14.12.23.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class HomeVC: UIViewController {
+final class ProfileVC: UIViewController {
     
     private enum L10n {
-        static let homeItem: String = "home_item".localized
+        static let profileItem: String = "profile_item".localized
     }
     
     init() {
@@ -25,16 +25,16 @@ final class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+       setupUI()
     }
     
     private func setupUI() {
-        view.backgroundColor = .appGray
+        view.backgroundColor = .systemGreen
     }
     
     private func setupTabBarItem() {
-        self.tabBarItem = UITabBarItem(title: L10n.homeItem,
-                                       image: .TabBar.home,
+        self.tabBarItem = UITabBarItem(title: L10n.profileItem,
+                                       image: .TabBar.profile,
                                        tag: .zero)
     }
     

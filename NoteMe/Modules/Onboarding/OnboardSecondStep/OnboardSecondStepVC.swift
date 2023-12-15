@@ -15,17 +15,27 @@ import SnapKit
 
 final class OnboardSecondStepVC: UIViewController {
     
+    private enum L10n {
+        static let doneButton: String = "onboard_done_button".localized
+        static let nextButton: String = "onboard_next_button".localized
+        static let infoLabel: String = "onboard_second_infolabel".localized
+        static let titleLabel: String = "onboard_second_title_label".localized
+        static let calendarLabel: String = "onboard_second_calendar_label".localized
+        static let locationLabel: String = "onboard_second_location_label".localized
+        static let timerLabel: String = "onboard_second_timer_label".localized
+    }
+    
     private lazy var contentView: UIView = .contentViewStyle()
     
     private lazy var doneButton: UIButton = 
-        .yellowRoundedButton("onboard_done_button".localized)
+        .yellowRoundedButton(L10n.doneButton)
         .withAction(viewModel,
                     #selector(OnboardSecondStepViewModelProtocol.doneDidTap))
     
     private lazy var infoView: UIView = .shadowStyle()
     
     private lazy var infoLabel: UILabel =
-        .infoLabelStyle("onboard_second_infolabel".localized)
+        .infoLabelStyle(L10n.infoLabel)
     
     private func infoLabelBoldText() {
         guard let text = infoLabel.text,
@@ -43,7 +53,7 @@ final class OnboardSecondStepVC: UIViewController {
     }
     
     private lazy var titleLabel: UILabel =
-        .titleLabelStyle("onboard_second_title_label".localized)
+        .titleLabelStyle(L10n.titleLabel)
     
     private lazy var logoContainer: UIView = UIView()
     private lazy var logoImageView: UIImageView = 
@@ -55,13 +65,13 @@ final class OnboardSecondStepVC: UIViewController {
     
     
     private lazy var calendarLabel: UILabel =
-        .onboardSelectionImageLabelStyle("onboard_second_calendar_label".localized)
+        .onboardSelectionImageLabelStyle(L10n.calendarLabel)
     
     private lazy var locationLabel: UILabel =
-        .onboardSelectionImageLabelStyle("onboard_second_location_label".localized)
+        .onboardSelectionImageLabelStyle(L10n.locationLabel)
     
     private lazy var timerLabel: UILabel =
-        .onboardSelectionImageLabelStyle("onboard_second_timer_label".localized)
+        .onboardSelectionImageLabelStyle(L10n.timerLabel)
     
     private var viewModel: OnboardSecondStepViewModelProtocol
     
