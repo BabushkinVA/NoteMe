@@ -34,26 +34,9 @@ final class OnboardSecondStepVC: UIViewController {
     
     private lazy var infoView: UIView = .shadowStyle()
     
-    private lazy var infoLabel: UILabel =
-        .infoLabelStyle(L10n.infoLabel)
+    private lazy var infoLabel: UILabel = .infoLabelStyle(L10n.infoLabel)
     
-    private func infoLabelBoldText() {
-        guard let text = infoLabel.text,
-                let font = infoLabel.font
-        else { return }
-        
-        let boldWords: Array<NSString> = 
-            ["• Calendar", "• Location", "• Timer",
-            "• Календарь", "• Положение", "• Таймер"]
-
-        let boldSearchFont = UIFont.systemFont(ofSize: font.pointSize, weight: .bold)
-        infoLabel.attributedText = addBoldText(fullString: text as NSString,
-                                               boldPartsOfString: boldWords,
-                                               boldFont: boldSearchFont)
-    }
-    
-    private lazy var titleLabel: UILabel =
-        .titleLabelStyle(L10n.titleLabel)
+    private lazy var titleLabel: UILabel = .titleLabelStyle(L10n.titleLabel)
     
     private lazy var logoContainer: UIView = UIView()
     private lazy var logoImageView: UIImageView = 
@@ -98,8 +81,6 @@ final class OnboardSecondStepVC: UIViewController {
     }
     
     private func setupUI() {
-        infoLabelBoldText()
-        
         view.backgroundColor = .appBlack
         
         view.addSubview(contentView)
@@ -187,42 +168,6 @@ final class OnboardSecondStepVC: UIViewController {
             make.top.equalTo(locationLabel.snp.bottom).inset(-12.0)
             make.left.equalToSuperview().inset(24.0)
         }
-    }
-    
-}
-
-extension OnboardSecondStepVC {
-    
-    private func addBoldText(fullString: NSString,
-                     boldPartsOfString: Array<NSString>,
-                     boldFont: UIFont) -> NSAttributedString {
-        
-        let boldFontAttribute = [NSAttributedString.Key.font: boldFont]
-        let boldString = NSMutableAttributedString(string: fullString as String)
-        for i in 0 ..< boldPartsOfString.count {
-            boldString.addAttributes(
-                boldFontAttribute,
-                range: fullString.range(of: boldPartsOfString[i] as String))
-        }
-        return boldString
-    }
-    
-}
-
-extension NSAttributedString {
-    
-    static func parse(html: String, font: UIFont) -> NSAttributedString? {
-        let fontFamilyName = font.familyName
-        let fontSize = font.pointSize
-        
-        if
-            let data = "<span style=\"font-family: '-apple-system', '\(fontFamilyName)'; font-size: \(fontSize)\">\(html)</span>"
-                .data(using: .utf8) {
-            return try? NSAttributedString(data: data,
-                                           options: [.documentType: NSAttributedString.DocumentType.html],
-                                           documentAttributes: nil)
-        }
-        return nil
     }
     
 }

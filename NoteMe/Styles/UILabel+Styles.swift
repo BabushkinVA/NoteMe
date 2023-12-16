@@ -26,6 +26,8 @@ extension UILabel {
         label.numberOfLines = 0
         label.font = .appFont.withSize(13.0)
         label.textColor = .appText
+        label.attributedText = .parse(html: text, font: .appFont.withSize(13.0))
+        label.numberOfLines = .zero
         
         return label
         
