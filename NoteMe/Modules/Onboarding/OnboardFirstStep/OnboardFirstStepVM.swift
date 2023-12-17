@@ -23,5 +23,4 @@ final class OnboardFirstStepVM: OnboardFirstStepViewModelProtocol {
         coordinator?.openNextStep()
     }
     
-    
 }

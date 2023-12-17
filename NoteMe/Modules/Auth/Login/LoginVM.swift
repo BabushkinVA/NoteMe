@@ -55,7 +55,7 @@ final class LoginVM: LoginViewModelProtocol {
             print(isSuccess)
             if isSuccess {
                 //FIXME: uncomment
-//                ParametersHelper.set(.authenticated, value: true)
+                ParametersHelper.set(.authenticated, value: true)
                 self?.coordinator?.finish()
             } else {
                 self?.alertService.showAlert(

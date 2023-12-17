@@ -21,6 +21,7 @@ final class OnboardFirstStepCoordinator: Coordinator {
 }
 
 extension OnboardFirstStepCoordinator: OnboardFirstStepCoordinatorProtocol {
+    
     func openNextStep() {
         let coordinator = OnboardSecondStepCoordinator()
         children.append(coordinator)
@@ -37,4 +38,5 @@ extension OnboardFirstStepCoordinator: OnboardFirstStepCoordinatorProtocol {
         let vc = coordinator.start()
         rootNC?.pushViewController(vc, animated: true)
     }
+    
 }
