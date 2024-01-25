@@ -64,3 +64,6 @@
 //TabBar
 "home_item" = "Home";
 "profile_item" = "Profile";
+
+//ProfileVC
+"account_label" = "Account";

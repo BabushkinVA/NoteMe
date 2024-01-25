@@ -29,7 +29,7 @@ final class HomeVC: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .appGray
+        view.backgroundColor = .systemBlue
     }
     
     private func setupTabBarItem() {

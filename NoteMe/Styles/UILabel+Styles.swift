@@ -43,4 +43,14 @@ extension UILabel {
         return label
     }
     
+    static func regularBoldLabelStyle(_ text: String, _ fontSize: CGFloat = 14.0) -> UILabel {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.text = "\(text)"
+        label.textColor = .appText
+        label.font = .appBoldFont.withSize(fontSize)
+        
+        return label
+    }
+    
 }

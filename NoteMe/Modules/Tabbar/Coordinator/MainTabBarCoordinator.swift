@@ -11,7 +11,7 @@ final class MainTabBarCoordinator: Coordinator {
     
     override func start() -> UIViewController {
         let tabBar = MainTabBarAssembler.make()
-        tabBar.viewControllers = [makeHomeModule(), makeProfileModule()]
+        tabBar.viewControllers = [makeProfileModule(), makeHomeModule()]
         return tabBar
     }
     

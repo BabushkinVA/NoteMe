@@ -52,6 +52,9 @@
 		DD6F0E372B0D24C4006EB549 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F0E362B0D24C4006EB549 /* RegisterCoordinator.swift */; };
 		DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */; };
 		DD734FF42AF6BEE800A2C4F4 /* UIView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */; };
+		DD8A05202B56E1D3000D91CE /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A051F2B56E1D3000D91CE /* Container.swift */; };
+		DD8A05222B56E550000D91CE /* ContainerRegistrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A05212B56E550000D91CE /* ContainerRegistrator.swift */; };
+		DD8A05252B56EFFA000D91CE /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A05242B56EFFA000D91CE /* WindowManager.swift */; };
 		DD9E12EC2B0BAB8500EF5671 /* InputValidator+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E12EB2B0BAB8500EF5671 /* InputValidator+Register.swift */; };
 		DDA7B6392AFE942D005FEFDB /* UIButton+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA7B6382AFE942D005FEFDB /* UIButton+Actions.swift */; };
 		DDA7B63B2AFE9780005FEFDB /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA7B63A2AFE9780005FEFDB /* LoginVM.swift */; };
@@ -127,6 +130,9 @@
 		DD6F0E362B0D24C4006EB549 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Styles.swift"; sourceTree = "<group>"; };
 		DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Styles.swift"; sourceTree = "<group>"; };
+		DD8A051F2B56E1D3000D91CE /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		DD8A05212B56E550000D91CE /* ContainerRegistrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerRegistrator.swift; sourceTree = "<group>"; };
+		DD8A05242B56EFFA000D91CE /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
 		DD9E12EB2B0BAB8500EF5671 /* InputValidator+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputValidator+Register.swift"; sourceTree = "<group>"; };
 		DDA7B6382AFE942D005FEFDB /* UIButton+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Actions.swift"; sourceTree = "<group>"; };
 		DDA7B63A2AFE9780005FEFDB /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
@@ -381,6 +387,23 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		DD8A051E2B56E1C3000D91CE /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				DD8A051F2B56E1D3000D91CE /* Container.swift */,
+				DD8A05212B56E550000D91CE /* ContainerRegistrator.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		DD8A05232B56EFE8000D91CE /* WindowManager */ = {
+			isa = PBXGroup;
+			children = (
+				DD8A05242B56EFFA000D91CE /* WindowManager.swift */,
+			);
+			path = WindowManager;
+			sourceTree = "<group>";
+		};
 		DD9E12EA2B0BAB6E00EF5671 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +417,8 @@
 		DDA7B63E2AFEA14C005FEFDB /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DD8A05232B56EFE8000D91CE /* WindowManager */,
+				DD8A051E2B56E1C3000D91CE /* Container */,
 				DDDF42072B209CBD00D183F4 /* AlertService */,
 				DDDF42022B20982700D183F4 /* AuthService */,
 				DD4632E92B164B48009275D3 /* ParametersHelper */,
@@ -644,6 +669,7 @@
 				DD24614E2B2B366C00DB5118 /* HomeAssembler.swift in Sources */,
 				DD5E1B692AF1602A004512AF /* UIButton+Styles.swift in Sources */,
 				DDA7B6392AFE942D005FEFDB /* UIButton+Actions.swift in Sources */,
+				DD8A05202B56E1D3000D91CE /* Container.swift in Sources */,
 				DD9E12EC2B0BAB8500EF5671 /* InputValidator+Register.swift in Sources */,
 				DD4632F02B165474009275D3 /* OnboardFirstStepVC.swift in Sources */,
 				DDB893E62AE824D0002CF4EE /* AppDelegate.swift in Sources */,
@@ -663,6 +689,7 @@
 				DD4EBAE32B03E53000CBABB8 /* KeyboardHelper.swift in Sources */,
 				DD4CF49B2B15F01C00BCDF65 /* ResetCoordinator.swift in Sources */,
 				DD53AE812B24A86600D78D24 /* AuthService+Register.swift in Sources */,
+				DD8A05252B56EFFA000D91CE /* WindowManager.swift in Sources */,
 				DD4632F62B1657D2009275D3 /* OnboardFirstStepCoordinator.swift in Sources */,
 				DD4EBADE2B03DB8500CBABB8 /* RegisterPresenter.swift in Sources */,
 				DD53AE832B24A94C00D78D24 /* AuthService+Reset.swift in Sources */,
@@ -673,6 +700,7 @@
 				DD4632FA2B165AEF009275D3 /* OnboardSecondStepVC.swift in Sources */,
 				DD6EA1262AF7813E004E0CF2 /* RegisterVC.swift in Sources */,
 				DD2461482B2B34D900DB5118 /* MainTabBarCoordinator.swift in Sources */,
+				DD8A05222B56E550000D91CE /* ContainerRegistrator.swift in Sources */,
 				DD5C55C02B0A8D360080065D /* InputValidator+Reset.swift in Sources */,
 				DDB893E82AE824D0002CF4EE /* SceneDelegate.swift in Sources */,
 				DD24614C2B2B364900DB5118 /* HomeVC.swift in Sources */,
