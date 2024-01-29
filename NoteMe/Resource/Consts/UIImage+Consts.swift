@@ -25,4 +25,11 @@ extension UIImage {
         static let profile: UIImage = .init(named: "profile")!
     }
     
+    //MARK: - ProfileVC
+    enum Profile {
+        static let notifications: UIImage = .init(named: "notifications")!
+        static let export: UIImage = .init(named: "export")!
+        static let logout: UIImage = .init(named: "logout")!
+    }
+    
 }

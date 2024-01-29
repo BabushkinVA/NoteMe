@@ -31,10 +31,10 @@ final class WindowManager {
         window.makeKeyAndVisible()
     }
     
-    func hide(type: WindowType) {
-        let window = get(type: type)
-        window.resignKey()
-    }
+//    func hide(type: WindowType) {
+//        let window = get(type: type)
+//        window.resignKey()
+//    }
     
     func hideAndRemove(type: WindowType){
         hide(type: type)
@@ -45,6 +45,11 @@ final class WindowManager {
         let window = UIWindow(windowScene: scene)
         windows[type] = window
         return window
+    }
+    
+    private func hide(type: WindowType) {
+        let window = get(type: type)
+        window.resignKey()
     }
     
 }

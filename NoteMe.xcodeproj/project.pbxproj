@@ -52,6 +52,8 @@
 		DD6F0E372B0D24C4006EB549 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F0E362B0D24C4006EB549 /* RegisterCoordinator.swift */; };
 		DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */; };
 		DD734FF42AF6BEE800A2C4F4 /* UIView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */; };
+		DD7B24BE2B626BD10049F812 /* ProfileSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B24BD2B626BD10049F812 /* ProfileSections.swift */; };
+		DD7B24C02B6274BD0049F812 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B24BF2B6274BD0049F812 /* ProfileVM.swift */; };
 		DD8A05202B56E1D3000D91CE /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A051F2B56E1D3000D91CE /* Container.swift */; };
 		DD8A05222B56E550000D91CE /* ContainerRegistrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A05212B56E550000D91CE /* ContainerRegistrator.swift */; };
 		DD8A05252B56EFFA000D91CE /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A05242B56EFFA000D91CE /* WindowManager.swift */; };
@@ -130,6 +132,8 @@
 		DD6F0E362B0D24C4006EB549 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Styles.swift"; sourceTree = "<group>"; };
 		DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Styles.swift"; sourceTree = "<group>"; };
+		DD7B24BD2B626BD10049F812 /* ProfileSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSections.swift; sourceTree = "<group>"; };
+		DD7B24BF2B6274BD0049F812 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
 		DD8A051F2B56E1D3000D91CE /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		DD8A05212B56E550000D91CE /* ContainerRegistrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerRegistrator.swift; sourceTree = "<group>"; };
 		DD8A05242B56EFFA000D91CE /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
@@ -203,8 +207,10 @@
 		DD2461512B2B6CA800DB5118 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				DD7B24BB2B626BA40049F812 /* Adapter */,
 				DD2461522B2B6CDA00DB5118 /* Coordinator */,
 				DD2461532B2B6CEB00DB5118 /* ProfileVC.swift */,
+				DD7B24BF2B6274BD0049F812 /* ProfileVM.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -385,6 +391,22 @@
 				DD4EBADF2B03E13200CBABB8 /* RegisterAssembler.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DD7B24BB2B626BA40049F812 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				DD7B24BC2B626BB70049F812 /* Sections */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		DD7B24BC2B626BB70049F812 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				DD7B24BD2B626BD10049F812 /* ProfileSections.swift */,
+			);
+			path = Sections;
 			sourceTree = "<group>";
 		};
 		DD8A051E2B56E1C3000D91CE /* Container */ = {
@@ -685,6 +707,7 @@
 				DDA7B6412AFEA1B4005FEFDB /* InputValidator.swift in Sources */,
 				DD6F0E342B0D1B71006EB549 /* LoginCoordinator.swift in Sources */,
 				DD6F0E312B0D129F006EB549 /* Coordinator.swift in Sources */,
+				DD7B24C02B6274BD0049F812 /* ProfileVM.swift in Sources */,
 				DD4632F22B165681009275D3 /* OnboardFirstStepVM.swift in Sources */,
 				DD4EBAE32B03E53000CBABB8 /* KeyboardHelper.swift in Sources */,
 				DD4CF49B2B15F01C00BCDF65 /* ResetCoordinator.swift in Sources */,
@@ -698,6 +721,7 @@
 				DD4632FC2B165AFA009275D3 /* OnboardSecondStepVM.swift in Sources */,
 				DDDF42062B209A1D00D183F4 /* AuthService+Login.swift in Sources */,
 				DD4632FA2B165AEF009275D3 /* OnboardSecondStepVC.swift in Sources */,
+				DD7B24BE2B626BD10049F812 /* ProfileSections.swift in Sources */,
 				DD6EA1262AF7813E004E0CF2 /* RegisterVC.swift in Sources */,
 				DD2461482B2B34D900DB5118 /* MainTabBarCoordinator.swift in Sources */,
 				DD8A05222B56E550000D91CE /* ContainerRegistrator.swift in Sources */,

@@ -27,7 +27,7 @@ final class LoginCoordinator: Coordinator {
 
 extension LoginCoordinator: LoginCoordinatorProtocol {
     func openRegisterModule() {
-        let coordinator = RegisterCoordinator()
+        let coordinator = RegisterCoordinator(container: container)
         children.append(coordinator)
         let vc = coordinator.start()
         
@@ -42,7 +42,7 @@ extension LoginCoordinator: LoginCoordinatorProtocol {
     }
     
     func openResetModule() {
-        let coordinator = ResetCoordinator()
+        let coordinator = ResetCoordinator(container: container)
         children.append(coordinator)
         let vc = coordinator.start()
         

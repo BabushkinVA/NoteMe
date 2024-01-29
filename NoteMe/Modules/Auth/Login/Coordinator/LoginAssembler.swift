@@ -13,7 +13,6 @@ final class LoginAssembler {
     static func make(container: Container,
                      coordinator: LoginCoordinatorProtocol) -> UIViewController {
         let authService: AuthService = container.resolve()
-//        let inputValidator: InputValidator = container.resolve()
         let alertService: AlertService = container.resolve()
         
         let vm = LoginVM(coordinator: coordinator,
