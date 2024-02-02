@@ -52,6 +52,10 @@
 		DD6F0E372B0D24C4006EB549 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F0E362B0D24C4006EB549 /* RegisterCoordinator.swift */; };
 		DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */; };
 		DD734FF42AF6BEE800A2C4F4 /* UIView+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */; };
+		DD774FA92B6C3BCA00185DCE /* ProfileSettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD774FA82B6C3BCA00185DCE /* ProfileSettingsCell.swift */; };
+		DD774FAB2B6D08BE00185DCE /* ProfileAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD774FAA2B6D08BE00185DCE /* ProfileAccountCell.swift */; };
+		DD774FAF2B6D270700185DCE /* ProfileTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD774FAE2B6D270700185DCE /* ProfileTableViewHeader.swift */; };
+		DD774FB12B6D29D200185DCE /* ProfileAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD774FB02B6D29D200185DCE /* ProfileAdapter.swift */; };
 		DD7B24BE2B626BD10049F812 /* ProfileSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B24BD2B626BD10049F812 /* ProfileSections.swift */; };
 		DD7B24C02B6274BD0049F812 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7B24BF2B6274BD0049F812 /* ProfileVM.swift */; };
 		DD8A05202B56E1D3000D91CE /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A051F2B56E1D3000D91CE /* Container.swift */; };
@@ -132,6 +136,10 @@
 		DD6F0E362B0D24C4006EB549 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		DD734FF12AF6B99500A2C4F4 /* UILabel+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Styles.swift"; sourceTree = "<group>"; };
 		DD734FF32AF6BEE800A2C4F4 /* UIView+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Styles.swift"; sourceTree = "<group>"; };
+		DD774FA82B6C3BCA00185DCE /* ProfileSettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsCell.swift; sourceTree = "<group>"; };
+		DD774FAA2B6D08BE00185DCE /* ProfileAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAccountCell.swift; sourceTree = "<group>"; };
+		DD774FAE2B6D270700185DCE /* ProfileTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewHeader.swift; sourceTree = "<group>"; };
+		DD774FB02B6D29D200185DCE /* ProfileAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAdapter.swift; sourceTree = "<group>"; };
 		DD7B24BD2B626BD10049F812 /* ProfileSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSections.swift; sourceTree = "<group>"; };
 		DD7B24BF2B6274BD0049F812 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
 		DD8A051F2B56E1D3000D91CE /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
@@ -393,10 +401,30 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		DD774FAC2B6D26B400185DCE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DD774FA82B6C3BCA00185DCE /* ProfileSettingsCell.swift */,
+				DD774FAA2B6D08BE00185DCE /* ProfileAccountCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DD774FAD2B6D26D600185DCE /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				DD774FAE2B6D270700185DCE /* ProfileTableViewHeader.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		DD7B24BB2B626BA40049F812 /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
+				DD774FAD2B6D26D600185DCE /* Headers */,
+				DD774FAC2B6D26B400185DCE /* Cells */,
 				DD7B24BC2B626BB70049F812 /* Sections */,
+				DD774FB02B6D29D200185DCE /* ProfileAdapter.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -689,12 +717,14 @@
 				DD00B1F22B1CB1FB00749721 /* MainTabBarAssembler.swift in Sources */,
 				DDDF42042B20983800D183F4 /* AuthService.swift in Sources */,
 				DD24614E2B2B366C00DB5118 /* HomeAssembler.swift in Sources */,
+				DD774FA92B6C3BCA00185DCE /* ProfileSettingsCell.swift in Sources */,
 				DD5E1B692AF1602A004512AF /* UIButton+Styles.swift in Sources */,
 				DDA7B6392AFE942D005FEFDB /* UIButton+Actions.swift in Sources */,
 				DD8A05202B56E1D3000D91CE /* Container.swift in Sources */,
 				DD9E12EC2B0BAB8500EF5671 /* InputValidator+Register.swift in Sources */,
 				DD4632F02B165474009275D3 /* OnboardFirstStepVC.swift in Sources */,
 				DDB893E62AE824D0002CF4EE /* AppDelegate.swift in Sources */,
+				DD774FB12B6D29D200185DCE /* ProfileAdapter.swift in Sources */,
 				DDB893FD2AE82E78002CF4EE /* UIColor+Consts.swift in Sources */,
 				DD734FF22AF6B99500A2C4F4 /* UILabel+Styles.swift in Sources */,
 				DDF3E94D2B0E090400CE23EA /* KeyboardHelper+Register.swift in Sources */,
@@ -706,11 +736,13 @@
 				DD2461502B2B36AA00DB5118 /* HomeCoordinator.swift in Sources */,
 				DDA7B6412AFEA1B4005FEFDB /* InputValidator.swift in Sources */,
 				DD6F0E342B0D1B71006EB549 /* LoginCoordinator.swift in Sources */,
+				DD774FAB2B6D08BE00185DCE /* ProfileAccountCell.swift in Sources */,
 				DD6F0E312B0D129F006EB549 /* Coordinator.swift in Sources */,
 				DD7B24C02B6274BD0049F812 /* ProfileVM.swift in Sources */,
 				DD4632F22B165681009275D3 /* OnboardFirstStepVM.swift in Sources */,
 				DD4EBAE32B03E53000CBABB8 /* KeyboardHelper.swift in Sources */,
 				DD4CF49B2B15F01C00BCDF65 /* ResetCoordinator.swift in Sources */,
+				DD774FAF2B6D270700185DCE /* ProfileTableViewHeader.swift in Sources */,
 				DD53AE812B24A86600D78D24 /* AuthService+Register.swift in Sources */,
 				DD8A05252B56EFFA000D91CE /* WindowManager.swift in Sources */,
 				DD4632F62B1657D2009275D3 /* OnboardFirstStepCoordinator.swift in Sources */,

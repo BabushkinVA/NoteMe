@@ -11,7 +11,10 @@ final class ProfileAssembler {
     private init() {}
     
     static func make() -> UIViewController {
-        return ProfileVC()
+        let viewModel = ProfileVM(adapter: ProfileAdapter())
+        let vc = ProfileVC(viewModel: viewModel)
+        
+        return vc
     }
     
 }

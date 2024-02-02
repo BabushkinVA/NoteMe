@@ -60,7 +60,7 @@
 
 "onboard_second_infolabel" = "You can use 3 types of notifications: <br><b>• Calendar</b> - choose the date, when you want to receive notification.<br><b>• Location</b> - choose the region and notification will come after you enter it.<br><b>• Timer</b> - set timer and after selected period you will receive the notification.";
 
-//MARK: - Main group
+    //MARK: - Main group
 //TabBar
 "home_item" = "Home";
 "profile_item" = "Profile";

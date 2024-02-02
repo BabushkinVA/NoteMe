@@ -12,8 +12,8 @@ fileprivate enum L10n {
 }
 
 enum ProfileSections {
-    case account
-    case settings([ProfileSectionsRows])
+    case account(String)
+    case settings([ProfileSettingsRows])
     
     var numberOfRows: Int {
         switch self {
@@ -30,7 +30,7 @@ enum ProfileSections {
     }
 }
 
-enum ProfileSectionsRows: CaseIterable {
+enum ProfileSettingsRows: CaseIterable {
     case notifications
     case export
     case logout
@@ -57,4 +57,5 @@ enum ProfileSectionsRows: CaseIterable {
         default: return nil
         }
     }
+    
 }
