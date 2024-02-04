@@ -20,7 +20,7 @@ final class ProfileAdapter: NSObject {
         tableView.backgroundColor = .clear
         tableView.isScrollEnabled = false
         tableView.separatorStyle = .singleLine
-        tableView.addShadow()
+//        tableView.addShadow()
         return tableView
     }()
     
@@ -32,10 +32,8 @@ final class ProfileAdapter: NSObject {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(ProfileSettingsCell.self,
-                           forCellReuseIdentifier: "\(ProfileSettingsCell.self)")
-        tableView.register(ProfileAccountCell.self,
-                           forCellReuseIdentifier: "\(ProfileAccountCell.self)")
+        tableView.register(ProfileSettingsCell.self)
+        tableView.register(ProfileAccountCell.self)
 
     }
     
@@ -54,18 +52,14 @@ extension ProfileAdapter: UITableViewDataSource {
         let section = sections[indexPath.section]
         switch section {
         case .account(let email):
-            let cell = tableView.dequeueReusableCell(
-                withIdentifier: "\(ProfileAccountCell.self)",
-                for: indexPath) as? ProfileAccountCell
-            cell?.setup(email)
-            return cell ?? UITableViewCell()
+            let cell:ProfileAccountCell = tableView.dequeue(at: indexPath)
+            cell.setup(email)
+            return cell
             
         case .settings(let rows):
-            let cell = tableView.dequeueReusableCell(
-                withIdentifier: "\(ProfileSettingsCell.self)",
-                for: indexPath) as? ProfileSettingsCell
-            cell?.setup(rows[indexPath.row])
-            return cell ?? UITableViewCell()
+            let cell = tableView.dequeue(at: indexPath) as ProfileSettingsCell
+            cell.setup(rows[indexPath.row])
+            return cell
         }
     }
         
@@ -75,7 +69,7 @@ extension ProfileAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionType = sections[section]
         let header = ProfileTableViewHeader()
-        header.text = section.headerText
+//        header.text = section.headerText
         return header
     }
 }

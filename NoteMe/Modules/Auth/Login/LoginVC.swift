@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Storage
 
 @objc protocol LoginViewModelProtocol: AnyObject {
     func loginDidTap(email: String?, password: String?)
@@ -89,6 +90,8 @@ final class LoginVC: UIViewController {
         bind()
         setupUI()
         setupConstraints()
+        
+        let storage = DateNotificationStorage()
     }
     
     private func bind() {
