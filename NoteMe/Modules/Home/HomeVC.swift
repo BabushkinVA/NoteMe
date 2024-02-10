@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HomeViewModelProtocol {
+    
+}
+
 final class HomeVC: UIViewController {
     
     private enum L10n {

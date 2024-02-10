@@ -61,6 +61,10 @@
 		DD8A05202B56E1D3000D91CE /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A051F2B56E1D3000D91CE /* Container.swift */; };
 		DD8A05222B56E550000D91CE /* ContainerRegistrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A05212B56E550000D91CE /* ContainerRegistrator.swift */; };
 		DD8A05252B56EFFA000D91CE /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8A05242B56EFFA000D91CE /* WindowManager.swift */; };
+		DD96594C2B767D9F0056389A /* DTODescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96594B2B767D9F0056389A /* DTODescription.swift */; };
+		DD96594E2B767E620056389A /* NotificationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96594D2B767E620056389A /* NotificationStorage.swift */; };
+		DD9659502B77D6EA0056389A /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD96594F2B77D6EA0056389A /* HomeVM.swift */; };
+		DD9659532B77D7BA0056389A /* FRCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9659522B77D7BA0056389A /* FRCService.swift */; };
 		DD9E12EC2B0BAB8500EF5671 /* InputValidator+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E12EB2B0BAB8500EF5671 /* InputValidator+Register.swift */; };
 		DDA7B6392AFE942D005FEFDB /* UIButton+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA7B6382AFE942D005FEFDB /* UIButton+Actions.swift */; };
 		DDA7B63B2AFE9780005FEFDB /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA7B63A2AFE9780005FEFDB /* LoginVM.swift */; };
@@ -182,6 +186,10 @@
 		DD8A051F2B56E1D3000D91CE /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		DD8A05212B56E550000D91CE /* ContainerRegistrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerRegistrator.swift; sourceTree = "<group>"; };
 		DD8A05242B56EFFA000D91CE /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
+		DD96594B2B767D9F0056389A /* DTODescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTODescription.swift; sourceTree = "<group>"; };
+		DD96594D2B767E620056389A /* NotificationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStorage.swift; sourceTree = "<group>"; };
+		DD96594F2B77D6EA0056389A /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		DD9659522B77D7BA0056389A /* FRCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FRCService.swift; sourceTree = "<group>"; };
 		DD9E12EB2B0BAB8500EF5671 /* InputValidator+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputValidator+Register.swift"; sourceTree = "<group>"; };
 		DDA7B6382AFE942D005FEFDB /* UIButton+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Actions.swift"; sourceTree = "<group>"; };
 		DDA7B63A2AFE9780005FEFDB /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
@@ -256,6 +264,7 @@
 			children = (
 				DD24614A2B2B361300DB5118 /* Coordinator */,
 				DD24614B2B2B364800DB5118 /* HomeVC.swift */,
+				DD96594F2B77D6EA0056389A /* HomeVM.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -512,6 +521,22 @@
 			path = WindowManager;
 			sourceTree = "<group>";
 		};
+		DD96594A2B767D740056389A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DD96594B2B767D9F0056389A /* DTODescription.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DD9659512B77D7A30056389A /* FRC */ = {
+			isa = PBXGroup;
+			children = (
+				DD9659522B77D7BA0056389A /* FRCService.swift */,
+			);
+			path = FRC;
+			sourceTree = "<group>";
+		};
 		DD9E12EA2B0BAB6E00EF5671 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
@@ -582,8 +607,6 @@
 				DDA7B63E2AFEA14C005FEFDB /* Services */,
 				DD5E1B672AF15FFE004512AF /* Styles */,
 				DD5E1B642AF15EBD004512AF /* Utils */,
-				DDB893F02AE824D1002CF4EE /* LaunchScreen.storyboard */,
-				DDB893F32AE824D1002CF4EE /* Info.plist */,
 				DDDF41C92B207C5000D183F4 /* GoogleService-Info.plist */,
 			);
 			path = NoteMe;
@@ -595,6 +618,7 @@
 				DD6F0E2D2B0D124D006EB549 /* AppCoordinator.swift */,
 				DDB893E52AE824D0002CF4EE /* AppDelegate.swift */,
 				DDB893E72AE824D0002CF4EE /* SceneDelegate.swift */,
+				DDB893F32AE824D1002CF4EE /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -605,6 +629,7 @@
 				DDB893FB2AE82E3D002CF4EE /* Consts */,
 				DD46330C2B17D1A7009275D3 /* Assets.xcassets */,
 				DD6EA1302AF7E41E004E0CF2 /* Localizable.strings */,
+				DDB893F02AE824D1002CF4EE /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -671,6 +696,7 @@
 		DDED01152B6E93460050CB46 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				DD9659512B77D7A30056389A /* FRC */,
 				DDED013B2B701D940050CB46 /* Consts */,
 				DDED01352B7010EB0050CB46 /* CoreData */,
 				DDED01222B6E94D70050CB46 /* DataStorage */,
@@ -692,6 +718,7 @@
 		DDED01262B6E99D90050CB46 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DD96594A2B767D740056389A /* Protocols */,
 				DDED01322B700A620050CB46 /* DTOs */,
 				DDED01272B6E99E30050CB46 /* ManagedObjects */,
 			);
@@ -701,10 +728,10 @@
 		DDED01272B6E99E30050CB46 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
-				DDED01282B6E9A570050CB46 /* DateNotificationMO+CoreDataClass.swift */,
-				DDED01292B6E9A570050CB46 /* DateNotificationMO+CoreDataProperties.swift */,
 				DDED012A2B6E9A570050CB46 /* BaseNotificationMO+CoreDataClass.swift */,
 				DDED012B2B6E9A570050CB46 /* BaseNotificationMO+CoreDataProperties.swift */,
+				DDED01282B6E9A570050CB46 /* DateNotificationMO+CoreDataClass.swift */,
+				DDED01292B6E9A570050CB46 /* DateNotificationMO+CoreDataProperties.swift */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -729,6 +756,7 @@
 			isa = PBXGroup;
 			children = (
 				DDED01392B70126C0050CB46 /* DateNotificationStorage.swift */,
+				DD96594D2B767E620056389A /* NotificationStorage.swift */,
 			);
 			path = Storages;
 			sourceTree = "<group>";
@@ -934,6 +962,7 @@
 				DD6EA1262AF7813E004E0CF2 /* RegisterVC.swift in Sources */,
 				DD2461482B2B34D900DB5118 /* MainTabBarCoordinator.swift in Sources */,
 				DD8A05222B56E550000D91CE /* ContainerRegistrator.swift in Sources */,
+				DD9659502B77D6EA0056389A /* HomeVM.swift in Sources */,
 				DD5C55C02B0A8D360080065D /* InputValidator+Reset.swift in Sources */,
 				DDB893E82AE824D0002CF4EE /* SceneDelegate.swift in Sources */,
 				DD24614C2B2B364900DB5118 /* HomeVC.swift in Sources */,
@@ -952,9 +981,12 @@
 				DDED012C2B6E9A570050CB46 /* DateNotificationMO+CoreDataClass.swift in Sources */,
 				DDED012D2B6E9A570050CB46 /* DateNotificationMO+CoreDataProperties.swift in Sources */,
 				DDED013D2B701DB90050CB46 /* NSPredicate+Const.swift in Sources */,
+				DD96594C2B767D9F0056389A /* DTODescription.swift in Sources */,
 				DDED012F2B6E9A570050CB46 /* BaseNotificationMO+CoreDataProperties.swift in Sources */,
 				DDED01252B6E951C0050CB46 /* NotificationDataBase.xcdatamodeld in Sources */,
 				DDED012E2B6E9A570050CB46 /* BaseNotificationMO+CoreDataClass.swift in Sources */,
+				DD96594E2B767E620056389A /* NotificationStorage.swift in Sources */,
+				DD9659532B77D7BA0056389A /* FRCService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1122,7 +1154,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A9S542Q43G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NoteMe/Info.plist;
+				INFOPLIST_FILE = NoteMe/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NOTEme;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1155,7 +1187,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A9S542Q43G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NoteMe/Info.plist;
+				INFOPLIST_FILE = NoteMe/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NOTEme;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
