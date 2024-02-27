@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol HomeViewModelProtocol {
-    
+protocol HomeViewModelProtocol: AnyObject{
+    func viewDidLoad()
 }
 
 final class HomeVC: UIViewController {
@@ -17,7 +17,11 @@ final class HomeVC: UIViewController {
         static let homeItem: String = "home_item".localized
     }
     
-    init() {
+    private var viewModel: HomeViewModelProtocol
+    
+    init(viewModel: HomeViewModelProtocol) {
+        self.viewModel = viewModel
+        
         super.init(nibName: nil, bundle: nil)
         setupTabBarItem()
     }
@@ -28,6 +32,7 @@ final class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.viewDidLoad()
         
         setupUI()
     }

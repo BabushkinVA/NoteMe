@@ -38,4 +38,36 @@ final class ProfileSettingsCell: UITableViewCell {
         iconImageView.image = type.icon
         infoLabel.text = type.infoText
     }
+    
+//    init() {
+//        commonInit()
+//    }
+    
+//    required init?(coder: NSCoder) {
+//        super.init(coder: coder)
+//        commonInit()
+//    }
+//    
+//    private func commonInit() {
+//        setupUI()
+//        setupConstraints()
+//    }
+//    
+//    private func setupUI() {
+//        addSubview(titleLabel)
+//        
+//    }
+//    
+//    private func setupConstraints() {
+//        
+//        iconImageView.snp.makeConstraints { make in
+//            make.edges.equalToSuperview()
+//        }
+//        
+//        titleLabel.snp.makeConstraints { make in
+//            make.horizontalEdges.top.bottom.equalToSuperview().inset(10.0)
+//        }
+//        
+//    }
+    
 }

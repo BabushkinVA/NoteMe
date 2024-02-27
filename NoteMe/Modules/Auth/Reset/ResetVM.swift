@@ -17,7 +17,7 @@ protocol ResetInputValidatorUseCase {
 
 protocol ResetAuthServiceUseCase {
     func resetPassword(email: String,
-               completion: @escaping (Bool) -> Void)
+                       completion: @escaping (Bool) -> Void)
 }
 
 protocol ResetAlertServiceUseCase {

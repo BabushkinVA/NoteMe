@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DD00B1F22B1CB1FB00749721 /* MainTabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD00B1F12B1CB1FB00749721 /* MainTabBarAssembler.swift */; };
+		DD019AAE2B7BD43200D5D5EE /* BaseNotificationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD019AAD2B7BD43200D5D5EE /* BaseNotificationDTO.swift */; };
 		DD2461412B2B162500DB5118 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2461402B2B162500DB5118 /* AlertService.swift */; };
 		DD2461432B2B26CF00DB5118 /* AlertService+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2461422B2B26CF00DB5118 /* AlertService+Login.swift */; };
 		DD2461462B2B33EF00DB5118 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2461452B2B33EF00DB5118 /* MainTabBarVC.swift */; };
@@ -39,6 +40,10 @@
 		DD5C55BB2B0A6AD60080065D /* ResetVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C55BA2B0A6AD60080065D /* ResetVM.swift */; };
 		DD5C55BD2B0A6AEA0080065D /* ResetAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C55BC2B0A6AEA0080065D /* ResetAssembler.swift */; };
 		DD5C55C02B0A8D360080065D /* InputValidator+Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5C55BF2B0A8D360080065D /* InputValidator+Reset.swift */; };
+		DD5D12962B850E6E00D9EEF0 /* TimerNotificationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D12952B850E6E00D9EEF0 /* TimerNotificationDTO.swift */; };
+		DD5D12982B850F3700D9EEF0 /* LocationNotificationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D12972B850F3700D9EEF0 /* LocationNotificationDTO.swift */; };
+		DD5D129A2B8514C800D9EEF0 /* AllNotificationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D12992B8514C800D9EEF0 /* AllNotificationStorage.swift */; };
+		DD5D129C2B851DBD00D9EEF0 /* NSSortDescriptor+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D129B2B851DBD00D9EEF0 /* NSSortDescriptor+Const.swift */; };
 		DD5E1B662AF15F48004512AF /* View+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B652AF15F48004512AF /* View+Layer.swift */; };
 		DD5E1B692AF1602A004512AF /* UIButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B682AF1602A004512AF /* UIButton+Styles.swift */; };
 		DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */; };
@@ -131,6 +136,7 @@
 
 /* Begin PBXFileReference section */
 		DD00B1F12B1CB1FB00749721 /* MainTabBarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarAssembler.swift; sourceTree = "<group>"; };
+		DD019AAD2B7BD43200D5D5EE /* BaseNotificationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNotificationDTO.swift; sourceTree = "<group>"; };
 		DD2461402B2B162500DB5118 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		DD2461422B2B26CF00DB5118 /* AlertService+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertService+Login.swift"; sourceTree = "<group>"; };
 		DD2461452B2B33EF00DB5118 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
@@ -162,6 +168,10 @@
 		DD5C55BA2B0A6AD60080065D /* ResetVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetVM.swift; sourceTree = "<group>"; };
 		DD5C55BC2B0A6AEA0080065D /* ResetAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetAssembler.swift; sourceTree = "<group>"; };
 		DD5C55BF2B0A8D360080065D /* InputValidator+Reset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InputValidator+Reset.swift"; sourceTree = "<group>"; };
+		DD5D12952B850E6E00D9EEF0 /* TimerNotificationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNotificationDTO.swift; sourceTree = "<group>"; };
+		DD5D12972B850F3700D9EEF0 /* LocationNotificationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNotificationDTO.swift; sourceTree = "<group>"; };
+		DD5D12992B8514C800D9EEF0 /* AllNotificationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotificationStorage.swift; sourceTree = "<group>"; };
+		DD5D129B2B851DBD00D9EEF0 /* NSSortDescriptor+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSSortDescriptor+Const.swift"; sourceTree = "<group>"; };
 		DD5E1B652AF15F48004512AF /* View+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Layer.swift"; sourceTree = "<group>"; };
 		DD5E1B682AF1602A004512AF /* UIButton+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Styles.swift"; sourceTree = "<group>"; };
 		DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
@@ -272,8 +282,8 @@
 		DD24614A2B2B361300DB5118 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				DD24614D2B2B366C00DB5118 /* HomeAssembler.swift */,
 				DD24614F2B2B36AA00DB5118 /* HomeCoordinator.swift */,
+				DD24614D2B2B366C00DB5118 /* HomeAssembler.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -740,6 +750,9 @@
 			isa = PBXGroup;
 			children = (
 				DDED01332B700A850050CB46 /* DateNotificationDTO.swift */,
+				DD019AAD2B7BD43200D5D5EE /* BaseNotificationDTO.swift */,
+				DD5D12952B850E6E00D9EEF0 /* TimerNotificationDTO.swift */,
+				DD5D12972B850F3700D9EEF0 /* LocationNotificationDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -757,6 +770,7 @@
 			children = (
 				DDED01392B70126C0050CB46 /* DateNotificationStorage.swift */,
 				DD96594D2B767E620056389A /* NotificationStorage.swift */,
+				DD5D12992B8514C800D9EEF0 /* AllNotificationStorage.swift */,
 			);
 			path = Storages;
 			sourceTree = "<group>";
@@ -765,6 +779,7 @@
 			isa = PBXGroup;
 			children = (
 				DDED013C2B701DB90050CB46 /* NSPredicate+Const.swift */,
+				DD5D129B2B851DBD00D9EEF0 /* NSSortDescriptor+Const.swift */,
 			);
 			path = Consts;
 			sourceTree = "<group>";
@@ -977,13 +992,18 @@
 			files = (
 				DDED01372B7011050050CB46 /* CoreDataService.swift in Sources */,
 				DDED01342B700A850050CB46 /* DateNotificationDTO.swift in Sources */,
+				DD5D12962B850E6E00D9EEF0 /* TimerNotificationDTO.swift in Sources */,
 				DDED013A2B70126C0050CB46 /* DateNotificationStorage.swift in Sources */,
+				DD5D12982B850F3700D9EEF0 /* LocationNotificationDTO.swift in Sources */,
 				DDED012C2B6E9A570050CB46 /* DateNotificationMO+CoreDataClass.swift in Sources */,
+				DD5D129C2B851DBD00D9EEF0 /* NSSortDescriptor+Const.swift in Sources */,
 				DDED012D2B6E9A570050CB46 /* DateNotificationMO+CoreDataProperties.swift in Sources */,
 				DDED013D2B701DB90050CB46 /* NSPredicate+Const.swift in Sources */,
+				DD019AAE2B7BD43200D5D5EE /* BaseNotificationDTO.swift in Sources */,
 				DD96594C2B767D9F0056389A /* DTODescription.swift in Sources */,
 				DDED012F2B6E9A570050CB46 /* BaseNotificationMO+CoreDataProperties.swift in Sources */,
 				DDED01252B6E951C0050CB46 /* NotificationDataBase.xcdatamodeld in Sources */,
+				DD5D129A2B8514C800D9EEF0 /* AllNotificationStorage.swift in Sources */,
 				DDED012E2B6E9A570050CB46 /* BaseNotificationMO+CoreDataClass.swift in Sources */,
 				DD96594E2B767E620056389A /* NotificationStorage.swift in Sources */,
 				DD9659532B77D7BA0056389A /* FRCService.swift in Sources */,

@@ -26,7 +26,7 @@ final class ProfileVC: UIViewController {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         setupTabBarItem()
-        bind()
+//        bind()
     }
     
     required init?(coder: NSCoder) {
@@ -44,12 +44,20 @@ final class ProfileVC: UIViewController {
         view.backgroundColor = .appBlack
         
         view.addSubview(contentView)
+        
+        contentView.addSubview(tableView)
     }
     
     private func setupConstraints() {
         contentView.snp.makeConstraints { make in
             make.horizontalEdges.equalToSuperview()
             make.top.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.horizontalEdges.equalToSuperview().inset(16.0)
+            make.bottom.equalToSuperview()
+            make.top.equalToSuperview().inset(150.0)
         }
     }
     

@@ -6,12 +6,25 @@
 //
 
 import UIKit
+import Storage
 
 final class HomeAssembler {
     private init() {}
     
     static func make() -> UIViewController {
-        return HomeVC()
+        let vm = HomeVM(
+        frcService: makeFRC(),
+        adapter: <#T##HomeAdapterProtocol#>)
+        
+        let vc = HomeVC(viewModel: vm)
+        return vc
+    }
+    
+    private static func makeFRC() -> FRCService<BaseNotificationDTO> {
+        return .init { request in
+            request.predicate = .Notification.allNotCompleted
+            request.sortDescriptors = [.Notification.byDate]
+        }
     }
     
 }

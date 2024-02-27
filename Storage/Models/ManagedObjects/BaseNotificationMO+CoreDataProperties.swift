@@ -24,6 +24,6 @@ extension BaseNotificationMO {
 
 }
 
-extension BaseNotificationMO : Identifiable {
+extension BaseNotificationMO: Identifiable {
 
 }

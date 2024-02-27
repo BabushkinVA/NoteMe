@@ -23,6 +23,7 @@ extension UIImage {
     enum TabBar {
         static let home: UIImage = .init(named: "home")!
         static let profile: UIImage = .init(named: "profile")!
+        static let plus: UIImage = .init(named: "plus")!
     }
     
     //MARK: - ProfileVC

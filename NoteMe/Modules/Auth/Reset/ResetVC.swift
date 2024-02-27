@@ -42,11 +42,10 @@ final class ResetVC: UIViewController {
         .withAction(viewModel, #selector(ResetViewModelProtocol.cancelDidTap))
     
     private lazy var infoView: UIView = .shadowStyle()
-    private lazy var infoLabel: UILabel =
-        .infoLabelStyle(L10n.infoLabel)
     
     private lazy var resetEmailTextField: LineTextField = {
         let textField = LineTextField()
+        textField.title = L10n.infoLabel
         textField.placeholder = L10n.resEmailTextField
         return textField
     }()
@@ -89,7 +88,6 @@ final class ResetVC: UIViewController {
         
         logoContainer.addSubview(logoImageView)
         
-        infoView.addSubview(infoLabel)
         infoView.addSubview(resetEmailTextField)
     }
     
@@ -132,13 +130,8 @@ final class ResetVC: UIViewController {
             make.bottom.equalTo(infoView.snp.top).inset(-8.0)
         }
         
-        infoLabel.snp.makeConstraints { make in
-            make.top.left.right.equalToSuperview().inset(16.0)
-        }
-        
         resetEmailTextField.snp.makeConstraints { make in
-            make.top.equalTo(infoLabel.snp.bottom).inset(-8.0)
-            make.horizontalEdges.equalToSuperview().inset(16.0)
+            make.top.horizontalEdges.equalToSuperview().inset(16.0)
             make.bottom.equalToSuperview().inset(20.0)
         }
     }

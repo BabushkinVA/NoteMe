@@ -16,6 +16,7 @@ final class ProfileTableViewHeader: UIView {
         label.font = .appBoldFont.withSize(14.0)
         label.text = "Test"
         label.textAlignment = .left
+        return label
     }()
     
     var text: String? {
