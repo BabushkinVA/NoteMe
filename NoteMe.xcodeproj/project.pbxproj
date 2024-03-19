@@ -20,6 +20,11 @@
 		DD2461562B2B6E1D00DB5118 /* ProfileAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2461552B2B6E1D00DB5118 /* ProfileAssembler.swift */; };
 		DD2461582B2B6E6800DB5118 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2461572B2B6E6800DB5118 /* ProfileCoordinator.swift */; };
 		DD24615A2B2B7E7D00DB5118 /* AlertService+Reset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2461592B2B7E7D00DB5118 /* AlertService+Reset.swift */; };
+		DD3ECBC22BA9F44300145042 /* ApiPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3ECBC12BA9F44200145042 /* ApiPaths.swift */; };
+		DD3ECBC52BA9F4D300145042 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3ECBC42BA9F4D300145042 /* NetworkRequest.swift */; };
+		DD3ECBC72BA9F5AE00145042 /* NetworkSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3ECBC62BA9F5AE00145042 /* NetworkSessionProvider.swift */; };
+		DD3ECBC92BA9F8C900145042 /* NearByRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3ECBC82BA9F8C900145042 /* NearByRequest.swift */; };
+		DD3ECBCC2BAA08E400145042 /* LocationNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3ECBCB2BAA08E400145042 /* LocationNetworkService.swift */; };
 		DD4632EB2B164B5A009275D3 /* ParametersHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4632EA2B164B5A009275D3 /* ParametersHelper.swift */; };
 		DD4632F02B165474009275D3 /* OnboardFirstStepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4632EF2B165474009275D3 /* OnboardFirstStepVC.swift */; };
 		DD4632F22B165681009275D3 /* OnboardFirstStepVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4632F12B165681009275D3 /* OnboardFirstStepVM.swift */; };
@@ -44,6 +49,11 @@
 		DD5D12982B850F3700D9EEF0 /* LocationNotificationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D12972B850F3700D9EEF0 /* LocationNotificationDTO.swift */; };
 		DD5D129A2B8514C800D9EEF0 /* AllNotificationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D12992B8514C800D9EEF0 /* AllNotificationStorage.swift */; };
 		DD5D129C2B851DBD00D9EEF0 /* NSSortDescriptor+Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D129B2B851DBD00D9EEF0 /* NSSortDescriptor+Const.swift */; };
+		DD5D13062B8E406C00D9EEF0 /* MenuPopoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D13052B8E406C00D9EEF0 /* MenuPopoverVC.swift */; };
+		DD5D13082B8E436E00D9EEF0 /* MenuPopoverBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D13072B8E436E00D9EEF0 /* MenuPopoverBuilder.swift */; };
+		DD5D130A2B8E44F200D9EEF0 /* MenuPopoverAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D13092B8E44F200D9EEF0 /* MenuPopoverAdapter.swift */; };
+		DD5D130D2B8E465600D9EEF0 /* MenuActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D130C2B8E465600D9EEF0 /* MenuActionCell.swift */; };
+		DD5D130F2B8E523300D9EEF0 /* MainTabBarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5D130E2B8E523300D9EEF0 /* MainTabBarVM.swift */; };
 		DD5E1B662AF15F48004512AF /* View+Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B652AF15F48004512AF /* View+Layer.swift */; };
 		DD5E1B692AF1602A004512AF /* UIButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B682AF1602A004512AF /* UIButton+Styles.swift */; };
 		DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */; };
@@ -84,6 +94,9 @@
 		DDB894022AE83827002CF4EE /* UIImage+Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB894012AE83827002CF4EE /* UIImage+Consts.swift */; };
 		DDB894052AE83AF2002CF4EE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DDB894042AE83AF2002CF4EE /* SnapKit */; };
 		DDB8940A2AE83DE1002CF4EE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB894092AE83DE1002CF4EE /* LoginVC.swift */; };
+		DDC870332BA20C7900201C5B /* NotificationFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC870322BA20C7900201C5B /* NotificationFilterView.swift */; };
+		DDC870372BA20FBA00201C5B /* NotificationFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC870362BA20FBA00201C5B /* NotificationFilterCell.swift */; };
+		DDC870392BA2173600201C5B /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC870382BA2173600201C5B /* String+Size.swift */; };
 		DDDF41CA2B207C5000D183F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DDDF41C92B207C5000D183F4 /* GoogleService-Info.plist */; };
 		DDDF41CD2B20804C00D183F4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = DDDF41CC2B20804C00D183F4 /* FirebaseAnalytics */; };
 		DDDF41CF2B20804C00D183F4 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = DDDF41CE2B20804C00D183F4 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -148,6 +161,11 @@
 		DD2461552B2B6E1D00DB5118 /* ProfileAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembler.swift; sourceTree = "<group>"; };
 		DD2461572B2B6E6800DB5118 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		DD2461592B2B7E7D00DB5118 /* AlertService+Reset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertService+Reset.swift"; sourceTree = "<group>"; };
+		DD3ECBC12BA9F44200145042 /* ApiPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPaths.swift; sourceTree = "<group>"; };
+		DD3ECBC42BA9F4D300145042 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		DD3ECBC62BA9F5AE00145042 /* NetworkSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionProvider.swift; sourceTree = "<group>"; };
+		DD3ECBC82BA9F8C900145042 /* NearByRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByRequest.swift; sourceTree = "<group>"; };
+		DD3ECBCB2BAA08E400145042 /* LocationNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNetworkService.swift; sourceTree = "<group>"; };
 		DD4632EA2B164B5A009275D3 /* ParametersHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersHelper.swift; sourceTree = "<group>"; };
 		DD4632EF2B165474009275D3 /* OnboardFirstStepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardFirstStepVC.swift; sourceTree = "<group>"; };
 		DD4632F12B165681009275D3 /* OnboardFirstStepVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardFirstStepVM.swift; sourceTree = "<group>"; };
@@ -172,6 +190,11 @@
 		DD5D12972B850F3700D9EEF0 /* LocationNotificationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNotificationDTO.swift; sourceTree = "<group>"; };
 		DD5D12992B8514C800D9EEF0 /* AllNotificationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotificationStorage.swift; sourceTree = "<group>"; };
 		DD5D129B2B851DBD00D9EEF0 /* NSSortDescriptor+Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSSortDescriptor+Const.swift"; sourceTree = "<group>"; };
+		DD5D13052B8E406C00D9EEF0 /* MenuPopoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPopoverVC.swift; sourceTree = "<group>"; };
+		DD5D13072B8E436E00D9EEF0 /* MenuPopoverBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPopoverBuilder.swift; sourceTree = "<group>"; };
+		DD5D13092B8E44F200D9EEF0 /* MenuPopoverAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPopoverAdapter.swift; sourceTree = "<group>"; };
+		DD5D130C2B8E465600D9EEF0 /* MenuActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuActionCell.swift; sourceTree = "<group>"; };
+		DD5D130E2B8E523300D9EEF0 /* MainTabBarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVM.swift; sourceTree = "<group>"; };
 		DD5E1B652AF15F48004512AF /* View+Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Layer.swift"; sourceTree = "<group>"; };
 		DD5E1B682AF1602A004512AF /* UIButton+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Styles.swift"; sourceTree = "<group>"; };
 		DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
@@ -215,6 +238,9 @@
 		DDB893FF2AE834F1002CF4EE /* UIFont+Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Consts.swift"; sourceTree = "<group>"; };
 		DDB894012AE83827002CF4EE /* UIImage+Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Consts.swift"; sourceTree = "<group>"; };
 		DDB894092AE83DE1002CF4EE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		DDC870322BA20C7900201C5B /* NotificationFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilterView.swift; sourceTree = "<group>"; };
+		DDC870362BA20FBA00201C5B /* NotificationFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFilterCell.swift; sourceTree = "<group>"; };
+		DDC870382BA2173600201C5B /* String+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
 		DDDF41C92B207C5000D183F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DDDF42032B20983800D183F4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DDDF42052B209A1D00D183F4 /* AuthService+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthService+Login.swift"; sourceTree = "<group>"; };
@@ -308,6 +334,34 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		DD3ECBC02BA9F42800145042 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DD3ECBCA2BAA08CA00145042 /* NetworkServices */,
+				DD3ECBC32BA9F4BC00145042 /* Requests */,
+				DD3ECBC12BA9F44200145042 /* ApiPaths.swift */,
+				DD3ECBC62BA9F5AE00145042 /* NetworkSessionProvider.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		DD3ECBC32BA9F4BC00145042 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				DD3ECBC42BA9F4D300145042 /* NetworkRequest.swift */,
+				DD3ECBC82BA9F8C900145042 /* NearByRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		DD3ECBCA2BAA08CA00145042 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				DD3ECBCB2BAA08E400145042 /* LocationNetworkService.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
 		DD4632E92B164B48009275D3 /* ParametersHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +422,7 @@
 			children = (
 				DD2461442B2B339C00DB5118 /* Coordinator */,
 				DD2461452B2B33EF00DB5118 /* MainTabBarVC.swift */,
+				DD5D130E2B8E523300D9EEF0 /* MainTabBarVM.swift */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -399,6 +454,25 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		DD5D13042B8E405900D9EEF0 /* MenuPopover */ = {
+			isa = PBXGroup;
+			children = (
+				DD5D130B2B8E464E00D9EEF0 /* Cell */,
+				DD5D13052B8E406C00D9EEF0 /* MenuPopoverVC.swift */,
+				DD5D13072B8E436E00D9EEF0 /* MenuPopoverBuilder.swift */,
+				DD5D13092B8E44F200D9EEF0 /* MenuPopoverAdapter.swift */,
+			);
+			path = MenuPopover;
+			sourceTree = "<group>";
+		};
+		DD5D130B2B8E464E00D9EEF0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DD5D130C2B8E465600D9EEF0 /* MenuActionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		DD5E1B642AF15EBD004512AF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +482,7 @@
 				DD4633012B1765B1009275D3 /* UIVC+hideNC.swift */,
 				DDAD2C0E2B2DD30D00DC1692 /* NSAttributedString+HTML.swift */,
 				DDED01302B6E9CEA0050CB46 /* Collection+Register.swift */,
+				DDC870382BA2173600201C5B /* String+Size.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -425,6 +500,7 @@
 		DD5E1B6A2AF16E9A004512AF /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				DDC870342BA20F9F00201C5B /* NotificationFilterView */,
 				DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */,
 			);
 			path = Custom;
@@ -560,6 +636,7 @@
 		DDA7B63E2AFEA14C005FEFDB /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DD3ECBC02BA9F42800145042 /* NetworkLayer */,
 				DD8A05232B56EFE8000D91CE /* WindowManager */,
 				DD8A051E2B56E1C3000D91CE /* Container */,
 				DDDF42072B209CBD00D183F4 /* AlertService */,
@@ -662,6 +739,7 @@
 				DD4633042B17C081009275D3 /* Tabbar */,
 				DD2461492B2B360C00DB5118 /* Home */,
 				DD2461512B2B6CA800DB5118 /* Profile */,
+				DD5D13042B8E405900D9EEF0 /* MenuPopover */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -685,6 +763,15 @@
 				DDA7B63A2AFE9780005FEFDB /* LoginVM.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		DDC870342BA20F9F00201C5B /* NotificationFilterView */ = {
+			isa = PBXGroup;
+			children = (
+				DDC870322BA20C7900201C5B /* NotificationFilterView.swift */,
+				DDC870362BA20FBA00201C5B /* NotificationFilterCell.swift */,
+			);
+			path = NotificationFilterView;
 			sourceTree = "<group>";
 		};
 		DDDF42022B20982700D183F4 /* AuthService */ = {
@@ -769,8 +856,8 @@
 			isa = PBXGroup;
 			children = (
 				DDED01392B70126C0050CB46 /* DateNotificationStorage.swift */,
-				DD96594D2B767E620056389A /* NotificationStorage.swift */,
 				DD5D12992B8514C800D9EEF0 /* AllNotificationStorage.swift */,
+				DD96594D2B767E620056389A /* NotificationStorage.swift */,
 			);
 			path = Storages;
 			sourceTree = "<group>";
@@ -940,8 +1027,10 @@
 				DD5E1B692AF1602A004512AF /* UIButton+Styles.swift in Sources */,
 				DDA7B6392AFE942D005FEFDB /* UIButton+Actions.swift in Sources */,
 				DD8A05202B56E1D3000D91CE /* Container.swift in Sources */,
+				DD3ECBC52BA9F4D300145042 /* NetworkRequest.swift in Sources */,
 				DD9E12EC2B0BAB8500EF5671 /* InputValidator+Register.swift in Sources */,
 				DD4632F02B165474009275D3 /* OnboardFirstStepVC.swift in Sources */,
+				DD5D130A2B8E44F200D9EEF0 /* MenuPopoverAdapter.swift in Sources */,
 				DDED01312B6E9CEA0050CB46 /* Collection+Register.swift in Sources */,
 				DDB893E62AE824D0002CF4EE /* AppDelegate.swift in Sources */,
 				DD774FB12B6D29D200185DCE /* ProfileAdapter.swift in Sources */,
@@ -955,9 +1044,14 @@
 				DD5C55BD2B0A6AEA0080065D /* ResetAssembler.swift in Sources */,
 				DD2461502B2B36AA00DB5118 /* HomeCoordinator.swift in Sources */,
 				DDA7B6412AFEA1B4005FEFDB /* InputValidator.swift in Sources */,
+				DD3ECBC92BA9F8C900145042 /* NearByRequest.swift in Sources */,
+				DDC870392BA2173600201C5B /* String+Size.swift in Sources */,
 				DD6F0E342B0D1B71006EB549 /* LoginCoordinator.swift in Sources */,
+				DDC870332BA20C7900201C5B /* NotificationFilterView.swift in Sources */,
 				DD774FAB2B6D08BE00185DCE /* ProfileAccountCell.swift in Sources */,
 				DD6F0E312B0D129F006EB549 /* Coordinator.swift in Sources */,
+				DD3ECBC72BA9F5AE00145042 /* NetworkSessionProvider.swift in Sources */,
+				DD5D130F2B8E523300D9EEF0 /* MainTabBarVM.swift in Sources */,
 				DD7B24C02B6274BD0049F812 /* ProfileVM.swift in Sources */,
 				DD4632F22B165681009275D3 /* OnboardFirstStepVM.swift in Sources */,
 				DD4EBAE32B03E53000CBABB8 /* KeyboardHelper.swift in Sources */,
@@ -965,10 +1059,13 @@
 				DD774FAF2B6D270700185DCE /* ProfileTableViewHeader.swift in Sources */,
 				DD53AE812B24A86600D78D24 /* AuthService+Register.swift in Sources */,
 				DD8A05252B56EFFA000D91CE /* WindowManager.swift in Sources */,
+				DDC870372BA20FBA00201C5B /* NotificationFilterCell.swift in Sources */,
 				DD4632F62B1657D2009275D3 /* OnboardFirstStepCoordinator.swift in Sources */,
 				DD4EBADE2B03DB8500CBABB8 /* RegisterPresenter.swift in Sources */,
+				DD3ECBCC2BAA08E400145042 /* LocationNetworkService.swift in Sources */,
 				DD53AE832B24A94C00D78D24 /* AuthService+Reset.swift in Sources */,
 				DD5E1B662AF15F48004512AF /* View+Layer.swift in Sources */,
+				DD5D13062B8E406C00D9EEF0 /* MenuPopoverVC.swift in Sources */,
 				DD2461542B2B6CEB00DB5118 /* ProfileVC.swift in Sources */,
 				DD4632FC2B165AFA009275D3 /* OnboardSecondStepVM.swift in Sources */,
 				DDDF42062B209A1D00D183F4 /* AuthService+Login.swift in Sources */,
@@ -979,10 +1076,13 @@
 				DD8A05222B56E550000D91CE /* ContainerRegistrator.swift in Sources */,
 				DD9659502B77D6EA0056389A /* HomeVM.swift in Sources */,
 				DD5C55C02B0A8D360080065D /* InputValidator+Reset.swift in Sources */,
+				DD5D13082B8E436E00D9EEF0 /* MenuPopoverBuilder.swift in Sources */,
 				DDB893E82AE824D0002CF4EE /* SceneDelegate.swift in Sources */,
 				DD24614C2B2B364900DB5118 /* HomeVC.swift in Sources */,
+				DD5D130D2B8E465600D9EEF0 /* MenuActionCell.swift in Sources */,
 				DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */,
 				DD6F0E372B0D24C4006EB549 /* RegisterCoordinator.swift in Sources */,
+				DD3ECBC22BA9F44300145042 /* ApiPaths.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1181,7 +1281,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1214,7 +1314,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1245,7 +1345,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1282,7 +1382,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

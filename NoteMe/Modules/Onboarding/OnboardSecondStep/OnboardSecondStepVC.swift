@@ -17,7 +17,6 @@ final class OnboardSecondStepVC: UIViewController {
     
     private enum L10n {
         static let doneButton: String = "onboard_done_button".localized
-        static let nextButton: String = "onboard_next_button".localized
         static let infoLabel: String = "onboard_second_infolabel".localized
         static let titleLabel: String = "onboard_second_title_label".localized
         static let calendarLabel: String = "onboard_second_calendar_label".localized

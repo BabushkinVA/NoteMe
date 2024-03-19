@@ -10,12 +10,22 @@ import Storage
 
 protocol HomeAdapterProtocol: AnyObject {
     func reloadData(_ dtoList: [any DTODescription])
+    
+    var filterDidSelect: ((NotificationFilterType) -> Void)? { get set }
 }
 
 final class HomeVM: HomeViewModelProtocol {
 
     private let frcService: FRCService<BaseNotificationDTO>
     private let adapter: HomeAdapterProtocol
+    
+    private var selectedFilter: NotificationFilterType = .all {
+        didSet {
+            let all = frcService.fetchedDTOs.filter { dto in
+                <#code#>
+            }
+        }
+    }
     
     init(frcService: FRCService<BaseNotificationDTO>,
          adapter: HomeAdapterProtocol) {
@@ -29,10 +39,16 @@ final class HomeVM: HomeViewModelProtocol {
         frcService.didChangeContent = { [weak adapter] dtoList in
             adapter?.reloadData(dtoList)
         }
+        
+        adapter.filterDidSelect = {
+            print($0)
+        }
     }
     
     func viewDidLoad() {
         frcService.startHandle()
     }
+    
+    
     
 }

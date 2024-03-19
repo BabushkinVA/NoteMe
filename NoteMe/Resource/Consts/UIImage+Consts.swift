@@ -33,4 +33,8 @@ extension UIImage {
         static let logout: UIImage = .init(named: "logout")!
     }
     
+    enum MenuAction {
+
+    }
+    
 }
