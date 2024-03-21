@@ -19,7 +19,7 @@ final class AppCoordinator: Coordinator {
     }
     
     func startApp() {
-        openMainApp()
+//        openMainApp()
 //        //FIXME: - TEST CODE
 //        ParametersHelper.set(.authenticated, value: false)
 //        ParametersHelper.set(.onboarded, value: false)
@@ -31,7 +31,7 @@ final class AppCoordinator: Coordinator {
 //                openOnboardingModule()
 //            }
 //        } else {
-//            openAuthModule()
+            openAuthModule()
 //        }
     }
     
@@ -67,20 +67,20 @@ final class AppCoordinator: Coordinator {
         windowManager.show(type: .main)
     }
     
-    private func openMainApp() {
-        let coordinator = MainTabBarCoordinator()
-        children.append(coordinator)
-        
-        coordinator.onDidFinish = { [weak self] coordinator in
-            self?.children.removeAll { $0 == coordinator }
-            self?.startApp()
-        }
-        
-        let vc = coordinator.start()
-        
-        let window = windowManager.get(type: .main)
-        window.rootViewController = vc
-        windowManager.show(type: .main)
-    }
+//    private func openMainApp() {
+//        let coordinator = MainTabBarCoordinator()
+//        children.append(coordinator)
+//        
+//        coordinator.onDidFinish = { [weak self] coordinator in
+//            self?.children.removeAll { $0 == coordinator }
+//            self?.startApp()
+//        }
+//        
+//        let vc = coordinator.start()
+//        
+//        let window = windowManager.get(type: .main)
+//        window.rootViewController = vc
+//        windowManager.show(type: .main)
+//    }
     
 }

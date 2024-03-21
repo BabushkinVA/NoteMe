@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class HomeCoordinator: Coordinator {
-    
-    override func start() -> UIViewController {
-        return HomeAssembler.make()
-    }
-    
-}
+//final class HomeCoordinator: Coordinator {
+//    
+//    override func start() -> UIViewController {
+//        return HomeAssembler.make()
+//    }
+//    
+//}

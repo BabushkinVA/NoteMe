@@ -91,7 +91,7 @@ final class LoginVC: UIViewController {
         setupUI()
         setupConstraints()
         
-        let storage = DateNotificationStorage()
+//        let storage = DateNotificationStorage()
     }
     
     private func bind() {
