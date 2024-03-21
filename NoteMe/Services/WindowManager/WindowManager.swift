@@ -2,7 +2,7 @@
 //  WindowManager.swift
 //  NoteMe
 //
-//  Created by Vadim on 16.01.24.
+//  Created by Vadim on 29.02.24.
 //
 
 import UIKit
@@ -31,12 +31,8 @@ final class WindowManager {
         window.makeKeyAndVisible()
     }
     
-//    func hide(type: WindowType) {
-//        let window = get(type: type)
-//        window.resignKey()
-//    }
-    
-    func hideAndRemove(type: WindowType){
+
+    func hideAndRemove(type: WindowType) {
         hide(type: type)
         windows[type] = nil
     }

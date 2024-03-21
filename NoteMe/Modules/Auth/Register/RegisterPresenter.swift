@@ -2,7 +2,7 @@
 //  RegisterPresenter.swift
 //  NoteMe
 //
-//  Created by Vadim on 14.11.23.
+//  Created by Vadim on 17.02.24.
 //
 
 import UIKit
@@ -16,12 +16,11 @@ protocol RegisterInputValidatorUseCase {
     func validate(password: String?) -> Bool
 }
 
-protocol RegisterPresenterDelegate: AnyObject {
-    func setEmailError(error: String?)
-    func setPasswordError(error: String?)
-    func setRepeatPasswordError(error: String?)
-    
-    func keyboardFrameChanged(_ frame: CGRect)
+protocol RegisterAuthServiceUseCase {
+    func register(email: String,
+                  password: String,
+                  repeatPassword: String,
+                  completion: @escaping (Bool) -> Void)
 }
 
 protocol RegisterKeyboardHelperUseCase {
@@ -32,11 +31,16 @@ protocol RegisterKeyboardHelperUseCase {
     func onWillHide(_ handler: @escaping (CGRect) -> Void) -> Self
 }
 
-protocol RegisterAuthServiceUseCase {
-    func register(email: String,
-               password: String,
-               repeatPassword: String,
-               completion: @escaping (Bool) -> Void)
+protocol RegisterPresenterDelegate: AnyObject {
+    func setEmailError(error: String?)
+    func setPasswordError(error: String?)
+    func setRepeatPasswordError(error: String?)
+    
+    func keyboardFrameChanged(_ frame: CGRect)
+}
+
+protocol RegisterAlertServiceUseCase {
+    func showAlert(title: String, message: String, okTitle: String)
 }
 
 final class RegisterPresenter: RegisterPresenterProtocol {
@@ -45,6 +49,9 @@ final class RegisterPresenter: RegisterPresenterProtocol {
         static let emailError: String = "reg_wrong_e-mail".localized
         static let passwError: String = "reg_wrong_password".localized
         static let matchPasswError: String = "reg_password_not_matches".localized
+        static let alertTitle: String = "reg_alert_title".localized
+        static let alertMessage: String = "reg_alert_message".localized
+        static let alertOkTitle: String = "reg_alert_okTitle".localized
     }
     
     weak var delegate: RegisterPresenterDelegate?
@@ -52,17 +59,20 @@ final class RegisterPresenter: RegisterPresenterProtocol {
     private weak var coordinator: RegisterCoordinatorProtocol?
     
     private let keyboardHelper: KeyboardHelper
-    private let registerService: RegisterAuthServiceUseCase
+    private let authService: RegisterAuthServiceUseCase
     private let inputValidator: RegisterInputValidatorUseCase
+    private let alertService: RegisterAlertServiceUseCase
     
     init(coordinator: RegisterCoordinatorProtocol,
          keyboardHelper: KeyboardHelper,
-         registerService: RegisterAuthServiceUseCase,
-         inputValidator: RegisterInputValidatorUseCase) {
+         authService: RegisterAuthServiceUseCase,
+         inputValidator: RegisterInputValidatorUseCase,
+         alertService: RegisterAlertServiceUseCase) {
         self.coordinator = coordinator
         self.keyboardHelper = keyboardHelper
-        self.registerService = registerService
+        self.authService = authService
         self.inputValidator = inputValidator
+        self.alertService = alertService
         
         bind()
     }
@@ -74,7 +84,7 @@ final class RegisterPresenter: RegisterPresenterProtocol {
             self?.delegate?.keyboardFrameChanged(frame)
         }
     }
-
+    
     func registerDidTap(email: String?,
                         password: String?,
                         repeatPassword: String?) {
@@ -82,13 +92,20 @@ final class RegisterPresenter: RegisterPresenterProtocol {
             checkValidation(email: email,
                             password: password,
                             repeatPassword: repeatPassword),
-            let email, let password, let repeatPassword  
+            let email, let password, let repeatPassword
         else { return }
-        registerService.register(email: email,
-                             password: password,
+        
+        authService.register(email: email,
+                          password: password,
                              repeatPassword: repeatPassword) { [weak coordinator] isSuccess in
             print(isSuccess)
-            coordinator?.finish()
+            if isSuccess {
+                coordinator?.finish()
+            } else {
+                self.alertService.showAlert(title: L10n.alertTitle,
+                                            message: L10n.alertMessage,
+                                            okTitle: L10n.alertOkTitle)
+            }
         }
     }
     
@@ -104,9 +121,8 @@ final class RegisterPresenter: RegisterPresenterProtocol {
         
         delegate?.setEmailError(error: isEmailValid ? nil : L10n.emailError)
         delegate?.setPasswordError(error: isPasswordValid ? nil : L10n.passwError)
-        delegate?.setRepeatPasswordError(error: repeatPassword == password ?
-                                         nil : L10n.matchPasswError)
-
+        delegate?.setRepeatPasswordError(error: repeatPassword == password ? nil : L10n.matchPasswError)
+        
         return isEmailValid && isPasswordValid && repeatPassword == password
     }
     

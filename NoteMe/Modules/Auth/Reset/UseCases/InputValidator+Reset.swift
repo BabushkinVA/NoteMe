@@ -2,9 +2,9 @@
 //  InputValidator+Reset.swift
 //  NoteMe
 //
-//  Created by Vadim on 19.11.23.
+//  Created by Vadim on 19.02.24.
 //
 
 import Foundation
 
-extension InputValidator: ResetInputValidatorUseCase { }
+extension InputValidator: ResetInputValidatorUseCase {}

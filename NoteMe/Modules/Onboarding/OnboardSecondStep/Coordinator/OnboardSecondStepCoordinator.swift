@@ -2,7 +2,7 @@
 //  OnboardSecondStepCoordinator.swift
 //  NoteMe
 //
-//  Created by Vadim on 28.11.23.
+//  Created by Vadim on 21.02.24.
 //
 
 import UIKit
@@ -10,16 +10,15 @@ import UIKit
 final class OnboardSecondStepCoordinator: Coordinator {
     
     var onDismissedByUser: ((Coordinator) -> Void)?
-
+    
     override func start() -> UIViewController {
         return OnboardSecondStepAssembler.make(self)
     }
+    
 }
 
 extension OnboardSecondStepCoordinator: OnboardSecondStepCoordinatorProtocol {
-    
     func dismissedByUser() {
         onDismissedByUser?(self)
     }
-
 }

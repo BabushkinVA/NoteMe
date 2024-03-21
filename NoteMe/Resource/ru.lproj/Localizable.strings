@@ -5,7 +5,7 @@
   Created by Vadim on 5.11.23.
   
 */
-"cancel_button" = "Назад";
+"cancel_button" = "Отмена";
 
     //MARK: - Auth group
 //LoginVC
@@ -34,6 +34,9 @@
 "reg_wrong_e-mail" = "Неверный формат электронной почты";
 "reg_wrong_password" = "Пароль должен содержать минимум 1 заглавную букву, 1 прописную, одну цифру, один символ, и должен состоять минимум из 6 символов";
 "reg_password_not_matches" = "Пароль не совпадает";
+"reg_alert_title" = "Ошибка!";
+"reg_alert_message" = "Электронная почта и пароль не совпадают!";
+"reg_alert_okTitle" = "Хорошо";
 
 //ResetPasswordVC
 "res_title_label" = "Восстановление Пароля";
@@ -45,7 +48,7 @@
 "res_alert_message" = "Письмо с дальнейшими инструкциями отправлено вам на почту.";
 "res_alert_okTitle" = "Хорошо";
 
-    //MARK: - Onboard group
+//MARK: - Onboard group
 //OnboardFirstStepVC
 "onboard_next_button" = "Далее";
 "onboard_first_title_label" = "Добро пожаловать!";
@@ -60,10 +63,22 @@
 
 "onboard_second_infolabel" = "Вы можете использовать 3 типа напоминаний<br><b>• Календарь</b> - выберите дату, когда вы хотите получить напоминание.<br><b>• Положение</b> - выберите область на карте и вы получите напоминание как только окажетесь в ней.<br><b>• Таймер</b> - установите таймер и через указанный промежуток времени вы получите напоминание.";
 
-    //MARK: - Main group
+//MARK: - Main group
 //TabBar
 "home_item" = "Главная";
 "profile_item" = "Профиль";
 
 //ProfileVC
+"profile_account" = "Аккаунт";
+"profile_settings" = "Настройки";
+"profile_notifications" = "Оповещения";
+"profile_export" = "Экспорт";
+"profile_logout" = "Выйти";
+"profileCell_infoText" = "Ваша электронная почта:";
 
+//MenuPopoverVC
+"popover_calendar" = "Календарь";
+"popover_location" = "Местоположение";
+"popover_timer" = "Таймер";
+"popover_edit" = "Изменить";
+"popover_delete" = "Удалить";

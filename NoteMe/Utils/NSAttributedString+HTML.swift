@@ -2,7 +2,7 @@
 //  NSAttributedString+HTML.swift
 //  NoteMe
 //
-//  Created by Vadim on 16.12.23.
+//  Created by Vadim on 24.02.24.
 //
 
 import UIKit

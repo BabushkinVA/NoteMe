@@ -2,7 +2,7 @@
 //  UIButton+Styles.swift
 //  NoteMe
 //
-//  Created by Vadim on 31.10.23.
+//  Created by Vadim on 15.02.24.
 //
 
 import UIKit
@@ -15,10 +15,9 @@ extension UIButton {
         button.cornerRadius = 5.0
         button.setTitle(title, for: .normal)
         button.setTitleColor(.appText, for: .normal)
-        button.setTitleColor(.appText.withAlphaComponent(0.75), 
+        button.setTitleColor(.appText.withAlphaComponent(0.75),
                              for: .highlighted)
         button.titleLabel?.font = .appBoldFont.withSize(17.0)
-        
         return button
     }
     
@@ -27,12 +26,11 @@ extension UIButton {
         button.backgroundColor = .clear
         button.cornerRadius = 5.0
         button.setBorder(width: 1.0, color: .appYellow)
-        button.setTitle("cancel_button".localized, for: .normal)
+        button.setTitle("Cancel", for: .normal)
         button.setTitleColor(.appYellow, for: .normal)
         button.setTitleColor(.appYellow.withAlphaComponent(0.75),
                              for: .highlighted)
         button.titleLabel?.font = .appBoldFont.withSize(17.0)
-        
         return button
     }
     
@@ -77,4 +75,5 @@ extension UIButton {
         
         return button
     }
+    
 }

@@ -2,7 +2,7 @@
 //  ContainerRegistrator.swift
 //  NoteMe
 //
-//  Created by Vadim on 16.01.24.
+//  Created by Vadim on 28.02.24.
 //
 
 import Foundation
@@ -14,8 +14,8 @@ final class ContainerRegistrator {
         
         container.register({ AlertService(container: container) })
         container.register({ AuthService() })
-        container.register({ KeyboardHelper() })
         container.register({ InputValidator() })
+        container.register({ KeyboardHelper() })
         
         return container
     }

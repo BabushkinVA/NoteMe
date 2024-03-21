@@ -2,7 +2,7 @@
 //  UIFont+Consts.swift
 //  NoteMe
 //
-//  Created by Vadim on 24.10.23.
+//  Created by Vadim on 14.02.24.
 //
 
 import UIKit

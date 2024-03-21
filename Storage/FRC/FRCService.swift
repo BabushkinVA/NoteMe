@@ -2,7 +2,7 @@
 //  FRCService.swift
 //  Storage
 //
-//  Created by Vadim on 10.02.24.
+//  Created by Vadim on 4.03.24.
 //
 
 import Foundation
@@ -19,11 +19,10 @@ public final class FRCService<DTO: DTODescription>: NSObject,
     
     private lazy var frc: NSFetchedResultsController<DTO.MO> = {
         let frc = NSFetchedResultsController(
-            fetchRequest: request,
-            managedObjectContext: CoreDataService.shared.mainContext,
-            sectionNameKeyPath: nil,
-            cacheName: nil)
-        
+                        fetchRequest: request,
+                        managedObjectContext: CoreDataService.shared.mainContext,
+                        sectionNameKeyPath: nil,
+                        cacheName: nil)
         frc.delegate = self
         return frc
     }()
@@ -32,15 +31,15 @@ public final class FRCService<DTO: DTODescription>: NSObject,
         let dtos = frc.fetchedObjects?.compactMap { $0.toDTO() }
         return dtos ?? []
     }
-    
+
     public init(_ requestBuilder: (NSFetchRequest<DTO.MO>) -> Void) {
         requestBuilder(self.request)
     }
-    
+
     public func startHandle() {
         try? frc.performFetch()
     }
-    
+
     public func controllerDidChangeContent(_ controller:
         NSFetchedResultsController<NSFetchRequestResult>) {
         try? controller.performFetch()

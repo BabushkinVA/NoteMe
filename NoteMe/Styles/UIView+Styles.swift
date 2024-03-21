@@ -2,16 +2,16 @@
 //  UIView+Styles.swift
 //  NoteMe
 //
-//  Created by Vadim on 4.11.23.
+//  Created by Vadim on 16.02.24.
 //
 
 import UIKit
 
 extension UIView {
     
-    static func shadowStyle() -> UIView {
+    static func infoViewStyle() -> UIView {
         let view = UIView()
-        view.cornerRadius = 5
+        view.cornerRadius = 5.0
         view.backgroundColor = .white
         
         view.layer.shadowOpacity = 1

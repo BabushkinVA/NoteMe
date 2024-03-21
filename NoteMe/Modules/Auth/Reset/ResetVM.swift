@@ -2,10 +2,10 @@
 //  ResetVM.swift
 //  NoteMe
 //
-//  Created by Vadim on 19.11.23.
+//  Created by Vadim on 19.02.24.
 //
 
-import UIKit
+import Foundation
 
 protocol ResetCoordinatorProtocol: AnyObject {
     func finish()
@@ -37,17 +37,17 @@ final class ResetVM: ResetViewModelProtocol {
     
     private weak var coordinator: ResetCoordinatorProtocol?
     
-    private let resetService: ResetAuthServiceUseCase
     private let inputValidator: ResetInputValidatorUseCase
+    private let resetService: ResetAuthServiceUseCase
     private let alertService: ResetAlertServiceUseCase
     
     init(coordinator: ResetCoordinatorProtocol,
-         resetService: ResetAuthServiceUseCase,
          inputValidator: ResetInputValidatorUseCase,
+         resetService: ResetAuthServiceUseCase,
          alertService: ResetAlertServiceUseCase) {
         self.coordinator = coordinator
-        self.resetService = resetService
         self.inputValidator = inputValidator
+        self.resetService = resetService
         self.alertService = alertService
     }
     
@@ -56,23 +56,17 @@ final class ResetVM: ResetViewModelProtocol {
             checkValidation(email: email),
             let email
         else { return }
-        resetService.resetPassword(email: email) { [weak self] isSuccess in
+        resetService.resetPassword(email: email) { [weak coordinator] isSuccess in
             print(isSuccess)
-            
             if isSuccess {
-                self?.coordinator?.finish()
+                coordinator?.finish()
             } else {
-                self?.alertService.showAlert(
-                    title: L10n.alertTitle,
-                    message: L10n.alertMessage,
-                    okTitle: L10n.alertOkTitle)
+                self.alertService.showAlert(title: L10n.alertTitle,
+                                            message: L10n.alertMessage,
+                                            okTitle: L10n.alertOkTitle)
             }
         }
-    }
-    
-    func cancelDidTap() {
-        print(#function)
-        coordinator?.finish()
+        
     }
     
     private func checkValidation(email: String?) -> Bool {
@@ -81,6 +75,10 @@ final class ResetVM: ResetViewModelProtocol {
         catchEmailError?(isEmailValid ? nil : L10n.emailError)
         
         return isEmailValid
+    }
+    
+    func cancelDidTap() {
+        coordinator?.finish()
     }
     
 }

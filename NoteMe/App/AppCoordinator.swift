@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 final class AppCoordinator: Coordinator {
     
@@ -18,12 +17,9 @@ final class AppCoordinator: Coordinator {
         self.windowManager = container.resolve()
     }
     
-    func startApp() {
-//        openMainApp()
-//        //FIXME: - TEST CODE
-//        ParametersHelper.set(.authenticated, value: false)
-//        ParametersHelper.set(.onboarded, value: false)
-//        
+//    func startApp() {
+////        ParametersHelper.set(.authenticated, value: false)
+////        ParametersHelper.set(.onboarded, value: false)
 //        if ParametersHelper.get(.authenticated) {
 //            if ParametersHelper.get(.onboarded) {
 //                openMainApp()
@@ -31,8 +27,15 @@ final class AppCoordinator: Coordinator {
 //                openOnboardingModule()
 //            }
 //        } else {
-            openAuthModule()
+//            openAuthModule()
 //        }
+//    }
+    
+    func startApp() {
+        openMainApp()
+//        openAuthModule()
+//        openDateNotificationModule()
+        
     }
     
     private func openAuthModule() {
@@ -40,7 +43,39 @@ final class AppCoordinator: Coordinator {
         children.append(coordinator)
         
         coordinator.onDidFinish = { [weak self] coordinator in
-            self?.children.removeAll { $0 == coordinator }
+            self?.children.removeAll() { $0 == coordinator }
+            self?.startApp()
+        }
+        
+        let vc = coordinator.start()
+        
+        let window = windowManager.get(type: .main)
+        window.rootViewController = vc
+        windowManager.show(type: .main)
+    }
+    
+    private func openRegisterModule() {
+        let coordinator = RegisterCoordinator(container: container)
+        children.append(coordinator)
+        
+        coordinator.onDidFinish = { [weak self] coordinator in
+            self?.children.removeAll() { $0 == coordinator }
+            self?.startApp()
+        }
+        
+        let vc = coordinator.start()
+        
+        let window = windowManager.get(type: .main)
+        window.rootViewController = vc
+        windowManager.show(type: .main)
+    }
+    
+    private func openResetModule() {
+        let coordinator = ResetCoordinator(container: container)
+        children.append(coordinator)
+        
+        coordinator.onDidFinish = { [weak self] coordinator in
+            self?.children.removeAll() { $0 == coordinator }
             self?.startApp()
         }
         
@@ -56,7 +91,7 @@ final class AppCoordinator: Coordinator {
         children.append(coordinator)
         
         coordinator.onDidFinish = { [weak self] coordinator in
-            self?.children.removeAll { $0 == coordinator }
+            self?.children.removeAll() { $0 == coordinator }
             self?.startApp()
         }
         
@@ -67,20 +102,36 @@ final class AppCoordinator: Coordinator {
         windowManager.show(type: .main)
     }
     
-//    private func openMainApp() {
-//        let coordinator = MainTabBarCoordinator()
-//        children.append(coordinator)
-//        
-//        coordinator.onDidFinish = { [weak self] coordinator in
-//            self?.children.removeAll { $0 == coordinator }
-//            self?.startApp()
-//        }
-//        
-//        let vc = coordinator.start()
-//        
-//        let window = windowManager.get(type: .main)
-//        window.rootViewController = vc
-//        windowManager.show(type: .main)
-//    }
+    private func openMainApp() {
+        let coordinator = MainTabBarCoordinator()
+        children.append(coordinator)
+        
+        coordinator.onDidFinish = { [weak self] coordinator in
+            self?.children.removeAll() { $0 == coordinator }
+            self?.startApp()
+        }
+        
+        let vc = coordinator.start()
+        
+        let window = windowManager.get(type: .main)
+        window.rootViewController = vc
+        windowManager.show(type: .main)
+    }
+    
+    private func openDateNotificationModule() {
+        let coordinator = DateNotificationCoordinator()
+        children.append(coordinator)
+        
+        coordinator.onDidFinish = { [weak self] coordinator in
+            self?.children.removeAll() { $0 == coordinator }
+            self?.startApp()
+        }
+        
+        let vc = coordinator.start()
+        
+        let window = windowManager.get(type: .main)
+        window.rootViewController = vc
+        windowManager.show(type: .main)
+    }
     
 }

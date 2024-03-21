@@ -2,9 +2,10 @@
 //  AllNotificationStorage.swift
 //  Storage
 //
-//  Created by Vadim on 20.02.24.
+//  Created by Vadim on 9.03.24.
 //
 
 import CoreData
 
-//final class AllNotificationStorage: NotificationStorage<BaseNotificationDTO> {}
+public final class AllNotificationStorage:
+    NotificationStorage<BaseNotificationDTO> {}

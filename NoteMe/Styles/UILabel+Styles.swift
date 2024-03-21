@@ -2,7 +2,7 @@
 //  UILabel+Styles.swift
 //  NoteMe
 //
-//  Created by Vadim on 4.11.23.
+//  Created by Vadim on 16.02.24.
 //
 
 import UIKit
@@ -15,7 +15,6 @@ extension UILabel {
         label.textColor = .appText
         label.font = .appBoldFont.withSize(25.0)
         label.textAlignment = .center
-
         return label
     }
     
@@ -28,9 +27,7 @@ extension UILabel {
         label.textColor = .appText
         label.attributedText = .parse(html: text, font: .appFont.withSize(13.0))
         label.numberOfLines = .zero
-        
         return label
-        
     }
     
     static func onboardSelectionImageLabelStyle(_ text: String) -> UILabel {
@@ -39,17 +36,15 @@ extension UILabel {
         label.text = "\(text)"
         label.font = .appFont.withSize(16.0)
         label.textColor = .appText
-        
         return label
     }
     
-    static func regularBoldLabelStyle(_ text: String, _ fontSize: CGFloat = 14.0) -> UILabel {
+    static func notificatioLabelStyle(_ title: String) -> UILabel {
         let label = UILabel()
-        label.textAlignment = .left
-        label.text = "\(text)"
+        label.text = "\(title)"
         label.textColor = .appText
-        label.font = .appBoldFont.withSize(fontSize)
-        
+        label.font = .appBoldFont.withSize(17.0)
+        label.textAlignment = .left
         return label
     }
     

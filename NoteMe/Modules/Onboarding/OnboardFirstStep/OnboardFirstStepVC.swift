@@ -2,7 +2,7 @@
 //  OnboardFirstStepVC.swift
 //  NoteMe
 //
-//  Created by Vadim on 28.11.23.
+//  Created by Vadim on 21.02.24.
 //
 
 import UIKit
@@ -27,7 +27,7 @@ final class OnboardFirstStepVC: UIViewController {
         .withAction(viewModel,
                     #selector(OnboardFirstStepViewModelProtocol.nextDidTap))
     
-    private lazy var infoView: UIView = .shadowStyle()
+    private lazy var infoView: UIView = .infoViewStyle()
     private lazy var infoLabel: UILabel =
         .infoLabelStyle(L10n.infoLabel)
     
@@ -35,7 +35,7 @@ final class OnboardFirstStepVC: UIViewController {
         .titleLabelStyle(L10n.titleLabel)
     
     private lazy var logoContainer: UIView = UIView()
-    private lazy var logoImageView: 
+    private lazy var logoImageView:
         UIImageView = UIImageView(image: .General.logo)
     
     private var viewModel: OnboardFirstStepViewModelProtocol
@@ -81,7 +81,7 @@ final class OnboardFirstStepVC: UIViewController {
         }
         
         nextButton.snp.makeConstraints { make in
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)//.inset(16.0)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
             make.horizontalEdges.equalToSuperview().inset(20.0)
             make.height.equalTo(45.0)
         }

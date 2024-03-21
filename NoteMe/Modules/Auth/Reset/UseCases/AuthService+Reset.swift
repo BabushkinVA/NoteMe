@@ -2,7 +2,7 @@
 //  AuthService+Reset.swift
 //  NoteMe
 //
-//  Created by Vadim on 9.12.23.
+//  Created by Vadim on 26.02.24.
 //
 
 import Foundation

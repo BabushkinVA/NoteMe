@@ -2,7 +2,7 @@
 //  RegisterVC.swift
 //  NoteMe
 //
-//  Created by Vadim on 5.11.23.
+//  Created by Vadim on 16.02.24.
 //
 
 import UIKit
@@ -33,21 +33,12 @@ final class RegisterVC: UIViewController {
     
     private lazy var logoContainer: UIView = UIView()
     private lazy var logoImageView: UIImageView =
-    UIImageView(image: .General.logo)
+        UIImageView(image: .General.logo)
+    
+    private lazy var infoView: UIView = .infoViewStyle()
     
     private lazy var titleLabel: UILabel =
         .titleLabelStyle(L10n.titleLabel)
-    
-    private lazy var registerButton: UIButton =
-        .yellowRoundedButton(L10n.registerButton)
-        .withAction(self, #selector(registerDidTap))
-    
-    private lazy var haveAccountButton: UIButton =
-        .underlineYellowButton(L10n.haveAccountButton)
-        .withAction(presenter,
-                    #selector(RegisterPresenterProtocol.haveAccountDidTap))
-    
-    private lazy var infoView: UIView = .shadowStyle()
     
     private lazy var emailTextField: LineTextField = {
         let textField = LineTextField()
@@ -70,6 +61,15 @@ final class RegisterVC: UIViewController {
         return textField
     }()
     
+    private lazy var haveAccountButton: UIButton =
+        .underlineYellowButton(L10n.haveAccountButton)
+        .withAction(presenter,
+                    #selector(RegisterPresenterProtocol.haveAccountDidTap))
+    
+    private lazy var registerButton: UIButton =
+        .yellowRoundedButton(L10n.registerButton)
+        .withAction(self, #selector(registerDidTap))
+    
     private var presenter: RegisterPresenterProtocol
     
     init(presenter: RegisterPresenterProtocol) {
@@ -87,22 +87,24 @@ final class RegisterVC: UIViewController {
         setupUI()
         setupConstraints()
     }
-        
+    
     private func setupUI() {
         view.backgroundColor = .appBlack
         view.addSubview(contentView)
-        view.addSubview(registerButton)
         view.addSubview(haveAccountButton)
+        view.addSubview(registerButton)
+        
+        
+        logoContainer.addSubview(logoImageView)
         
         contentView.addSubview(logoContainer)
         contentView.addSubview(infoView)
         contentView.addSubview(titleLabel)
         
-        logoContainer.addSubview(logoImageView)
-        
         infoView.addSubview(emailTextField)
         infoView.addSubview(passwordTextField)
         infoView.addSubview(repeatPasswordTextField)
+        
     }
     
     private func setupConstraints() {
@@ -154,9 +156,9 @@ final class RegisterVC: UIViewController {
         }
         
         repeatPasswordTextField.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(16.0)
             make.top.equalTo(passwordTextField.snp.bottom).inset(-16.0)
-            make.bottom.equalToSuperview().inset(20.0)
+            make.horizontalEdges.equalToSuperview().inset(16.0)
+            make.bottom.equalToSuperview().inset(16.0)
         }
     }
     
@@ -173,6 +175,7 @@ final class RegisterVC: UIViewController {
 }
 
 extension RegisterVC: RegisterPresenterDelegate {
+    
     func setEmailError(error: String?) {
         emailTextField.errorText = error
     }

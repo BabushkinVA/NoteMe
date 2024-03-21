@@ -2,14 +2,14 @@
 //  AlertService.swift
 //  NoteMe
 //
-//  Created by Vadim on 14.12.23.
+//  Created by Vadim on 27.02.24.
 //
 
 import UIKit
 
 final class AlertService {
     
-    typealias AlertActionHandler = () -> Void
+    typealias AlertActionHadler = () -> Void
     
     private let windowManager: WindowManager
     
@@ -20,9 +20,9 @@ final class AlertService {
     func showAlert(title: String?,
                    message: String?,
                    cancelTitle: String? = nil,
-                   cancelHandler: AlertActionHandler? = nil,
+                   cancelHandler: AlertActionHadler? = nil,
                    okTitle: String? = nil,
-                   okHandler: AlertActionHandler? = nil) {
+                   okHandler: AlertActionHadler? = nil) {
         //Build
         let alertVC = buildAlert(title: title,
                                  message: message,
@@ -30,7 +30,6 @@ final class AlertService {
                                  cancelHandler: cancelHandler,
                                  okTitle: okTitle,
                                  okHandler: okHandler)
-        
         let window = windowManager.get(type: .alert)
         window.rootViewController = UIViewController()
         windowManager.show(type: .alert)
@@ -40,9 +39,9 @@ final class AlertService {
     private func buildAlert(title: String?,
                             message: String?,
                             cancelTitle: String? = nil,
-                            cancelHandler: AlertActionHandler? = nil,
+                            cancelHandler: AlertActionHadler? = nil,
                             okTitle: String? = nil,
-                            okHandler: AlertActionHandler? = nil) -> UIAlertController {
+                            okHandler: AlertActionHadler? = nil) -> UIAlertController {
         let alertVC = UIAlertController(title: title,
                                         message: message,
                                         preferredStyle: .alert)
@@ -66,14 +65,12 @@ final class AlertService {
         }
         return alertVC
     }
-    
 }
 
 //extension UIAlertController {
 //    
 //    func show() {
 //        let alertService = AlertService.current
-//        
 //        alertService.buildWindow()
 //        
 //        alertService.window?.makeKeyAndVisible()

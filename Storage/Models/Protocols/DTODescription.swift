@@ -2,7 +2,7 @@
 //  DTODescription.swift
 //  Storage
 //
-//  Created by Vadim on 9.02.24.
+//  Created by Vadim on 3.03.24.
 //
 
 import Foundation
@@ -16,8 +16,9 @@ public protocol DTODescription {
     var title: String { get set }
     var subtitle: String? { get set }
     var completedDate: Date? { get set }
-    
-    static func fromMO(_ mo: MO) -> Self
+
+    static func fromMO(_ mo: MO) -> Self?
+
 }
 
 public protocol MODescription: NSManagedObject, NSFetchRequestResult {

@@ -2,7 +2,7 @@
 //  BaseNotificationMO+CoreDataClass.swift
 //  Storage
 //
-//  Created by Vadim on 3.02.24.
+//  Created by Vadim on 1.03.24.
 //
 //
 
@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 @objc(BaseNotificationMO)
-public class BaseNotificationMO: NSManagedObject {
-//    public func toDTO() -> (any DTODescription)? {
-//        return BaseNotificationDTO.fromMO(self)
-//    }
+public class BaseNotificationMO: NSManagedObject, MODescription {
+    public func toDTO() -> (any DTODescription)? {
+        return BaseNotificationDTO.fromMO(self)
+    }
     
     public func apply(dto: any DTODescription) {
         self.identifier = dto.id

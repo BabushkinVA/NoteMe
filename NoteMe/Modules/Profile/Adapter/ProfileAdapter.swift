@@ -2,7 +2,7 @@
 //  ProfileAdapter.swift
 //  NoteMe
 //
-//  Created by Vadim on 2.02.24.
+//  Created by Vadim on 1.03.24.
 //
 
 import UIKit
@@ -20,7 +20,7 @@ final class ProfileAdapter: NSObject {
         tableView.backgroundColor = .clear
         tableView.isScrollEnabled = false
         tableView.separatorStyle = .singleLine
-//        tableView.addShadow()
+        tableView.tableViewShadow()
         return tableView
     }()
     
@@ -34,48 +34,48 @@ final class ProfileAdapter: NSObject {
         tableView.dataSource = self
         tableView.register(ProfileSettingsCell.self)
         tableView.register(ProfileAccountCell.self)
-
     }
     
 }
 
 extension ProfileAdapter: UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].numberOfRows
+        sections[section].numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = sections[indexPath.section]
+        
         switch section {
         case .account(let email):
-            let cell:ProfileAccountCell = tableView.dequeue(at: indexPath)
+            let cell: ProfileAccountCell = tableView.dequeue(at: indexPath)
             cell.setup(email)
             return cell
             
         case .settings(let rows):
-            let cell = tableView.dequeue(at: indexPath) as ProfileSettingsCell
+            let cell: ProfileSettingsCell = tableView.dequeue(at: indexPath) 
             cell.setup(rows[indexPath.row])
             return cell
         }
     }
-        
+    
 }
 
 extension ProfileAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let sectionType = sections[section]
+        let section = sections[section]
         let header = ProfileTableViewHeader()
-//        header.text = section.headerText
+        header.text = section.headerText
         return header
     }
 }
 
 extension ProfileAdapter: ProfileAdapterProtocol {
-    
     func reloadData(with sections: [ProfileSections]) {
         self.sections = sections
     }
@@ -84,4 +84,11 @@ extension ProfileAdapter: ProfileAdapterProtocol {
         return tableView
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.contentView.layer.masksToBounds = true
+    }
 }

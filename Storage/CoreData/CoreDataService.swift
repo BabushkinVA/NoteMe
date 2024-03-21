@@ -2,7 +2,7 @@
 //  CoreDataService.swift
 //  Storage
 //
-//  Created by Vadim on 4.02.24.
+//  Created by Vadim on 2.03.24.
 //
 
 import CoreData
@@ -18,13 +18,23 @@ final class CoreDataService {
         context.automaticallyMergesChangesFromParent = true
         return context
     }()
-    
-    var backgroundContext: NSManagedObjectContext {
-        return persistentContainer.newBackgroundContext()
-    }
 
+    var backgroundContext: NSManagedObjectContext {
+           return persistentContainer.newBackgroundContext()
+       }
+    
     private var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "NotificationDataBase")
+        let modelName = "NotificationDataBase"
+        let bundle = Bundle(for: CoreDataService.self)
+        
+        guard
+            let modelURL = bundle.url(forResource: modelName,
+                                      withExtension: "momd"),
+            let manageObjectModel = NSManagedObjectModel(contentsOf: modelURL)
+        else { fatalError("unable to find model in bundle") }
+        
+        let container = NSPersistentContainer(name: modelName,
+                                              managedObjectModel: manageObjectModel)
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -32,6 +42,17 @@ final class CoreDataService {
         })
         return container
     }()
+    
+
+//    private var persistentContainer: NSPersistentContainer = {
+//        let container = NSPersistentContainer(name: "NotificationDataBase")
+//        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+//            if let error = error as NSError? {
+//                fatalError("Unresolved error \(error), \(error.userInfo)")
+//            }
+//        })
+//        return container
+//    }()
     
     func saveMainContext(completion: CompletionHandler? = nil) {
         saveContext(context: mainContext, completion: completion)
@@ -52,4 +73,3 @@ final class CoreDataService {
     }
     
 }
-

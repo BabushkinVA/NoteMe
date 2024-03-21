@@ -2,7 +2,7 @@
 //  MenuActionCell.swift
 //  NoteMe
 //
-//  Created by Vadim on 27.02.24.
+//  Created by Vadim on 7.03.24.
 //
 
 import UIKit
@@ -16,16 +16,25 @@ protocol MenuActionItem {
 final class MenuActionCell: UITableViewCell {
     
     private lazy var titleLabel: UILabel = {
-       let label = UILabel()
-        label.textAlignment = .left
+        let label = UILabel()
         label.textColor = .appText
-        label.font = .appBoldFont.withSize(16.0)
+        label.font = .appFont.withSize(16.0)
+        label.textAlignment = .left
         return label
     }()
     
     private lazy var iconView: UIImageView = UIImageView()
     
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        setupUI()
+        setupConstraints()
+    }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func setup(_ item: MenuActionItem) {
         titleLabel.text = item.title
@@ -45,9 +54,11 @@ final class MenuActionCell: UITableViewCell {
         
         iconView.snp.makeConstraints { make in
             make.size.equalTo(24.0)
-            make.left.equalTo(titleLabel.snp.right).offset(8.0)
+//            make.left.equalTo(titleLabel.snp.right).offset(8.0)
             make.right.equalToSuperview().inset(16.0)
-            make.centerY.equalToSuperview()
+            make.centerY.equalTo(titleLabel.snp.centerY)
         }
+        
     }
+    
 }

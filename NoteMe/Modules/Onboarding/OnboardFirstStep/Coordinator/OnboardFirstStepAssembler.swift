@@ -2,7 +2,7 @@
 //  OnboardFirstStepAssembler.swift
 //  NoteMe
 //
-//  Created by Vadim on 28.11.23.
+//  Created by Vadim on 21.02.24.
 //
 
 import UIKit
@@ -10,9 +10,9 @@ import UIKit
 final class OnboardFirstStepAssembler {
     private init() {}
     
-    static func  make(_ coordinator: OnboardFirstStepCoordinatorProtocol) -> 
-        UIViewController {
+    static func make(_ coordinator: OnboardFirstStepCoordinatorProtocol) -> UIViewController {
         let vm = OnboardFirstStepVM(coordinator: coordinator)
         return OnboardFirstStepVC(viewModel: vm)
     }
+    
 }

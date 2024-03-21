@@ -2,7 +2,7 @@
 //  ResetVC.swift
 //  NoteMe
 //
-//  Created by Vadim on 5.11.23.
+//  Created by Vadim on 16.02.24.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ import SnapKit
     var catchEmailError: ((String?) -> Void)? { get set }
     
     func resetDidTap(email: String?)
-    @objc func cancelDidTap()
+    func cancelDidTap()
 }
 
 final class ResetVC: UIViewController {
@@ -23,25 +23,17 @@ final class ResetVC: UIViewController {
         static let infoLabel: String = "res_infolabel".localized
         static let resEmailTextField: String = "res_e-mail_textField_placeholder".localized
     }
-
+    
     private lazy var contentView: UIView = .contentViewStyle()
     
     private lazy var logoContainer: UIView = UIView()
     private lazy var logoImageView: UIImageView =
         UIImageView(image: .General.logo)
     
+    private lazy var infoView: UIView = .infoViewStyle()
+    
     private lazy var titleLabel: UILabel =
         .titleLabelStyle(L10n.titleLabel)
-    
-    private lazy var resetButton: UIButton =
-        .yellowRoundedButton(L10n.resetButton)
-        .withAction(self, #selector(resetDidTap))
-    
-    private lazy var cancelButton: UIButton = 
-        .cancelButton()
-        .withAction(viewModel, #selector(ResetViewModelProtocol.cancelDidTap))
-    
-    private lazy var infoView: UIView = .shadowStyle()
     
     private lazy var resetEmailTextField: LineTextField = {
         let textField = LineTextField()
@@ -50,7 +42,15 @@ final class ResetVC: UIViewController {
         return textField
     }()
     
-    private var viewModel: ResetViewModelProtocol
+    private lazy var cancelButton: UIButton = 
+        .cancelButton()
+        .withAction(viewModel, #selector(ResetViewModelProtocol.cancelDidTap))
+    
+    private lazy var resetButton: UIButton =
+        .yellowRoundedButton(L10n.resetButton)
+        .withAction(self, #selector(resetDidTap))
+    
+    private let viewModel: ResetViewModelProtocol
     
     init(viewModel: ResetViewModelProtocol) {
         self.viewModel = viewModel
@@ -78,9 +78,10 @@ final class ResetVC: UIViewController {
     
     private func setupUI() {
         view.backgroundColor = .appBlack
+        
         view.addSubview(contentView)
-        view.addSubview(resetButton)
         view.addSubview(cancelButton)
+        view.addSubview(resetButton)
         
         contentView.addSubview(logoContainer)
         contentView.addSubview(infoView)
@@ -89,6 +90,7 @@ final class ResetVC: UIViewController {
         logoContainer.addSubview(logoImageView)
         
         infoView.addSubview(resetEmailTextField)
+        
     }
     
     private func setupConstraints() {
@@ -131,7 +133,7 @@ final class ResetVC: UIViewController {
         }
         
         resetEmailTextField.snp.makeConstraints { make in
-            make.top.horizontalEdges.equalToSuperview().inset(16.0)
+            make.horizontalEdges.top.equalToSuperview().inset(16.0)
             make.bottom.equalToSuperview().inset(20.0)
         }
     }
@@ -141,7 +143,7 @@ final class ResetVC: UIViewController {
     }
     
     @objc private func resetDidTap() {
-        viewModel.resetDidTap(email: resetEmailTextField.text)
+            viewModel.resetDidTap(email: resetEmailTextField.text)
     }
     
 }

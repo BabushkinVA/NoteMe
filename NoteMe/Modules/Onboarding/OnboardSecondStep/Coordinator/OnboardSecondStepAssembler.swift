@@ -2,7 +2,7 @@
 //  OnboardSecondStepAssembler.swift
 //  NoteMe
 //
-//  Created by Vadim on 28.11.23.
+//  Created by Vadim on 21.02.24.
 //
 
 import UIKit

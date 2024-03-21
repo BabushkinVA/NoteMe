@@ -2,7 +2,7 @@
 //  DateNotificationMO+CoreDataProperties.swift
 //  Storage
 //
-//  Created by Vadim on 3.02.24.
+//  Created by Vadim on 1.03.24.
 //
 //
 

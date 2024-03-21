@@ -34,6 +34,9 @@
 "reg_wrong_e-mail" = "Wrong e-mail format";
 "reg_wrong_password" = "Password must contain at least six characters, including at least one number and includes both lower and uppercase letters and special characters";
 "reg_password_not_matches" = "Passwords doesn't match";
+"reg_alert_title" = "Error!";
+"reg_alert_message" = "Email and password doesn't match!";
+"reg_alert_okTitle" = "Ok";
 
 //ResetPasswordVC
 "res_title_label" = "Reset Password";
@@ -66,4 +69,16 @@
 "profile_item" = "Profile";
 
 //ProfileVC
+"profile_account" = "Account";
+"profile_settings" = "Settings";
+"profile_notifications" = "Notifications";
+"profile_export" = "Export";
+"profile_logout" = "Logout";
+"profileCell_infoText" = "Your e-mail:";
 
+//MenuPopoverVC
+"popover_calendar" = "Calendar";
+"popover_location" = "Location";
+"popover_timer" = "Timer";
+"popover_edit" = "Edit";
+"popover_delete" = "Delete";

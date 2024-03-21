@@ -2,13 +2,14 @@
 //  ResetCoordinator.swift
 //  NoteMe
 //
-//  Created by Vadim on 28.11.23.
+//  Created by Vadim on 21.02.24.
 //
 
 import UIKit
 
 final class ResetCoordinator: Coordinator {
     
+    private var rootVC: UIViewController?
     private let container: Container
     
     init(container: Container) {
@@ -16,8 +17,9 @@ final class ResetCoordinator: Coordinator {
     }
     
     override func start() -> UIViewController {
-        return ResetAssembler.make(container: container, 
-                                   coordinator: self)
+        let vc =  ResetAssembler.make(container: container, coordinator: self)
+        rootVC = vc
+        return vc
     }
     
 }

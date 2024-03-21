@@ -2,26 +2,25 @@
 //  HomeVC.swift
 //  NoteMe
 //
-//  Created by Vadim on 14.12.23.
+//  Created by Vadim on 28.02.24.
 //
 
 import UIKit
 
-protocol HomeViewModelProtocol: AnyObject{
+protocol HomeViewModelProtocol {
     func viewDidLoad()
 }
 
 final class HomeVC: UIViewController {
     
     private enum L10n {
-        static let homeItem: String = "home_item".localized
+        static let home: String = "home_item".localized
     }
     
     private var viewModel: HomeViewModelProtocol
     
     init(viewModel: HomeViewModelProtocol) {
         self.viewModel = viewModel
-        
         super.init(nibName: nil, bundle: nil)
         setupTabBarItem()
     }
@@ -38,13 +37,14 @@ final class HomeVC: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .appGray
     }
     
     private func setupTabBarItem() {
-        self.tabBarItem = UITabBarItem(title: L10n.homeItem,
+        self.tabBarItem = UITabBarItem(title: L10n.home,
                                        image: .TabBar.home,
                                        tag: .zero)
+        
     }
     
 }

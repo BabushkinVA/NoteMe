@@ -2,7 +2,7 @@
 //  OnboardSecondStepVC.swift
 //  NoteMe
 //
-//  Created by Vadim on 28.11.23.
+//  Created by Vadim on 21.02.24.
 //
 
 import UIKit
@@ -26,19 +26,19 @@ final class OnboardSecondStepVC: UIViewController {
     
     private lazy var contentView: UIView = .contentViewStyle()
     
-    private lazy var doneButton: UIButton = 
+    private lazy var doneButton: UIButton =
         .yellowRoundedButton(L10n.doneButton)
         .withAction(viewModel,
                     #selector(OnboardSecondStepViewModelProtocol.doneDidTap))
     
-    private lazy var infoView: UIView = .shadowStyle()
+    private lazy var infoView: UIView = .infoViewStyle()
     
     private lazy var infoLabel: UILabel = .infoLabelStyle(L10n.infoLabel)
     
     private lazy var titleLabel: UILabel = .titleLabelStyle(L10n.titleLabel)
     
     private lazy var logoContainer: UIView = UIView()
-    private lazy var logoImageView: UIImageView = 
+    private lazy var logoImageView: UIImageView =
         UIImageView(image: .General.logo)
     
     private lazy var onboardContainer: UIView = UIView()
@@ -59,6 +59,7 @@ final class OnboardSecondStepVC: UIViewController {
     
     init(viewModel: OnboardSecondStepViewModelProtocol) {
         self.viewModel = viewModel
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -154,13 +155,13 @@ final class OnboardSecondStepVC: UIViewController {
             make.height.equalTo(24.0)
             make.top.equalToSuperview().inset(18.0)
             make.left.equalToSuperview().inset(24.0)
-        }        
+        }
         
         locationLabel.snp.makeConstraints { make in
             make.height.equalTo(24.0)
             make.top.equalTo(calendarLabel.snp.bottom).inset(-14.0)
             make.left.equalToSuperview().inset(24.0)
-        }        
+        }
         
         timerLabel.snp.makeConstraints { make in
             make.height.equalTo(24.0)

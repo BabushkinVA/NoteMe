@@ -2,14 +2,13 @@
 //  RegisterCoordinator.swift
 //  NoteMe
 //
-//  Created by Vadim on 21.11.23.
+//  Created by Vadim on 20.02.24.
 //
 
 import UIKit
 
 final class RegisterCoordinator: Coordinator {
     
-    private var rootVC: UIViewController?
     private let container: Container
     
     init(container: Container) {
@@ -17,10 +16,7 @@ final class RegisterCoordinator: Coordinator {
     }
     
     override func start() -> UIViewController {
-        let vc =  RegisterAssembler.make(container: container, 
-                                         coordinator: self)
-        rootVC = vc
-        return vc
+        return RegisterAssembler.make(container: container, coordinator: self)
     }
     
 }

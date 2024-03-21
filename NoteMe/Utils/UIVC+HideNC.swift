@@ -1,8 +1,8 @@
 //
-//  UIVC+hideNC.swift
+//  UIVC+HideNC.swift
 //  NoteMe
 //
-//  Created by Vadim on 29.11.23.
+//  Created by Vadim on 24.02.24.
 //
 
 import UIKit
@@ -10,5 +10,5 @@ import UIKit
 extension UIViewController {
     func hideNavigationBar() {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-    }    
+    }
 }

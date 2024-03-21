@@ -8,6 +8,10 @@
 import UIKit
 import SnapKit
 
+protocol LineTextFieldDelegate {
+    func didChangeContent(_ textField: LineTextField)
+}
+
 final class LineTextField: UIView {
     
     private lazy var titleLabel: UILabel = {
@@ -15,6 +19,7 @@ final class LineTextField: UIView {
         label.font = .appBoldFont.withSize(13.0)
         label.textColor = .appText
         label.textAlignment = .left
+        label.numberOfLines = 2
         return label
     }()
     
@@ -62,6 +67,11 @@ final class LineTextField: UIView {
         set { textField.text = newValue }
     }
     
+    override var inputView: UIView? {
+        get { textField.inputView }
+        set { textField.inputView = newValue }
+    }
+    
     var delegate: UITextFieldDelegate? {
         get { textField.delegate }
         set { textField.delegate = newValue }
@@ -76,7 +86,7 @@ final class LineTextField: UIView {
         super.init(coder: coder)
         commonInit()
     }
-    
+     
     private func commonInit() {
         setupUI()
         setupConstraints()
@@ -112,3 +122,5 @@ final class LineTextField: UIView {
         }
     }
 }
+
+extension LineTextField: UITextFieldDelegate {}

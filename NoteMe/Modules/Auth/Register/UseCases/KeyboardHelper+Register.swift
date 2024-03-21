@@ -2,10 +2,9 @@
 //  KeyboardHelper+Register.swift
 //  NoteMe
 //
-//  Created by Vadim on 22.11.23.
+//  Created by Vadim on 19.02.24.
 //
 
 import Foundation
 
-extension KeyboardHelper: RegisterKeyboardHelperUseCase { }
- 
+extension KeyboardHelper: RegisterKeyboardHelperUseCase {}

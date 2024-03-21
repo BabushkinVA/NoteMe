@@ -2,7 +2,7 @@
 //  LoginVM.swift
 //  NoteMe
 //
-//  Created by Vadim on 10.11.23.
+//  Created by Vadim on 16.02.24.
 //
 
 import UIKit
@@ -12,6 +12,11 @@ protocol LoginCoordinatorProtocol: AnyObject {
     func finish()
     func openRegisterModule()
     func openResetModule()
+}
+
+protocol LoginInputValidatorUseCase {
+    func validate(email: String?) -> Bool
+    func validate(password: String?) -> Bool
 }
 
 protocol LoginAuthServiceUseCase {
@@ -32,46 +37,63 @@ final class LoginVM: LoginViewModelProtocol {
     static let alertOkTitle: String = "auth_alert_okTitle".localized
     }
     
+    var catchEmailError: ((String?) -> Void)?
+    var catchPasswordError: ((String?) -> Void)?
+    
     private weak var coordinator: LoginCoordinatorProtocol?
     
     private let authService: LoginAuthServiceUseCase
+    private let inputValidator: LoginInputValidatorUseCase
     private let alertService: LoginAlertServiceUseCase
     
     init(coordinator: LoginCoordinatorProtocol,
          authService: LoginAuthServiceUseCase,
+         inputValidator: LoginInputValidatorUseCase,
          alertService: LoginAlertServiceUseCase) {
-        
         self.coordinator = coordinator
         self.authService = authService
+        self.inputValidator = inputValidator
         self.alertService = alertService
     }
     
     func loginDidTap(email: String?, password: String?) {
-        guard let email, let password
+        guard
+            checkValidation(email: email), //, password: password),
+            let email, let password
         else { return }
         
         authService.login(email: email,
                           password: password) { [weak self] isSuccess in
             print(isSuccess)
             if isSuccess {
-                //FIXME: uncomment
                 ParametersHelper.set(.authenticated, value: true)
                 self?.coordinator?.finish()
             } else {
-                self?.alertService.showAlert(
-                    title: L10n.alertTitle,
-                    message: L10n.alertMessage,
-                    okTitle: L10n.alertOkTitle)
+                self?.alertService.showAlert(title: L10n.alertTitle,
+                                             message: L10n.alertMessage,
+                                             okTitle: L10n.alertOkTitle)
             }
         }
     }
     
     func newAccountDidTap() {
+        print(#function)
         coordinator?.openRegisterModule()
     }
     
-    func forgotPasswordDidTap(email: String?) {
+    func forgorPasswordDidTap(email: String?) {
+        print(#function)
         coordinator?.openResetModule()
+    }
+    
+    private func checkValidation(email: String?) -> Bool { //, password: String?) -> Bool {
+        let isEmailValid = inputValidator.validate(email: email)
+//        let isPasswordValid = inputValidator.validate(password: password)
+        
+        catchEmailError?(isEmailValid ? nil : "wrong email_loc")
+//        catchPasswordError?(isPasswordValid ? nil : "Non-valid password")
+        
+        return isEmailValid // && isPasswordValid
     }
     
 }

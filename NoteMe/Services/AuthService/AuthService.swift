@@ -2,7 +2,7 @@
 //  AuthService.swift
 //  NoteMe
 //
-//  Created by Vadim on 6.12.23.
+//  Created by Vadim on 25.02.24.
 //
 
 import Foundation
@@ -17,8 +17,7 @@ final class AuthService {
     func signIn(email: String,
                 password: String,
                 completion: @escaping (Bool) -> Void) {
-        firebase.signIn(withEmail: email,
-                        password: password) { result, error in
+        firebase.signIn(withEmail: email, password: password) { result, error in
             completion(error == nil)
         }
     }
@@ -38,5 +37,10 @@ final class AuthService {
         }
     }
     
+    func logout() {
+        //FIXME: Test code
+        print("Logout function used")
+        try! firebase.signOut()
+        }
+    
 }
-

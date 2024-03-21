@@ -2,7 +2,7 @@
 //  BaseNotificationMO+CoreDataProperties.swift
 //  Storage
 //
-//  Created by Vadim on 4.02.24.
+//  Created by Vadim on 4.03.24.
 //
 //
 
@@ -16,14 +16,14 @@ extension BaseNotificationMO {
         return NSFetchRequest<BaseNotificationMO>(entityName: "BaseNotificationMO")
     }
 
+    @NSManaged public var completedDate: Date?
     @NSManaged public var date: Date?
     @NSManaged public var identifier: String?
-    @NSManaged public var title: String?
     @NSManaged public var subtitle: String?
-    @NSManaged public var completedDate: Date?
+    @NSManaged public var title: String?
 
 }
 
-extension BaseNotificationMO: Identifiable {
+extension BaseNotificationMO : Identifiable {
 
 }

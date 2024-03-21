@@ -2,7 +2,7 @@
 //  String+Locale.swift
 //  NoteMe
 //
-//  Created by Vadim on 6.11.23.
+//  Created by Vadim on 16.02.24.
 //
 
 import Foundation

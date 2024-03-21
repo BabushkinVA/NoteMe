@@ -2,7 +2,7 @@
 //  LoginCoordinator.swift
 //  NoteMe
 //
-//  Created by Vadim on 21.11.23.
+//  Created by Vadim on 19.02.24.
 //
 
 import UIKit
@@ -17,8 +17,7 @@ final class LoginCoordinator: Coordinator {
     }
     
     override func start() -> UIViewController {
-        let vc = LoginAssembler.make(container: container, 
-                                     coordinator: self)
+        let vc = LoginAssembler.make(container: container, coordinator: self)
         rootVC = vc
         return vc
     }
@@ -26,6 +25,7 @@ final class LoginCoordinator: Coordinator {
 }
 
 extension LoginCoordinator: LoginCoordinatorProtocol {
+    
     func openRegisterModule() {
         let coordinator = RegisterCoordinator(container: container)
         children.append(coordinator)

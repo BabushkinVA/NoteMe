@@ -2,7 +2,7 @@
 //  InputValidator.swift
 //  NoteMe
 //
-//  Created by Vadim on 10.11.23.
+//  Created by Vadim on 16.02.24.
 //
 
 import UIKit
@@ -16,7 +16,6 @@ final class InputValidator {
     
     func validate(password: String?) -> Bool {
         return validate(string: password,
-//                        pattern: "ˆ(?=.*[A-Z])(?=.*[!@#$*])(?=.*[0-9])(?=.*[a-z]).{6,}$")
                         pattern: "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&*!]).{4,}")
         
     }
@@ -34,4 +33,5 @@ final class InputValidator {
                                      range: NSRange(location: 0, length: string.count))
         return match != nil
     }
+    
 }

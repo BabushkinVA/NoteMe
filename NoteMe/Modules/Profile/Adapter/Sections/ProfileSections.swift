@@ -2,16 +2,21 @@
 //  ProfileSections.swift
 //  NoteMe
 //
-//  Created by Vadim on 25.01.24.
+//  Created by Vadim on 29.02.24.
 //
 
 import UIKit
 
 fileprivate enum L10n {
-    
+    static let account: String = "profile_account".localized
+    static let settings: String = "profile_settings".localized
+    static let notifications: String = "profile_notifications".localized
+    static let export: String = "profile_export".localized
+    static let logout: String = "profile_logout".localized
 }
 
 enum ProfileSections {
+    
     case account(String)
     case settings([ProfileSettingsRows])
     
@@ -24,13 +29,15 @@ enum ProfileSections {
     
     var headerText: String {
         switch self {
-        case .account: return "account_loc".localized
-        case .settings(_): return "profile_loc".localized
+        case .account: return L10n.account
+        case .settings(_): return L10n.settings
         }
     }
+    
 }
 
 enum ProfileSettingsRows: CaseIterable {
+    
     case notifications
     case export
     case logout
@@ -45,15 +52,15 @@ enum ProfileSettingsRows: CaseIterable {
     
     var title: String {
         switch self {
-        case .notifications: return "notif_loc".localized
-        case .export: return "export_loc".localized
-        case .logout: return "logout_loc".localized
+        case .notifications: return L10n.notifications
+        case .export: return L10n.export
+        case .logout: return L10n.logout
         }
     }
     
     var infoText: String? {
         switch self {
-        case .export: return "Now_loc".localized
+        case .export: return "Now_test"
         default: return nil
         }
     }

@@ -2,7 +2,7 @@
 //  OnboardSecondStepVM.swift
 //  NoteMe
 //
-//  Created by Vadim on 28.11.23.
+//  Created by Vadim on 21.02.24.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ protocol OnboardSecondStepCoordinatorProtocol: AnyObject {
 }
 
 final class OnboardSecondStepVM: OnboardSecondStepViewModelProtocol {
-    
+
     private weak var coordinator: OnboardSecondStepCoordinatorProtocol?
     
     init(coordinator: OnboardSecondStepCoordinatorProtocol? = nil) {
@@ -21,7 +21,7 @@ final class OnboardSecondStepVM: OnboardSecondStepViewModelProtocol {
     }
     
     func doneDidTap() {
-        print("Done tapped")
+        print("Done tappet")
         ParametersHelper.set(.onboarded, value: true)
         coordinator?.finish()
     }

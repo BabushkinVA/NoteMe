@@ -2,7 +2,7 @@
 //  Collection+Register.swift
 //  NoteMe
 //
-//  Created by Vadim on 3.02.24.
+//  Created by Vadim on 1.03.24.
 //
 
 import UIKit
@@ -26,7 +26,8 @@ extension UICollectionView {
         self.register(CellType.self, forCellWithReuseIdentifier: "\(CellType.self)")
     }
     
-    func dequeue<CellType: UICollectionViewCell>(at indexPath: IndexPath) -> CellType {
+    func dequeue<CellType: UICollectionViewCell>(at indexPath: IndexPath)
+    -> CellType {
         return self.dequeueReusableCell(withReuseIdentifier: "\(CellType.self)",
                                         for: indexPath) as! CellType
     }

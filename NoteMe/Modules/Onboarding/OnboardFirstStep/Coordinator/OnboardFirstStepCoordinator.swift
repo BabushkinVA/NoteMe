@@ -2,7 +2,7 @@
 //  OnboardFirstStepCoordinator.swift
 //  NoteMe
 //
-//  Created by Vadim on 28.11.23.
+//  Created by Vadim on 21.02.24.
 //
 
 import UIKit
@@ -21,18 +21,17 @@ final class OnboardFirstStepCoordinator: Coordinator {
 }
 
 extension OnboardFirstStepCoordinator: OnboardFirstStepCoordinatorProtocol {
-    
     func openNextStep() {
         let coordinator = OnboardSecondStepCoordinator()
         children.append(coordinator)
         
         coordinator.onDidFinish = { [weak self] coordinator in
-            self?.children.removeAll { coordinator == $0 }
+            self?.children.removeAll() { $0 == coordinator }
             self?.finish()
         }
         
         coordinator.onDismissedByUser = { [weak self] coordinator in
-            self?.children.removeAll { coordinator == $0 }
+            self?.children.removeAll() { $0 == coordinator }
         }
         
         let vc = coordinator.start()

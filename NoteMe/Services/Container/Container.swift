@@ -2,16 +2,16 @@
 //  Container.swift
 //  NoteMe
 //
-//  Created by Vadim on 16.01.24.
+//  Created by Vadim on 28.02.24.
 //
 
-import UIKit
+import Foundation
 
 final class Container {
     
     private var container: [String: Any] = [:]
     private var lazyContainer: [String: () -> Any] = [:]
-    
+
 //    func register<Type: Any>(_ service: Type) {
 //        container["\(Type.self)"] = service
 //    }
