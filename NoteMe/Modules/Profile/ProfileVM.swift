@@ -21,6 +21,7 @@ final class ProfileVM: ProfileViewModelProtocol {
     private var sections: [ProfileSections] {
         return [
             .account("Set user email"),
+            .notifications,
             .settings(ProfileSettingsRows.allCases)
         ]
     }

@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import Storage
 
 final class DateNotificationAssembler {
     private init() {}
     
     static func make(coordinator: DateNotificationCoordinatorProtocol)
     -> UIViewController {
-        let vm = DateNotificationVM(coordinator: coordinator)
+        let vm = DateNotificationVM(coordinator: coordinator, storage: DateNotificationStorage())
         return DateNotificationVC(viewModel: vm)
     }
     

@@ -10,11 +10,11 @@ import UIKit
 final class MainTabBarCoordinator: Coordinator {
     
     private var rootVC: UIViewController?
-//    private let container: Container
-//    
-//    init(container: Container) {
-//        self.container = container
-//    }
+    private let container: Container
+    
+    init(container: Container) {
+        self.container = container
+    }
     
     override func start() -> UIViewController {
         let tabBar = MainTabBarAssembler.make(coordinator: self)
@@ -55,27 +55,46 @@ extension MainTabBarCoordinator: MainTabBarCoordinatorProtocol {
         rootVC?.present(menu, animated: true)
     }
     
-//    func openNewDateNotification() {
-//        let coordinator = DateNotificationCoordinator(container: container)
-//        children.append(coordinator)
-//        let vc = coordinator.start()
-//        
-//        coordinator.onDidFinish = { [weak self] coordinator in
-//            self?.children.removeAll { coordinator == $0 }
-//            vc.dismiss(animated: true)
-//        }
-//        
-//        vc.modalPresentationStyle = .fullScreen
-//        rootVC?.present(vc, animated: true)
-//        fatalError("DateNotif")
-//    }
-//    
-//    func openNewLocationNotification() {
-//        fatalError("LocNotif")
-//    }
-//    
-//    func openNewTimerNotification() {
-//        fatalError("TimerNotif")
-//    }
+    func openNewDateNotification() {
+        let coordinator = DateNotificationCoordinator(container: container)
+        children.append(coordinator)
+        let vc = coordinator.start()
+        
+        coordinator.onDidFinish = { [weak self] coordinator in
+            self?.children.removeAll { coordinator == $0 }
+            vc.dismiss(animated: true)
+        }
+        
+        vc.modalPresentationStyle = .fullScreen
+        rootVC?.present(vc, animated: true)
+    }
+    
+    func openNewLocationNotification() {
+        let coordinator = LocationNotificationCoordinator(container: container)
+        children.append(coordinator)
+        let vc = coordinator.start()
+        
+        coordinator.onDidFinish = { [weak self] coordinator in
+            self?.children.removeAll { coordinator == $0 }
+            vc.dismiss(animated: true)
+        }
+        
+        vc.modalPresentationStyle = .fullScreen
+        rootVC?.present(vc, animated: true)
+    }
+    
+    func openNewTimerNotification() {
+        let coordinator = TimerNotificationCoordinator(container: container)
+        children.append(coordinator)
+        let vc = coordinator.start()
+        
+        coordinator.onDidFinish = { [weak self] coordinator in
+            self?.children.removeAll { coordinator == $0 }
+            vc.dismiss(animated: true)
+        }
+        
+        vc.modalPresentationStyle = .fullScreen
+        rootVC?.present(vc, animated: true)
+    }
     
 }

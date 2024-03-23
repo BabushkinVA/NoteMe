@@ -76,6 +76,7 @@ final class MenuPopoverVC: UIViewController {
          sourceView: UIView) {
         self.delegate = delegate
         self.adapter = adapter
+        
         super.init(nibName: nil, bundle: nil)
         
         setupPopover(sourceView: sourceView)
@@ -107,10 +108,10 @@ final class MenuPopoverVC: UIViewController {
         
     private func setupConstraints() {
         tableView.snp.makeConstraints { make in
-//            make.edges.equalToSuperview()
-            make.horizontalEdges.equalToSuperview()
-            make.verticalEdges.equalTo(
-                self.view.safeAreaLayoutGuide.snp.verticalEdges)
+            make.edges.equalToSuperview()
+//            make.horizontalEdges.equalToSuperview()
+//            make.verticalEdges.equalTo(
+//                self.view.safeAreaLayoutGuide.snp.verticalEdges)
         }
     }
     

@@ -11,30 +11,44 @@ import SnapKit
 @objc protocol DateNotificationViewModelProtocol: AnyObject {
     @objc func cancelDidTap()
     func dismissedByUser()
+    @objc func createDidTap()
 }
 
 final class DateNotificationVC: UIViewController, UITextViewDelegate {
+    
+    private enum L10n {
+        static let mainLabel: String = "date_main_label".localized
+        static let titleLabel: String = "date_title".localized
+        static let titlePlaceholder: String = "date_title_placeholder".localized
+        static let dateLabel: String = "date_date".localized
+        static let datePlaceholder: String = "date_date_placeholder".localized
+        static let commentLabel: String = "date_comment".localized
+        static let commentPlaceholder: String = "date_comment_placeholder".localized
+        static let createButton: String = "create_button".localized
+    }
     
     private lazy var contentView: UIView = .contentViewStyle()
     private lazy var cancelButton: UIButton = 
         .cancelButton()
         .withAction(viewModel, #selector(DateNotificationViewModelProtocol.cancelDidTap))
-    private lazy var createButton: UIButton = .yellowRoundedButton("Create_loc")
-    private lazy var titleLabel: UILabel = .notificatioLabelStyle("Title DATE")
+    private lazy var createButton: UIButton = 
+        .yellowRoundedButton(L10n.createButton)
+        .withAction(viewModel, #selector(DateNotificationViewModelProtocol.createDidTap))
+    private lazy var mainLabel: UILabel = .notificatioLabelStyle(L10n.mainLabel)
     private lazy var infoView: UIView = .infoViewStyle()
     
     private lazy var titleTextField: LineTextField = {
         let textField = LineTextField()
-        textField.placeholder = "Enter Title_loc"
-        textField.title = "Title.loc"
+        textField.title = L10n.titleLabel
+        textField.placeholder = L10n.titlePlaceholder
         return textField
     }()
     
  private lazy var dateTextField: LineTextField = {
         let textField = LineTextField()
         let datePicker = UIDatePicker()
-        textField.placeholder = "Enter Date_loc"
-        textField.title = "Date.loc"
+        textField.title = L10n.dateLabel
+        textField.placeholder = L10n.datePlaceholder
         textField.inputView = datePicker
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
@@ -46,8 +60,8 @@ final class DateNotificationVC: UIViewController, UITextViewDelegate {
     
     private lazy var dateTextView: NotificationTextView = {
         let textView = NotificationTextView()
-        textView.placeholder = "Enter Comment_loc"
-        textView.title = "Comment_loc"
+        textView.title = L10n.commentLabel
+        textView.placeholder = L10n.commentPlaceholder
         return textView
     }()
     
@@ -83,7 +97,7 @@ final class DateNotificationVC: UIViewController, UITextViewDelegate {
         view.addSubview(cancelButton)
         view.addSubview(createButton)
         
-        contentView.addSubview(titleLabel)
+        contentView.addSubview(mainLabel)
         contentView.addSubview(infoView)
         
         infoView.addSubview(titleTextField)
@@ -110,12 +124,12 @@ final class DateNotificationVC: UIViewController, UITextViewDelegate {
             make.bottom.equalTo(cancelButton.snp.top).inset(-8.0)
         }
         
-        titleLabel.snp.makeConstraints { make in
+        mainLabel.snp.makeConstraints { make in
             make.top.left.equalToSuperview().inset(20.0)
         }
         
         infoView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).inset(-10.0)
+            make.top.equalTo(mainLabel.snp.bottom).inset(-10.0)
             make.horizontalEdges.equalToSuperview().inset(20.0)
         }
         
@@ -149,7 +163,7 @@ final class DateNotificationVC: UIViewController, UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
-            dateTextView.text = "Enter Comment_loc"
+            dateTextView.text = L10n.commentPlaceholder
             dateTextView.textColor = .appGrayText
         }
     }

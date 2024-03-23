@@ -6,6 +6,7 @@
   
 */
 "cancel_button" = "Cancel";
+"create_button" = "Create";
 
     //MARK: - Auth group
 //LoginVC
@@ -72,9 +73,11 @@
 "profile_account" = "Account";
 "profile_settings" = "Settings";
 "profile_notifications" = "Notifications";
-"profile_export" = "Export";
-"profile_logout" = "Logout";
+"profile_settings_notifications" = "Notifications";
+"profile_settings_export" = "Export";
+"profile_settings_logout" = "Logout";
 "profileCell_infoText" = "Your e-mail:";
+"profile_map" = "Map";
 
 //MenuPopoverVC
 "popover_calendar" = "Calendar";
@@ -82,3 +85,33 @@
 "popover_timer" = "Timer";
 "popover_edit" = "Edit";
 "popover_delete" = "Delete";
+
+    //MARK: - Notification group
+//DateNotificationVC
+"date_main_label" = "Create Date Notification";
+"date_title" = "Title";
+"date_title_placeholder" = "Enter Title";
+"date_date" = "Date";
+"date_date_placeholder" = "Enter Date";
+"date_comment" = "Comment";
+"date_comment_placeholder" = "Enter Comment";
+
+//TimerNotificationVC
+"timer_main_label" = "Create Timer Notification";
+"timer_title" = "Title";
+"timer_title_placeholder" = "Enter Title";
+"timer_timer" = "Timer";
+"timer_timer_placeholder" = "Enter Timer";
+"timer_comment" = "Comment";
+"timer_comment_placeholder" = "Enter Comment";
+
+//LocationNotificationVC
+"location_main_label" = "Create Location Notification";
+"location_title" = "Title";
+"location_title_placeholder" = "Enter Title";
+"location_comment" = "Comment";
+"location_comment_placeholder" = "Enter Comment";
+"location_image_title" = "Location";
+    
+    //MapVC
+    "select_button" = "Select";

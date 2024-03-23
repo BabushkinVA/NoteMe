@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD3148FD2BADB5DC001C497C /* NotificationImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3148FC2BADB5DC001C497C /* NotificationImageView.swift */; };
+		DD3148FF2BADB702001C497C /* LocationNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3148FE2BADB702001C497C /* LocationNotificationVC.swift */; };
+		DD3149012BADBEB8001C497C /* LocationNotificationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3149002BADBEB8001C497C /* LocationNotificationVM.swift */; };
+		DD3149042BADBED5001C497C /* LocationNotificationAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3149032BADBED5001C497C /* LocationNotificationAssembler.swift */; };
+		DD3149062BADBEE1001C497C /* LocationNotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3149052BADBEE1001C497C /* LocationNotificationCoordinator.swift */; };
+		DD31490B2BADED3E001C497C /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31490A2BADED3E001C497C /* MapVC.swift */; };
+		DD31490F2BAED648001C497C /* MapAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD31490E2BAED648001C497C /* MapAssembler.swift */; };
+		DD3149112BAED657001C497C /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3149102BAED657001C497C /* MapCoordinator.swift */; };
+		DD3149132BAED6C9001C497C /* MapVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3149122BAED6C8001C497C /* MapVM.swift */; };
+		DD3149152BAF329E001C497C /* ProfileNotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3149142BAF329D001C497C /* ProfileNotificationCell.swift */; };
 		DD3ECBC22BA9F44300145042 /* ApiPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3ECBC12BA9F44200145042 /* ApiPaths.swift */; };
 		DD3ECBC52BA9F4D300145042 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3ECBC42BA9F4D300145042 /* NetworkRequest.swift */; };
 		DD3ECBC72BA9F5AE00145042 /* NetworkSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3ECBC62BA9F5AE00145042 /* NetworkSessionProvider.swift */; };
 		DD3ECBC92BA9F8C900145042 /* NearByRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3ECBC82BA9F8C900145042 /* NearByRequest.swift */; };
 		DD3ECBCC2BAA08E400145042 /* LocationNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3ECBCB2BAA08E400145042 /* LocationNetworkService.swift */; };
 		DD46330D2B17D1A7009275D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD46330C2B17D1A7009275D3 /* Assets.xcassets */; };
+		DD4EF5632BAD6C5600EBC433 /* TimerNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EF5622BAD6C5600EBC433 /* TimerNotificationVC.swift */; };
+		DD4EF5652BAD6F7400EBC433 /* TimerNotificationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EF5642BAD6F7400EBC433 /* TimerNotificationVM.swift */; };
+		DD4EF5672BAD703F00EBC433 /* TimerNotificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EF5662BAD703F00EBC433 /* TimerNotificationCoordinator.swift */; };
+		DD4EF5692BAD713600EBC433 /* TimerNotificationAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4EF5682BAD713600EBC433 /* TimerNotificationAssembler.swift */; };
 		DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */; };
 		DD6EA12E2AF7E41E004E0CF2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD6EA1302AF7E41E004E0CF2 /* Localizable.strings */; };
 		DD6F0E2E2B0D124D006EB549 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6F0E2D2B0D124D006EB549 /* AppCoordinator.swift */; };
@@ -166,12 +180,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DD3148FC2BADB5DC001C497C /* NotificationImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationImageView.swift; sourceTree = "<group>"; };
+		DD3148FE2BADB702001C497C /* LocationNotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNotificationVC.swift; sourceTree = "<group>"; };
+		DD3149002BADBEB8001C497C /* LocationNotificationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNotificationVM.swift; sourceTree = "<group>"; };
+		DD3149032BADBED5001C497C /* LocationNotificationAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNotificationAssembler.swift; sourceTree = "<group>"; };
+		DD3149052BADBEE1001C497C /* LocationNotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNotificationCoordinator.swift; sourceTree = "<group>"; };
+		DD31490A2BADED3E001C497C /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		DD31490E2BAED648001C497C /* MapAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAssembler.swift; sourceTree = "<group>"; };
+		DD3149102BAED657001C497C /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
+		DD3149122BAED6C8001C497C /* MapVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVM.swift; sourceTree = "<group>"; };
+		DD3149142BAF329D001C497C /* ProfileNotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNotificationCell.swift; sourceTree = "<group>"; };
 		DD3ECBC12BA9F44200145042 /* ApiPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPaths.swift; sourceTree = "<group>"; };
 		DD3ECBC42BA9F4D300145042 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		DD3ECBC62BA9F5AE00145042 /* NetworkSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionProvider.swift; sourceTree = "<group>"; };
 		DD3ECBC82BA9F8C900145042 /* NearByRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByRequest.swift; sourceTree = "<group>"; };
 		DD3ECBCB2BAA08E400145042 /* LocationNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNetworkService.swift; sourceTree = "<group>"; };
 		DD46330C2B17D1A7009275D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../NoteMe COPY 25.11 before Home coordinator/NoteMe copy/NoteMe/Resource/Assets.xcassets"; sourceTree = "<group>"; };
+		DD4EF5622BAD6C5600EBC433 /* TimerNotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNotificationVC.swift; sourceTree = "<group>"; };
+		DD4EF5642BAD6F7400EBC433 /* TimerNotificationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNotificationVM.swift; sourceTree = "<group>"; };
+		DD4EF5662BAD703F00EBC433 /* TimerNotificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNotificationCoordinator.swift; sourceTree = "<group>"; };
+		DD4EF5682BAD713600EBC433 /* TimerNotificationAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerNotificationAssembler.swift; sourceTree = "<group>"; };
 		DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
 		DD6EA12F2AF7E41E004E0CF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DD6EA1312AF7E4C9004E0CF2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -322,6 +350,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD3148FB2BADB587001C497C /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				DD3149022BADBEBE001C497C /* Adapter */,
+				DD3148FE2BADB702001C497C /* LocationNotificationVC.swift */,
+				DD3149002BADBEB8001C497C /* LocationNotificationVM.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		DD3149022BADBEBE001C497C /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				DD3149032BADBED5001C497C /* LocationNotificationAssembler.swift */,
+				DD3149052BADBEE1001C497C /* LocationNotificationCoordinator.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		DD31490C2BADED43001C497C /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				DD31490D2BADEDAB001C497C /* Adapter */,
+				DD31490A2BADED3E001C497C /* MapVC.swift */,
+				DD3149122BAED6C8001C497C /* MapVM.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		DD31490D2BADEDAB001C497C /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				DD31490E2BAED648001C497C /* MapAssembler.swift */,
+				DD3149102BAED657001C497C /* MapCoordinator.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
 		DD3ECBC02BA9F42800145042 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +414,35 @@
 				DD3ECBCB2BAA08E400145042 /* LocationNetworkService.swift */,
 			);
 			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		DD4EF55D2BAD6C0200EBC433 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				DDCEBCA32BAC468400E4561E /* Adapter */,
+				DDCEBCA42BAC468400E4561E /* DateNotificationVC.swift */,
+				DDCEBCA52BAC468400E4561E /* DateNotificationVM.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		DD4EF55E2BAD6C0D00EBC433 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				DD4EF55F2BAD6C1500EBC433 /* Adapter */,
+				DD4EF5622BAD6C5600EBC433 /* TimerNotificationVC.swift */,
+				DD4EF5642BAD6F7400EBC433 /* TimerNotificationVM.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		DD4EF55F2BAD6C1500EBC433 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				DD4EF5682BAD713600EBC433 /* TimerNotificationAssembler.swift */,
+				DD4EF5662BAD703F00EBC433 /* TimerNotificationCoordinator.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 		DD5E1B642AF15EBD004512AF /* Utils */ = {
@@ -381,6 +476,7 @@
 				DDC870342BA20F9F00201C5B /* NotificationFilterView */,
 				DD5E1B6B2AF16EC7004512AF /* LineTextField.swift */,
 				DDCEBC442BAC460700E4561E /* NotificationTextView.swift */,
+				DD3148FC2BADB5DC001C497C /* NotificationImageView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -460,12 +556,12 @@
 			isa = PBXGroup;
 			children = (
 				DDCEBC652BAC464600E4561E /* Auth */,
-				DDCEBCA62BAC468400E4561E /* CreateNotification */,
-				DDCEBC932BAC468400E4561E /* Home */,
-				DDCEBC872BAC468300E4561E /* MenuPopover */,
 				DDCEBCA02BAC468400E4561E /* Onboarding */,
-				DDCEBCB52BAC468400E4561E /* Profile */,
 				DDCEBC812BAC468300E4561E /* TabBar */,
+				DDCEBC932BAC468400E4561E /* Home */,
+				DDCEBCB52BAC468400E4561E /* Profile */,
+				DDCEBC872BAC468300E4561E /* MenuPopover */,
+				DDCEBCA62BAC468400E4561E /* CreateNotification */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -716,9 +812,10 @@
 		DDCEBCA62BAC468400E4561E /* CreateNotification */ = {
 			isa = PBXGroup;
 			children = (
-				DDCEBCA32BAC468400E4561E /* Adapter */,
-				DDCEBCA42BAC468400E4561E /* DateNotificationVC.swift */,
-				DDCEBCA52BAC468400E4561E /* DateNotificationVM.swift */,
+				DD4EF55D2BAD6C0200EBC433 /* Date */,
+				DD3148FB2BADB587001C497C /* Location */,
+				DD31490C2BADED43001C497C /* Map */,
+				DD4EF55E2BAD6C0D00EBC433 /* Timer */,
 			);
 			path = CreateNotification;
 			sourceTree = "<group>";
@@ -727,6 +824,7 @@
 			isa = PBXGroup;
 			children = (
 				DDCEBCA72BAC468400E4561E /* ProfileAccountCell.swift */,
+				DD3149142BAF329D001C497C /* ProfileNotificationCell.swift */,
 				DDCEBCA82BAC468400E4561E /* ProfileSettingsCell.swift */,
 			);
 			path = Cells;
@@ -949,9 +1047,9 @@
 			isa = PBXGroup;
 			children = (
 				DDCEBD3D2BAC48CE00E4561E /* AllNotificationStorage.swift */,
+				DDCEBD412BAC48CE00E4561E /* NotificationStorage.swift */,
 				DDCEBD3F2BAC48CE00E4561E /* DateNotificationStorage.swift */,
 				DDCEBD3E2BAC48CE00E4561E /* LocationNotificationStorage.swift */,
-				DDCEBD412BAC48CE00E4561E /* NotificationStorage.swift */,
 				DDCEBD402BAC48CE00E4561E /* TimerNotificationStorage.swift */,
 			);
 			path = Storages;
@@ -1089,6 +1187,7 @@
 			files = (
 				DDCEBC772BAC464600E4561E /* AlertService+Reset.swift in Sources */,
 				DDCEBCC92BAC468400E4561E /* OnboardFirstStepVM.swift in Sources */,
+				DD31490B2BADED3E001C497C /* MapVC.swift in Sources */,
 				DDCEBCC52BAC468400E4561E /* HomeVM.swift in Sources */,
 				DDCEBCBC2BAC468400E4561E /* MenuPopoverBuilder.swift in Sources */,
 				DDCEBCD82BAC468400E4561E /* ProfileCoordinator.swift in Sources */,
@@ -1103,6 +1202,7 @@
 				DDCEBCD72BAC468400E4561E /* ProfileAssembler.swift in Sources */,
 				DDCEBC762BAC464600E4561E /* ResetCoordinator.swift in Sources */,
 				DDCEBC6C2BAC464600E4561E /* LoginVM.swift in Sources */,
+				DD3149062BADBEE1001C497C /* LocationNotificationCoordinator.swift in Sources */,
 				DDCEBD0F2BAC477700E4561E /* String+Locale.swift in Sources */,
 				DDCEBCCF2BAC468400E4561E /* DateNotificationCoordinator.swift in Sources */,
 				DDCEBC672BAC464600E4561E /* LoginCoordinator.swift in Sources */,
@@ -1113,15 +1213,18 @@
 				DDCEBCD92BAC468400E4561E /* ProfileVC.swift in Sources */,
 				DDCEBCCB2BAC468400E4561E /* OnboardSecondStepCoordinator.swift in Sources */,
 				DDCEBCD62BAC468400E4561E /* ProfileAdapter.swift in Sources */,
+				DD4EF5692BAD713600EBC433 /* TimerNotificationAssembler.swift in Sources */,
 				DDCEBCC62BAC468400E4561E /* OnboardFirstStepAssembler.swift in Sources */,
 				DDCEBC6F2BAC464600E4561E /* AlertService+Register.swift in Sources */,
 				DD3ECBC52BA9F4D300145042 /* NetworkRequest.swift in Sources */,
+				DD3149042BADBED5001C497C /* LocationNotificationAssembler.swift in Sources */,
 				DDCEBCD12BAC468400E4561E /* DateNotificationVM.swift in Sources */,
 				DDB893E62AE824D0002CF4EE /* AppDelegate.swift in Sources */,
 				DDCEBD052BAC476400E4561E /* UIView+Styles.swift in Sources */,
 				DDCEBCF92BAC474100E4561E /* ContainerRegistrator.swift in Sources */,
 				DDCEBCC82BAC468400E4561E /* OnboardFirstStepVC.swift in Sources */,
 				DDCEBCD52BAC468400E4561E /* ProfileSections.swift in Sources */,
+				DD4EF5632BAD6C5600EBC433 /* TimerNotificationVC.swift in Sources */,
 				DDCEBC6D2BAC464600E4561E /* RegisterAssembler.swift in Sources */,
 				DDCEBCBB2BAC468400E4561E /* MenuPopoverAdapter.swift in Sources */,
 				DDCEBD112BAC477700E4561E /* UIButton+Actions.swift in Sources */,
@@ -1130,6 +1233,7 @@
 				DDCEBCDA2BAC468400E4561E /* ProfileVM.swift in Sources */,
 				DDCEBC782BAC464600E4561E /* AuthService+Reset.swift in Sources */,
 				DDCEBC742BAC464600E4561E /* RegisterVC.swift in Sources */,
+				DD3149152BAF329E001C497C /* ProfileNotificationCell.swift in Sources */,
 				DDCEBC7A2BAC464600E4561E /* ResetVC.swift in Sources */,
 				DDCEBD042BAC476400E4561E /* UIButton+Styles.swift in Sources */,
 				DDCEBCFA2BAC474100E4561E /* AuthService.swift in Sources */,
@@ -1145,12 +1249,15 @@
 				DDCEBCF42BAC474100E4561E /* InputValidator.swift in Sources */,
 				DDCEBC702BAC464600E4561E /* AuthService+Register.swift in Sources */,
 				DDCEBC682BAC464600E4561E /* AlertService+Login.swift in Sources */,
+				DD4EF5672BAD703F00EBC433 /* TimerNotificationCoordinator.swift in Sources */,
 				DDC870332BA20C7900201C5B /* NotificationFilterView.swift in Sources */,
+				DD3149132BAED6C9001C497C /* MapVM.swift in Sources */,
 				DDCEBC722BAC464600E4561E /* KeyboardHelper+Register.swift in Sources */,
 				DDCEBCB72BAC468400E4561E /* MainTabBarCoordinator.swift in Sources */,
 				DDCEBC662BAC464600E4561E /* LoginAssembler.swift in Sources */,
 				DDCEBCC32BAC468400E4561E /* HomeCoordinator.swift in Sources */,
 				DDCEBCCC2BAC468400E4561E /* OnboardSecondStepVC.swift in Sources */,
+				DD3149012BADBEB8001C497C /* LocationNotificationVM.swift in Sources */,
 				DD3ECBC72BA9F5AE00145042 /* NetworkSessionProvider.swift in Sources */,
 				DDCEBCCE2BAC468400E4561E /* DateNotificationAssembler.swift in Sources */,
 				DDCEBD012BAC476400E4561E /* UIDatePicker+Styles.swift in Sources */,
@@ -1167,7 +1274,10 @@
 				DD3ECBCC2BAA08E400145042 /* LocationNetworkService.swift in Sources */,
 				DDCEBCCD2BAC468400E4561E /* OnboardSecondStepVM.swift in Sources */,
 				DDCEBCD02BAC468400E4561E /* DateNotificationVC.swift in Sources */,
+				DD3149112BAED657001C497C /* MapCoordinator.swift in Sources */,
 				DDCEBCF72BAC474100E4561E /* Coordinator.swift in Sources */,
+				DD3148FD2BADB5DC001C497C /* NotificationImageView.swift in Sources */,
+				DD31490F2BAED648001C497C /* MapAssembler.swift in Sources */,
 				DDCEBCBA2BAC468400E4561E /* MenuActionCell.swift in Sources */,
 				DDCEBD022BAC476400E4561E /* UILabel+Styles.swift in Sources */,
 				DDCEBC6B2BAC464600E4561E /* LoginVC.swift in Sources */,
@@ -1179,8 +1289,10 @@
 				DDCEBCF52BAC474100E4561E /* ParametersHelper.swift in Sources */,
 				DDCEBC7B2BAC464600E4561E /* ResetVM.swift in Sources */,
 				DD5E1B6C2AF16EC7004512AF /* LineTextField.swift in Sources */,
+				DD3148FF2BADB702001C497C /* LocationNotificationVC.swift in Sources */,
 				DDCEBD0D2BAC477700E4561E /* View+Layer.swift in Sources */,
 				DD3ECBC22BA9F44300145042 /* ApiPaths.swift in Sources */,
+				DD4EF5652BAD6F7400EBC433 /* TimerNotificationVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1381,6 +1493,8 @@
 				INFOPLIST_FILE = NoteMe/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NOTEme;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "for notification";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For notification";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
@@ -1414,6 +1528,8 @@
 				INFOPLIST_FILE = NoteMe/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NOTEme;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "for notification";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For notification";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;

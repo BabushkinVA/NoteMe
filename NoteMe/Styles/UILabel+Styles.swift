@@ -45,6 +45,7 @@ extension UILabel {
         label.textColor = .appText
         label.font = .appBoldFont.withSize(17.0)
         label.textAlignment = .left
+        label.numberOfLines = 0
         return label
     }
     

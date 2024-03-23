@@ -1,18 +1,23 @@
 //
-//  ProfileSettingsCell.swift
+//  ProfileNotificationCell.swift
 //  NoteMe
 //
-//  Created by Vadim on 29.02.24.
+//  Created by Vadim on 23.03.24.
 //
 
 import UIKit
 import SnapKit
 
-final class ProfileSettingsCell: UITableViewCell {
+final class ProfileNotificationCell: UITableViewCell {
+    
+    private enum L10n {
+        static let map: String = "profile_map".localized
+    }
     
     private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.image = .Profile.point
         return imageView
     }()
     
@@ -20,14 +25,7 @@ final class ProfileSettingsCell: UITableViewCell {
         let label = UILabel()
         label.font = .appFont.withSize(14.0)
         label.textAlignment = .left
-        return label
-    }()
-    
-    private lazy var infoLabel: UILabel = {
-        let label = UILabel()
-        label.font = .appFont.withSize(12.0)
-        label.textColor = .appGrayText
-        label.textAlignment = .left
+        label.text = L10n.map
         return label
     }()
     
@@ -49,7 +47,6 @@ final class ProfileSettingsCell: UITableViewCell {
     func setupUI() {
         addSubview(iconImageView)
         addSubview(titleLabel)
-        addSubview(infoLabel)
     }
     
     func setupConstraints() {
@@ -63,19 +60,7 @@ final class ProfileSettingsCell: UITableViewCell {
             make.left.equalTo(iconImageView.snp.right).inset(-8.0)
             make.centerY.equalTo(iconImageView.snp.centerY)
         }
-        
-        infoLabel.snp.makeConstraints { make in
-            make.right.equalToSuperview().inset(16.0)
-            make.centerY.equalTo(iconImageView.snp.centerY)
-        }
-    }
-    
-    func setup(_ type: ProfileSettingsRows) {
-        titleLabel.text = type.title
-        titleLabel.textColor = type == .logout ? .appRed : .appText
-        iconImageView.image = type.icon
-        infoLabel.text = type.infoText
-        
     }
     
 }
+

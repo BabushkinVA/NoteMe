@@ -22,12 +22,10 @@ final class MainTabBarVC: UITabBarController {
         button.setImage(.TabBar.plus, for: .normal)
         button.setImage(.TabBar.plus.withTintColor(.appGrayText), for: .highlighted)
         button.cornerRadius = 25.0
-        button.addTarget(viewModel, action: #selector(MainTabBarViewModelProtocol.addButtonDidTap), for: .touchUpInside)
         return button
-    }()
-//    }().withAction(viewModel,
-//                   #selector(MainTabBarViewModelProtocol.addButtonDidTap),
-//                   for: .touchUpInside)
+    }().withAction(viewModel,
+                   #selector(MainTabBarViewModelProtocol.addButtonDidTap),
+                   for: .touchUpInside)
     
     init(viewModel: MainTabBarViewModelProtocol) {
         self.viewModel = viewModel

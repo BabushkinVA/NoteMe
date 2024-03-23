@@ -22,9 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         appCoordinator = AppCoordinator(container: container)
         appCoordinator?.startApp()
-        
 //        window = UIWindow(windowScene: windowScene)
-//        window?.rootViewController = MenuPopoverVC(coder: <#NSCoder#>)
+//        window?.rootViewController = MapVC(coder: coder)
 //        window?.makeKeyAndVisible()
     }
 

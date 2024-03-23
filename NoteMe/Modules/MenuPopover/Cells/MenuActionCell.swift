@@ -54,7 +54,7 @@ final class MenuActionCell: UITableViewCell {
         
         iconView.snp.makeConstraints { make in
             make.size.equalTo(24.0)
-//            make.left.equalTo(titleLabel.snp.right).offset(8.0)
+            make.left.equalTo(titleLabel.snp.right).offset(8.0)
             make.right.equalToSuperview().inset(16.0)
             make.centerY.equalTo(titleLabel.snp.centerY)
         }

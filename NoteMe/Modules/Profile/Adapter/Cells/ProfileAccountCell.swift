@@ -37,12 +37,6 @@ final class ProfileAccountCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-//        self.layer.masksToBounds = false
-//        self.layer.shadowOpacity = 1
-//        self.layer.shadowRadius = 4
-//        self.layer.shadowOffset = CGSize(width: 2.0, height: 4.0)
-//        self.layer.shadowColor = UIColor.green.cgColor
-        
         commonInit()
     }
     
@@ -62,8 +56,6 @@ final class ProfileAccountCell: UITableViewCell {
     private func setupUI() {
         addSubview(infoLabel)
         addSubview(emailLabel)
-        
-//        self.clipsToBounds = true
     }
     
     private func setupConstraints() {

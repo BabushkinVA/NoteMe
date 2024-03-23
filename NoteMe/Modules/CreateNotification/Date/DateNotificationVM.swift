@@ -6,22 +6,40 @@
 //
 
 import Foundation
+import Storage
 
 protocol DateNotificationCoordinatorProtocol: AnyObject {
     func finish()
     func dismissedByUser()
 }
 
+protocol DateNotificationStorageUseCase {
+    func create(_ dto: DateNotificationDTO)
+}
+
 final class DateNotificationVM: DateNotificationViewModelProtocol {
+    func createDidTap() {
+        print(#function)
+    }
+    
 
     private weak var coordinator: DateNotificationCoordinatorProtocol?
+    private let storage: DateNotificationStorage //UseCase
+    var dto: DateNotificationDTO?
+//    var shouldEditDTO: ((DateNotificationDTO) -> Void)?
     
-    init(coordinator: DateNotificationCoordinatorProtocol) {
+    init(coordinator: DateNotificationCoordinatorProtocol,
+         storage: DateNotificationStorage) {
         self.coordinator = coordinator
+        self.storage = storage
+    }
+    
+    func createDidTap(_ dto: DateNotificationDTO) {
+        let dto = dto
+        
     }
     
     func cancelDidTap() {
-        print(#function)
         coordinator?.finish()
     }
     

@@ -9,6 +9,10 @@ import UIKit
 
 extension UIButton {
     
+    private enum L10n {
+        static let cancelButton: String = "cancel_button".localized
+    }
+    
     static func yellowRoundedButton(_ title: String?) -> UIButton {
         let button = UIButton()
         button.backgroundColor = .appYellow
@@ -26,7 +30,7 @@ extension UIButton {
         button.backgroundColor = .clear
         button.cornerRadius = 5.0
         button.setBorder(width: 1.0, color: .appYellow)
-        button.setTitle("Cancel", for: .normal)
+        button.setTitle(L10n.cancelButton, for: .normal)
         button.setTitleColor(.appYellow, for: .normal)
         button.setTitleColor(.appYellow.withAlphaComponent(0.75),
                              for: .highlighted)

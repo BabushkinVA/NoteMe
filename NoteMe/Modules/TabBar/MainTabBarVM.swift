@@ -9,9 +9,9 @@ import UIKit
 
 protocol MainTabBarCoordinatorProtocol: AnyObject {
     func showMenu(sender: UIView, delegate: MenuPopoverDelegate)
-//    func openNewDateNotification()
-//    func openNewLocationNotification()
-//    func openNewTimerNotification()
+    func openNewDateNotification()
+    func openNewLocationNotification()
+    func openNewTimerNotification()
 }
 
 final class MainTabBarVM: MainTabBarViewModelProtocol {
@@ -30,11 +30,11 @@ final class MainTabBarVM: MainTabBarViewModelProtocol {
 
 extension MainTabBarVM: MenuPopoverDelegate {
     func didSelect(action: MenuPopoverVC.Action) {
-//        switch action {
-//        case .calendar: coordinator?.openNewDateNotification()
-//        case .location: coordinator?.openNewLocationNotification()
-//        case .timer: coordinator?.openNewTimerNotification()
-//        default: break
-//        }
+        switch action {
+        case .calendar: coordinator?.openNewDateNotification()
+        case .location: coordinator?.openNewLocationNotification()
+        case .timer: coordinator?.openNewTimerNotification()
+        default: break
+        }
     }
 }

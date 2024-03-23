@@ -32,8 +32,9 @@ final class ProfileAdapter: NSObject {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(ProfileSettingsCell.self)
         tableView.register(ProfileAccountCell.self)
+        tableView.register(ProfileNotificationCell.self)
+        tableView.register(ProfileSettingsCell.self)
     }
     
 }
@@ -55,6 +56,10 @@ extension ProfileAdapter: UITableViewDataSource {
         case .account(let email):
             let cell: ProfileAccountCell = tableView.dequeue(at: indexPath)
             cell.setup(email)
+            return cell
+            
+        case .notifications:
+            let cell: ProfileNotificationCell = tableView.dequeue(at: indexPath)
             return cell
             
         case .settings(let rows):

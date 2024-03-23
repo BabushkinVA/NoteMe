@@ -6,6 +6,7 @@
   
 */
 "cancel_button" = "Отмена";
+"create_button" = "Создать";
 
     //MARK: - Auth group
 //LoginVC
@@ -58,7 +59,7 @@
 "onboard_done_button" = "Готово";
 "onboard_second_title_label" = "Разные варианты!";
 "onboard_second_calendar_label" = "Календарь";
-"onboard_second_location_label" = "Положение";
+"onboard_second_location_label" = "Локация";
 "onboard_second_timer_label" = "Таймер";
 
 "onboard_second_infolabel" = "Вы можете использовать 3 типа напоминаний<br><b>• Календарь</b> - выберите дату, когда вы хотите получить напоминание.<br><b>• Положение</b> - выберите область на карте и вы получите напоминание как только окажетесь в ней.<br><b>• Таймер</b> - установите таймер и через указанный промежуток времени вы получите напоминание.";
@@ -71,14 +72,46 @@
 //ProfileVC
 "profile_account" = "Аккаунт";
 "profile_settings" = "Настройки";
-"profile_notifications" = "Оповещения";
-"profile_export" = "Экспорт";
-"profile_logout" = "Выйти";
+"profile_notifications" = "Заметки";
+"profile_settings_notifications" = "Оповещения";
+"profile_settings_export" = "Экспорт";
+"profile_settings_logout" = "Выйти";
 "profileCell_infoText" = "Ваша электронная почта:";
+"profile_map" = "Карта";
 
 //MenuPopoverVC
 "popover_calendar" = "Календарь";
-"popover_location" = "Местоположение";
+"popover_location" = "Локация";
 "popover_timer" = "Таймер";
 "popover_edit" = "Изменить";
 "popover_delete" = "Удалить";
+
+    //MARK: - Notification group
+//DateNotificationVC
+"date_main_label" = "Создать Напоминание в Календаре";
+"date_title" = "Заголовок";
+"date_title_placeholder" = "Введите заголовок";
+"date_date" = "Дата";
+"date_date_placeholder" = "Выберите Дату";
+"date_comment" = "Комментарий";
+"date_comment_placeholder" = "Введите Комментарий";
+
+//TimerNotificationVC
+"timer_main_label" = "Создать Напоминание по Таймеру";
+"timer_title" = "Заголовок";
+"timer_title_placeholder" = "Введите заголовок";
+"timer_timer" = "Таймер";
+"timer_timer_placeholder" = "Выберите Таймер";
+"timer_comment" = "Комментарий";
+"timer_comment_placeholder" = "Введите Комментарий";
+
+//LocationNotificationVC
+"location_main_label" = "Создать Напоминание по Локация";
+"location_title" = "Заголовок";
+"location_title_placeholder" = "Введите заголовок";
+"location_comment" = "Комментарий";
+"location_comment_placeholder" = "Введите Комментарий";
+"location_image_title" = "Локация";
+
+    //MapVC
+    "select_button" = "Выбрать";

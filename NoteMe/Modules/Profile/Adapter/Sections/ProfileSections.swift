@@ -9,15 +9,17 @@ import UIKit
 
 fileprivate enum L10n {
     static let account: String = "profile_account".localized
-    static let settings: String = "profile_settings".localized
     static let notifications: String = "profile_notifications".localized
-    static let export: String = "profile_export".localized
-    static let logout: String = "profile_logout".localized
+    static let settings: String = "profile_settings".localized
+    static let settingsNotifications: String = "profile_settings_notifications".localized
+    static let settingsExport: String = "profile_settings_export".localized
+    static let settingsLogout: String = "profile_settings_logout".localized
 }
 
 enum ProfileSections {
     
     case account(String)
+    case notifications
     case settings([ProfileSettingsRows])
     
     var numberOfRows: Int {
@@ -30,10 +32,11 @@ enum ProfileSections {
     var headerText: String {
         switch self {
         case .account: return L10n.account
+        case .notifications: return L10n.notifications
         case .settings(_): return L10n.settings
         }
+        
     }
-    
 }
 
 enum ProfileSettingsRows: CaseIterable {
@@ -52,9 +55,9 @@ enum ProfileSettingsRows: CaseIterable {
     
     var title: String {
         switch self {
-        case .notifications: return L10n.notifications
-        case .export: return L10n.export
-        case .logout: return L10n.logout
+        case .notifications: return L10n.settingsNotifications
+        case .export: return L10n.settingsExport
+        case .logout: return L10n.settingsLogout
         }
     }
     

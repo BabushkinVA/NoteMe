@@ -10,8 +10,12 @@ import UIKit
 final class DateNotificationCoordinator: Coordinator {
     
     private var rootVC: UIViewController?
+    private let container: Container
     var onDismissedByUser: ((Coordinator) -> Void)?
-
+    
+    init(container: Container) {
+        self.container = container
+    }
     
     override func start() -> UIViewController {
         let vc = DateNotificationAssembler.make(coordinator: self)
